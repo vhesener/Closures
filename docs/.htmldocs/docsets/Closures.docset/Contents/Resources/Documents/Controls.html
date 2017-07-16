@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Controls  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Controls  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Closures Docs</a></p>
+        <p class="header-right"><a href="https://github.com/vhesener/Closures"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Closures Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Controls  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIDatePicker.html">UIDatePicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPageControl.html">UIPageControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIStepper.html">UIStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIControl.html">UIControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Scrolling Views.html">Scrolling Views</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Gesture Recognizers.html">Gesture Recognizers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITapGestureRecognizer.html">UITapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UILongPressGestureRecognizer.html">UILongPressGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPinchGestureRecognizer.html">UIPinchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPanGestureRecognizer.html">UIPanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISwipeGestureRecognizer.html">UISwipeGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIRotationGestureRecognizer.html">UIRotationGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScreenEdgePanGestureRecognizer.html">UIScreenEdgePanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Controllers.html">Controllers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController.html">UIImagePickerController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController/MediaFilter.html">– MediaFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController/Result.html">– Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="KVO.html">KVO</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/_5FKeyValueCodingAndObserving.html">_KeyValueCodingAndObserving</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Controls</h1>
+            <p><code>Closures</code> framework adds closures to many features of <code>UIControl</code> subclasses.
+ Below are some common actions on some common controls.</p>
+<h2 id='uibutton-tap' class='heading'>UIButton Tap</h2>
+
+<p>A common target-action used is a button tap event. This one is
+ really simple:</p>
+<pre class="highlight swift"><code><span class="n">button</span><span class="o">.</span><span class="n">onTap</span> <span class="p">{</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"Button tapped"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='value-changed-events' class='heading'>Value Changed Events</h2>
+
+<p>Most other <code>UIControl</code> types are only interesting for their
+ value changes. The following are examples of how to observe
+ value changes on other popular <code>UIControl</code>s.</p>
+<h3 id='uislider' class='heading'>UISlider</h3>
+<pre class="highlight swift"><code><span class="n">slider</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"slider: </span><span class="se">\(</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uisegmentedcontrol' class='heading'>UISegmentedControl</h3>
+<pre class="highlight swift"><code><span class="n">segmentedControl</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">index</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"segment: </span><span class="se">\(</span><span class="n">index</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uistepper' class='heading'>UIStepper</h3>
+<pre class="highlight swift"><code><span class="n">stepper</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"stepper: </span><span class="se">\(</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uipagecontrol' class='heading'>UIPageControl</h3>
+<pre class="highlight swift"><code><span class="n">pageControl</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">index</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"page: </span><span class="se">\(</span><span class="n">index</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uiswitch' class='heading'>UISwitch</h3>
+<pre class="highlight swift"><code><span class="n">uiSwitch</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">isOn</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"swith is: </span><span class="se">\(</span><span class="n">isOn</span> <span class="p">?</span> <span class="s">"on"</span> <span class="p">:</span> <span class="s">"off"</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uidatepicker' class='heading'>UIDatePicker</h3>
+<pre class="highlight swift"><code><span class="n">datePicker</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">date</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='uitextfield' class='heading'>UITextField</h3>
+
+<p>In addtion to text changes, <code>UITextField</code> has some other convenient wrappers
+ around some commonly needed actions. Below are examples of some events that
+ can you can observe. Notice the use of daisy chaining in order to keep it
+ concise and organized.</p>
+<pre class="highlight swift"><code><span class="n">textfield</span>
+    <span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">newText</span> <span class="k">in</span>
+        <span class="nf">log</span><span class="p">(</span><span class="n">newText</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">onEditingBegan</span> <span class="p">{</span>
+        <span class="nf">log</span><span class="p">(</span><span class="s">"Editing began"</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">onEditingEnded</span> <span class="p">{</span>
+        <span class="nf">log</span><span class="p">(</span><span class="s">"Editing ended"</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">onReturn</span> <span class="p">{</span>
+        <span class="nf">log</span><span class="p">(</span><span class="s">"Return key tapped"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='delegation' class='heading'>Delegation</h2>
+
+<p><code>UITextField</code> also employs delegation to help define its behavior. Below
+ is how you would implement <code>UITextFieldDelegate</code> methods using closures.</p>
+<pre class="highlight swift"><code><span class="n">textfield</span>
+    <span class="o">.</span><span class="n">didBeginEditing</span> <span class="p">{</span>
+        <span class="nf">log</span><span class="p">(</span><span class="s">"Did begin editing delegate"</span><span class="p">)</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">shouldClear</span> <span class="p">{</span>
+        <span class="nf">log</span><span class="p">(</span><span class="s">"Text clearing"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span><span class="o">.</span><span class="n">shouldChangeCharacters</span> <span class="p">{</span> <span class="n">range</span><span class="p">,</span> <span class="n">string</span> <span class="k">in</span>
+        <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Although these convenience closures are not exhaustive, there is a way to
+ use a closure for any <code>UIControlEvents</code>.</p>
+<pre class="highlight swift"><code><span class="n">button</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="n">touchDragInside</span><span class="p">)</span> <span class="p">{</span> <span class="n">sender</span><span class="p">,</span> <span class="n">event</span> <span class="k">in</span>
+    <span class="nf">log</span><span class="p">(</span><span class="s">"Dragging inside button"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIButton"></a>
+                    <a name="//apple_ref/swift/Extension/UIButton" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIButton">UIButton</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UIButton.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UISwitch"></a>
+                    <a name="//apple_ref/swift/Extension/UISwitch" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UISwitch">UISwitch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UISwitch.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UITextField"></a>
+                    <a name="//apple_ref/swift/Extension/UITextField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UITextField">UITextField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UITextField.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIDatePicker"></a>
+                    <a name="//apple_ref/swift/Extension/UIDatePicker" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIDatePicker">UIDatePicker</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UIDatePicker.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIPageControl"></a>
+                    <a name="//apple_ref/swift/Extension/UIPageControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIPageControl">UIPageControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UIPageControl.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UISegmentedControl"></a>
+                    <a name="//apple_ref/swift/Extension/UISegmentedControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UISegmentedControl">UISegmentedControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UISegmentedControl.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIStepper"></a>
+                    <a name="//apple_ref/swift/Extension/UIStepper" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIStepper">UIStepper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UIStepper.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UISlider"></a>
+                    <a name="//apple_ref/swift/Extension/UISlider" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UISlider">UISlider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UISlider.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)UIControl"></a>
+                    <a name="//apple_ref/swift/Extension/UIControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)UIControl">UIControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/UIControl.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2017 Vincent Hesener</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

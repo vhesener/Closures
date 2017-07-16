@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UITextField Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UITextField" class="dashAnchor"></a>
+    <a title="UITextField Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Closures Docs</a></p>
+        <p class="header-right"><a href="https://github.com/vhesener/Closures"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Closures Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UITextField Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDatePicker.html">UIDatePicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPageControl.html">UIPageControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIStepper.html">UIStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIControl.html">UIControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Scrolling Views.html">Scrolling Views</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Gesture Recognizers.html">Gesture Recognizers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITapGestureRecognizer.html">UITapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILongPressGestureRecognizer.html">UILongPressGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPinchGestureRecognizer.html">UIPinchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPanGestureRecognizer.html">UIPanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwipeGestureRecognizer.html">UISwipeGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIRotationGestureRecognizer.html">UIRotationGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreenEdgePanGestureRecognizer.html">UIScreenEdgePanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Controllers.html">Controllers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController.html">UIImagePickerController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/MediaFilter.html">– MediaFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/Result.html">– Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../KVO.html">KVO</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/_5FKeyValueCodingAndObserving.html">_KeyValueCodingAndObserving</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UITextField</h1>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Common%20Events"></a>
+                <a name="//apple_ref/swift/Section/Common Events" class="dashAnchor"></a>
+                <a href="#/Common%20Events">
+                  <h3 class="section-name">Common Events</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE8onChangeABXDySSc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/onChange(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onChangeABXDySSc7handler_tF">onChange(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method wrapping a typical use for UITextField&rsquo;s
+UIControlEvents.editingChanged event. This will send the new
+value <code>text</code> after it has been modified.</p>
+
+<hr>
+<h4 id='an-example-of-calling-this-method' class='heading'>An example of calling this method:</h4>
+<pre class="highlight swift"><code><span class="n">myTextField</span><span class="o">.</span><span class="n">onChange</span> <span class="p">{</span> <span class="n">newText</span> <span class="k">in</span>
+    <span class="o">&lt;</span><span class="err">#</span><span class="n">text</span> <span class="n">changed</span> <span class="n">code</span><span class="err">#</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This callback provides a non-optional String, even though UITextField.text can be <code>nil</code>.
+For that reason, it is technically not exactly the text in the <code>text</code> property, but
+rather a convenience so you don&rsquo;t have to unwrap it. If <code>nil</code> is an important distinction
+for you to have, please use the text field&rsquo;s <code>text</code> property directly or use
+<code>on(_:handler:)</code> and obtain the <code>text</code> property from the sender parameter.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onChange</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to be called on the text changed event</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other event handler calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingEndedABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/onEditingEnded(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingEndedABXDyyc7handler_tF">onEditingEnded(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method to respond to UIControlEvents.editingDidEnd for a UITextField.
+This occurs when the UITextField resigns as first responder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingEnded</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to be called when the focus leaves the text field</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other event handler calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingBeganABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/onEditingBegan(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingBeganABXDyyc7handler_tF">onEditingBegan(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method to respond to UIControlEvents.editingDidBegin for a UITextField.
+This occurs when the UITextField becomes the first responder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingBegan</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to be called when the focus enters the text field</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other event handler calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE8onReturnABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/onReturn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onReturnABXDyyc7handler_tF">onReturn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method to respond to UIControlEvents.editingDidEndOnExit for a UITextField.
+This occurs when the user taps the return key on the keyboard.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure to be called when the return key is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other event handler calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Delegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/Delegate Overrides" class="dashAnchor"></a>
+                <a href="#/Delegate%20Overrides">
+                  <h3 class="section-name">Delegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE18shouldBeginEditingABXDSbyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldBeginEditing(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldBeginEditingABXDSbyc7handler_tF">shouldBeginEditing(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should begin editing. This is equivalent 
+to implementing the textFieldShouldBeginEditing(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should begin editing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE15didBeginEditingABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didBeginEditing(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE15didBeginEditingABXDyyc7handler_tF">didBeginEditing(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field did begin editing. This is equivalent
+to implementing the textFieldDidBeginEditing(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field did begin editing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE16shouldEndEditingABXDSbyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldEndEditing(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE16shouldEndEditingABXDSbyc7handler_tF">shouldEndEditing(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should end editing. This is equivalent
+to implementing the textFieldShouldEndEditing(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should end editing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE13didEndEditingABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didEndEditing(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE13didEndEditingABXDyyc7handler_tF">didEndEditing(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field did end editing. This is equivalent
+to implementing the textFieldDidEndEditing(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field did end editing.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE22shouldChangeCharactersABXDSbSC8_NSRangeV_SStc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldChangeCharacters(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE22shouldChangeCharactersABXDSbSC8_NSRangeV_SStc7handler_tF">shouldChangeCharacters(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should change its characters based on user input.
+This is equivalent to implementing the textField(_:shouldChangeCharactersIn:replacementString:) 
+method in UITextFieldDelegate. This closure passed here will conflict with any closure 
+passed to <code><a href="../Extensions/UITextField.html#/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF">shouldChangeString(handler:)</a></code> and the last closure passed will be the one that&rsquo;s called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeCharacters</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">_</span> <span class="nv">replacementString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should change its characters.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldChangeString(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF">shouldChangeString(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should change its text based on user input.
+This is a convenience method around equivalent to implementing the 
+textField(<em>:shouldChangeCharactersIn:replacementString:) method in UITextFieldDelegate.
+This closure passed here will conflict with any closure passed to `shouldChangeCharacters(</em>:)`
+and the last closure passed will be the one that&rsquo;s called.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeString</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should change its text <code>from</code> 
+the first parameter string <code>to</code> the second parameter string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE11shouldClearABXDSbyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldClear(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE11shouldClearABXDSbyc7handler_tF">shouldClear(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should remove its text. This is equivalent
+to implementing the textFieldShouldClear(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldClear</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should clear its text.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITextFieldC8ClosuresE12shouldReturnABXDSbyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldReturn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE12shouldReturnABXDSbyc7handler_tF">shouldReturn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method determines if the text field should process the return button. This is equivalent
+to implementing the textFieldShouldReturn(_:) method in UITextFieldDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that determines whether the text field should process the return button.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Reset"></a>
+                <a name="//apple_ref/swift/Section/Reset" class="dashAnchor"></a>
+                <a href="#/Reset">
+                  <h3 class="section-name">Reset</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Closures@@objc(cs)UITextField(im)clearClosureDelegates"></a>
+                    <a name="//apple_ref/swift/Method/clearClosureDelegates()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Closures@@objc(cs)UITextField(im)clearClosureDelegates">clearClosureDelegates()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears any delegate closures that were assigned to this
+<code>UITextField</code>. This cleans up memory as well as sets the
+delegate property to nil. This is typically only used for explicit
+cleanup. You are not required to call this method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2017 Vincent Hesener</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

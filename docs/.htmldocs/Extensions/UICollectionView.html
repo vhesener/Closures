@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UICollectionView Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UICollectionView" class="dashAnchor"></a>
+    <a title="UICollectionView Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Closures Docs</a></p>
+        <p class="header-right"><a href="https://github.com/vhesener/Closures"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Closures Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UICollectionView Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDatePicker.html">UIDatePicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPageControl.html">UIPageControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIStepper.html">UIStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIControl.html">UIControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Scrolling Views.html">Scrolling Views</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Gesture Recognizers.html">Gesture Recognizers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITapGestureRecognizer.html">UITapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILongPressGestureRecognizer.html">UILongPressGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPinchGestureRecognizer.html">UIPinchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPanGestureRecognizer.html">UIPanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwipeGestureRecognizer.html">UISwipeGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIRotationGestureRecognizer.html">UIRotationGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreenEdgePanGestureRecognizer.html">UIScreenEdgePanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Controllers.html">Controllers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController.html">UIImagePickerController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/MediaFilter.html">– MediaFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/Result.html">– Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../KVO.html">KVO</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/_5FKeyValueCodingAndObserving.html">_KeyValueCodingAndObserving</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UICollectionView</h1>
+            <h2 id='delegate-and-datasource' class='heading'>Delegate and DataSource</h2>
+
+<p><code>UICollectionView</code> closures make it easy to implement <code>UICollectionViewDelegate</code> and
+ <code>UICollectionViewDataSource</code> protocol methods in an organized way. The following
+ is an example of a simple collection view that displays strings in a basic cell.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadCollectionView</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">collectionView</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">MyCustomCollectionViewCell</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forCellWithReuseIdentifier</span><span class="p">:</span> <span class="s">"Cell"</span><span class="p">)</span>
+
+    <span class="n">collectionView</span>
+        <span class="o">.</span><span class="n">numberOfItemsInSection</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+            <span class="n">countries</span><span class="o">.</span><span class="n">count</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">cellForItemAt</span> <span class="p">{</span> <span class="n">indexPath</span> <span class="k">in</span>
+            <span class="k">let</span> <span class="nv">cell</span> <span class="o">=</span> <span class="n">collectionView</span><span class="o">.</span><span class="nf">dequeueReusableCell</span><span class="p">(</span><span class="nv">withReuseIdentifier</span><span class="p">:</span> <span class="s">"Cell"</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="n">indexPath</span><span class="p">)</span> <span class="k">as!</span> <span class="kt">MyCustomCollectionViewCell</span>
+            <span class="n">cell</span><span class="o">.</span><span class="n">textLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">countries</span><span class="p">[</span><span class="n">indexPath</span><span class="o">.</span><span class="n">item</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">cell</span>
+        <span class="p">}</span><span class="o">.</span><span class="n">didSelectItemAt</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">countries</span><span class="p">[</span><span class="nv">$0</span><span class="o">.</span><span class="n">item</span><span class="p">]</span><span class="se">)</span><span class="s"> selected"</span><span class="p">)</span>
+        <span class="p">}</span><span class="o">.</span><span class="nf">reloadData</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='arrays' class='heading'>Arrays</h2>
+
+<p>These operations are common. Usually, they involve populating the <code>UICollectionView</code>
+ with the values from an array. <code>Closures</code> framework gives you a convenient
+ way to pass your array to the collection view, so that it can perform the boilerplate
+ operations for you, especially the ones that are required to make the collection
+ view perform at a basic level.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Please remember that Swift <code>Array</code>s are value types. This means that they
+are copied when mutated. When the values or sequence of your array changes, you will
+need to call <code>addFlowElements</code> again, just before you call reloadData().
+
+</div>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadCollectionView</span><span class="p">(</span><span class="nv">countries</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">collectionView</span>
+        <span class="o">.</span><span class="nf">addFlowElements</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">MyCustomCollectionViewCell</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">country</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">index</span> <span class="k">in</span>
+            <span class="n">cell</span><span class="o">.</span><span class="n">textLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">country</span>
+    <span class="p">}</span><span class="o">.</span><span class="nf">reloadData</span><span class="p">()</span>
+
+    <span class="cm">/**
+     This also allows you to override any default behavior so
+     you aren't overly committed, even though you're initially binding everything
+     to the `Array`.
+     */</span>
+    <span class="n">collectionView</span><span class="o">.</span><span class="n">didSelectItemAt</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">countries</span><span class="p">[</span><span class="nv">$0</span><span class="o">.</span><span class="n">item</span><span class="p">]</span><span class="se">)</span><span class="s"> selected from array"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Common%20Array%20Usage"></a>
+                <a name="//apple_ref/swift/Section/Common Array Usage" class="dashAnchor"></a>
+                <a href="#/Common%20Array%20Usage">
+                  <h3 class="section-name">Common Array Usage</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE15addFlowElementsABXDSayxG_q_m4cellSSSg0G7NibNameyx_q_zSitc4itemtSo0aB4CellCRb_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/addFlowElements(_:cell:cellNibName:item:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15addFlowElementsABXDSayxG_q_m4cellSSSg0G7NibNameyx_q_zSitc4itemtSo0aB4CellCRb_r0_lF">addFlowElements(_:cell:cellNibName:item:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method defaults many of the boilerplate callbacks needed to populate a
+UICollectionView when using an <code>Array</code> as a data source.
+The defaults that this method takes care of:</p>
+
+<ul>
+<li>Registers the cell&rsquo;s class and reuse identifier with a default value</li>
+<li>Optionally uses a cellNibName value to create the cell from a nib file
+from the main bundle</li>
+<li>Handles cell dequeueing and provides a reference to the cell
+in the <code>item</code> closure for you to modify in place.</li>
+<li>Provides the number of sections</li>
+<li>Provides the number of items</li>
+</ul>
+
+<p>This method simply sets basic default behavior. This means that you can
+override the default collection view handlers after this method is called.
+However, remember that order matters. If you call this method after you
+override the <code>numberOfSectionsIn</code> callback, for instance, the closure
+you passed into <code>numberOfSectionsIn</code> will be wiped out by this method
+and you will have to override that closure handler again.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    Please remember that Swift <code>Array</code>s are value types. This means that they
+are copied when mutaded. When the values or sequence of your array changes, you will
+need to call this method again, just before you
+call reloadData(). If you have a lot of collection view customization in addtion to a lot
+of updates to your array, it is more appropriate to use the individual
+closure handlers instead of this method.
+
+</div>
+
+<hr>
+<h4 id='an-example-of-calling-this-method' class='heading'>An example of calling this method:</h4>
+<pre class="highlight swift"><code><span class="n">collectionView</span><span class="o">.</span><span class="nf">addFlowElements</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="n">myArray</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">cell</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">MyUICollectionViewCellClass</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span> <span class="n">element</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> <span class="n">index</span> <span class="k">in</span>
+    <span class="n">cell</span><span class="o">.</span><span class="n">imageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">T</span><span class="err">##</span><span class="nf">someImage</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">element</span><span class="p">)</span><span class="err">##</span><span class="kt">UIImage</span><span class="err">#</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addFlowElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
+        <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+        <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">item</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+        <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>array</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An Array to be used for each item.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cell</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A type of cell to use when calling <code>dequeueReusableCell(withReuseIdentifier:for:)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cellNibName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If non-nil, the cell will be dequeued using a nib with this name from the main bundle</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>item</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that&rsquo;s called when a cell is about to be shown and needs to be configured.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other datasource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Delegate%20and%20DataSource%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/Delegate and DataSource Overrides" class="dashAnchor"></a>
+                <a href="#/Delegate%20and%20DataSource%20Overrides">
+                  <h3 class="section-name">Delegate and DataSource Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldHighlightItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldHighlightItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldHighlightItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18didHighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didHighlightItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18didHighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF">didHighlightItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didHighlightItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didUnhighlightItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF">didUnhighlightItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didUnhighlightItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUnhighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldSelectItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldSelectItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldSelectItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldDeselectItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldDeselectItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldDeselectItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE15didSelectItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didSelectItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15didSelectItemAtABXDy10Foundation9IndexPathVc7handler_tF">didSelectItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didSelectItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE17didDeselectItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didDeselectItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17didDeselectItemAtABXDy10Foundation9IndexPathVc7handler_tF">didDeselectItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didDeselectItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/willDisplay(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">willDisplay(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:willDisplay:forItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplay</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/willDisplaySupplementaryView(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF">willDisplaySupplementaryView(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:willDisplaySupplementaryView:forElementKind:at:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplaySupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didEndDisplaying(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">didEndDisplaying(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didEndDisplaying:forItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplaying</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didEndDisplayingSupplementaryView(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF">didEndDisplayingSupplementaryView(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didEndDisplayingSupplementaryView:forElementOfKind:at:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingSupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldShowMenuForItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldShowMenuForItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldShowMenuForItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldShowMenuForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/canPerformAction(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">canPerformAction(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:canPerformAction:forItemAt:withSender:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canPerformAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/performAction(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">performAction(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:performAction:forItemAt:withSender:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">performAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE0ABXDSo0ab10TransitionE0CSo0abE0C_AHtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/transitionLayoutForOldLayout(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE0ABXDSo0ab10TransitionE0CSo0abE0C_AHtc7handler_tF">transitionLayoutForOldLayout(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:transitionLayoutForOldLayout:newLayout:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">transitionLayoutForOldLayout</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">fromLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="n">_</span> <span class="nv">toLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewTransitionLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE14canFocusItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/canFocusItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14canFocusItemAtABXDSb10Foundation9IndexPathVc7handler_tF">canFocusItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:canFocusItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canFocusItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusInABXDSbSo0abfE7ContextCc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldUpdateFocusIn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusInABXDSbSo0abfE7ContextCc7handler_tF">shouldUpdateFocusIn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldUpdateFocusIn:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16didUpdateFocusInABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didUpdateFocusIn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didUpdateFocusInABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF">didUpdateFocusIn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:didUpdateFocusIn:with:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">,</span> <span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">UIFocusAnimationCoordinator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2InABXD10Foundation05IndexE0VSgyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/indexPathForPreferredFocusedViewIn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2InABXD10Foundation05IndexE0VSgyc7handler_tF">indexPathForPreferredFocusedViewIn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s indexPathForPreferredFocusedVies(in:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForPreferredFocusedViewIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAtABXD10Foundation0eF0VAG_AGtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/targetIndexPathForMoveFromItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAtABXD10Foundation0eF0VAG_AGtc7handler_tF">targetIndexPathForMoveFromItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:targetIndexPathForMoveFromItemAt:toProposedIndexPath:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetIndexPathForMoveFromItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">originalIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proposedIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF0ABXDSC7CGPointVAFc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/targetContentOffsetForProposedContentOffset(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF0ABXDSC7CGPointVAFc7handler_tF">targetContentOffsetForProposedContentOffset(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:targetContentOffsetForProposedContentOffset:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetContentOffsetForProposedContentOffset</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">proposedContentOffset</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldSpringLoadItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF">shouldSpringLoadItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegate&rsquo;s collectionView(_:shouldSpringLoadItemAt:with:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSpringLoadItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UISpringLoadedInteractionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSectionABXDS2ic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/numberOfItemsInSection(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSectionABXDS2ic7handler_tF">numberOfItemsInSection(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:numberOfItemsInSection:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfItemsInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13cellForItemAtABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/cellForItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13cellForItemAtABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF">cellForItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:cellForItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSectionsIn(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF">numberOfSectionsIn(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s numberOfSections(in:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSectionsIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKindABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/viewForSupplementaryElementOfKind(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKindABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc7handler_tF">viewForSupplementaryElementOfKind(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:viewForSupplementaryElementOfKind:at:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForSupplementaryElementOfKind</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13canMoveItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/canMoveItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13canMoveItemAtABXDSb10Foundation9IndexPathVc7handler_tF">canMoveItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:canMoveItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMoveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE10moveItemAtABXDy10Foundation9IndexPathV_AGtc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/moveItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE10moveItemAtABXDy10Foundation9IndexPathV_AGtc7handler_tF">moveItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:moveItemAt:to:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE14indexTitlesForABXDSaySSGyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/indexTitlesFor(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14indexTitlesForABXDSaySSGyc7handler_tF">indexTitlesFor(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s indexTitles(for:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexTitlesFor</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitleABXD10Foundation0gE0VSS_Sitc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/indexPathForIndexTitle(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitleABXD10Foundation0gE0VSS_Sitc7handler_tF">indexPathForIndexTitle(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDataSource&rsquo;s collectionView(_:indexPathForIndexTitle:at:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForIndexTitle</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent dataSource method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other dataSource calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13sizeForItemAtABXDSC6CGSizeV10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/sizeForItemAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13sizeForItemAtABXDSC6CGSizeV10Foundation9IndexPathVc7handler_tF">sizeForItemAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionView(_:layout:sizeForItemAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sizeForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE17insetForSectionAtABXDSC12UIEdgeInsetsVSic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/insetForSectionAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17insetForSectionAtABXDSC12UIEdgeInsetsVSic7handler_tF">insetForSectionAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionV(_:layout:insetForSectionAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">insetForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIEdgeInsets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/minimumLineSpacingForSectionAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF">minimumLineSpacingForSectionAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionView(_:layout:minimumLineSpacingForSectionAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumLineSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/minimumInteritemSpacingForSectionAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF">minimumInteritemSpacingForSectionAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionView(_:layout:minimumInteritemSpacingForSectionAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumInteritemSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSectionABXDSC6CGSizeVSic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/referenceSizeForHeaderInSection(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSectionABXDSC6CGSizeVSic7handler_tF">referenceSizeForHeaderInSection(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionView(_:layout:referenceSizeForHeaderInSection:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSectionABXDSC6CGSizeVSic7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/referenceSizeForFooterInSection(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSectionABXDSC6CGSizeVSic7handler_tF">referenceSizeForFooterInSection(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UICollectionViewDelegateFlowLayout&rsquo;s collectionView(_:layout:referenceSizeForFooterInSection:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Reset"></a>
+                <a name="//apple_ref/swift/Section/Reset" class="dashAnchor"></a>
+                <a href="#/Reset">
+                  <h3 class="section-name">Reset</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Closures@@objc(cs)UICollectionView(im)clearClosureDelegates"></a>
+                    <a name="//apple_ref/swift/Method/clearClosureDelegates()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Closures@@objc(cs)UICollectionView(im)clearClosureDelegates">clearClosureDelegates()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears any delegate/dataSource closures that were assigned to this
+<code>UICollectionView</code>. This cleans up memory as well as sets the
+delegate/dataSource properties to nil. This is typically only used for explicit
+cleanup. You are not required to call this method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2017 Vincent Hesener</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

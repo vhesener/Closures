@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UIImagePickerController Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/UIImagePickerController" class="dashAnchor"></a>
+    <a title="UIImagePickerController Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Closures Docs</a></p>
+        <p class="header-right"><a href="https://github.com/vhesener/Closures"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Closures Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        UIImagePickerController Extension Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIDatePicker.html">UIDatePicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPageControl.html">UIPageControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIStepper.html">UIStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIControl.html">UIControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Scrolling Views.html">Scrolling Views</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Gesture Recognizers.html">Gesture Recognizers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UITapGestureRecognizer.html">UITapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILongPressGestureRecognizer.html">UILongPressGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPinchGestureRecognizer.html">UIPinchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIPanGestureRecognizer.html">UIPanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UISwipeGestureRecognizer.html">UISwipeGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIRotationGestureRecognizer.html">UIRotationGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIScreenEdgePanGestureRecognizer.html">UIScreenEdgePanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Controllers.html">Controllers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController.html">UIImagePickerController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/MediaFilter.html">– MediaFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImagePickerController/Result.html">– Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../KVO.html">KVO</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/_5FKeyValueCodingAndObserving.html">_KeyValueCodingAndObserving</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UIImagePickerController</h1>
+            <p>The following is an example of using closures to
+ select media from a <code>UIImagePickerController</code>.
+ A simple picker is created which defaults to allowing
+ images to be selected from the photos library. This
+ initializer will call the handler when an image is selected.
+ When preseting with the <code>present(from:)</code> method,
+ the <code>UIImagePickerController</code> will dismiss itself on user cancel
+ or after the picker has picked its content (after the closure
+ is called).</p>
+<pre class="highlight swift"><code> <span class="kt">UIImagePickerController</span><span class="p">()</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span><span class="n">picker</span> <span class="k">in</span>
+     <span class="n">myImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">editedImage</span>
+ <span class="p">}</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+<p>You can also customize the picker if you need more control, including
+ setting your own initial values and delegate callbacks.
+ The following is a verbose example using most of the possible
+ customization points.</p>
+<pre class="highlight swift"><code> <span class="kt">UIImagePickerController</span><span class="p">(</span>
+     <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="n">camera</span><span class="p">,</span>
+     <span class="nv">allow</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="o">.</span><span class="n">movie</span><span class="p">],</span>
+     <span class="nv">cameraOverlay</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+     <span class="nv">showsCameraControls</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span><span class="n">picker</span> <span class="k">in</span>
+         <span class="n">myImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">originalImage</span>
+ <span class="p">}</span><span class="o">.</span><span class="n">didCancel</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+     <span class="c1">// some custom didCancel implementation</span>
+     <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="n">animation</span><span class="o">.</span><span class="n">animate</span><span class="p">)</span>
+ <span class="p">}</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Convenient%20Presenting"></a>
+                <a name="//apple_ref/swift/Section/Convenient Presenting" class="dashAnchor"></a>
+                <a href="#/Convenient%20Presenting">
+                  <h3 class="section-name">Convenient Presenting</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresEABSC0abC10SourceTypeO6source_AbCE11MediaFilterV5allowSo6UIViewCSg13cameraOverlaySb19showsCameraControlsyABc9didCancelyAbCE6ResultV_ABtc0Q4Picktcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(source:allow:cameraOverlay:showsCameraControls:didCancel:didPick:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresEABSC0abC10SourceTypeO6source_AbCE11MediaFilterV5allowSo6UIViewCSg13cameraOverlaySb19showsCameraControlsyABc9didCancelyAbCE6ResultV_ABtc0Q4Picktcfc">init(source:allow:cameraOverlay:showsCameraControls:didCancel:didPick:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a convenience initializer that allows you to setup your
+UIImagePickerController with some commonly used default settings.
+In addition, it provides a default handler for a cancelled picker,
+but you are free to provide your own <code>didCancel</code> implementation
+using the <code>didCancel</code> parameter. The only required parameter is
+the <code>didPick</code> closure, which will be called when the user picks
+a medium.</p>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    The picker will not be attempted to be dismissed
+after this closure is called, unless you use the
+<code><a href="../Extensions/UIImagePickerController.html#/s:So23UIImagePickerControllerC8ClosuresE7presentABXDSo06UIViewC0C4from_Sb7animate_yycSg10onCompletet9animationtF">present(from:animation:)</a></code> method.
+
+</div>
+
+<hr>
+<h4 id='an-example-of-initializing-with-this-method' class='heading'>An example of initializing with this method:</h4>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">picker</span> <span class="o">=</span> <span class="kt">UIImagePickerController</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="n">camera</span><span class="p">,</span>
+    <span class="nv">allow</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="o">.</span><span class="n">movie</span><span class="p">])</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">result</span><span class="p">,</span><span class="n">picker</span> <span class="k">in</span>
+        <span class="n">myImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">originalImage</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">dismiss</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="n">animation</span><span class="o">.</span><span class="n">animate</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="kt">UIImagePickerControllerSourceType</span> <span class="o">=</span> <span class="o">.</span><span class="n">photoLibrary</span><span class="p">,</span>
+                            <span class="nv">allow</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="o">.</span><span class="kt"><a href="../Extensions/UIImagePickerController/MediaFilter.html">MediaFilter</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">image</span><span class="p">,</span>
+                            <span class="nv">cameraOverlay</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                            <span class="nv">showsCameraControls</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+                            <span class="nv">didCancel</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span> <span class="n">_</span> <span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="o">=</span> <span class="n">dismissFromPresenting</span><span class="p">,</span>
+                            <span class="nv">didPick</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="o">.</span><span class="kt"><a href="../Extensions/UIImagePickerController/Result.html">Result</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">picker</span><span class="p">:</span> <span class="kt">UIImagePickerController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>source</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>UIImagePickerControllerSourceType</code> that
+UIImagePickerController expects to determine where the content
+should be obtained from. This value will be applied to the
+picker&rsquo;s <code>sourceType</code> property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allow</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A convenience <code>OptionSet</code> filter based on <code>kUTType</code> Strings.
+These types will be applied to the picker&rsquo;s mediaTypes property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cameraOverlay</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is equivalent to <code>UIImagePickerController</code>&lsquo;s
+<code>cameraOverlayView</code> property and will be applied as such.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>showsCameraControls</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This is equivalent to <code>UIImagePickerController</code>&lsquo;s
+<code>showsCameraControls</code> property and will be applied as such.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>didCancel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the <code>didCancel</code> delegate
+method is called. The default is to attempt to dismiss the picker.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>didPick</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the
+imagePickerController(_:didFinishPickingMediaWithInfo:) is called.
+The closure conveniently wraps the Dictionary obtained from this
+delegate call in a <code>Result</code> struct. The original Dictionary can
+be found in the <code>rawInfo</code> property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresE7presentABXDSo06UIViewC0C4from_Sb7animate_yycSg10onCompletet9animationtF"></a>
+                    <a name="//apple_ref/swift/Method/present(from:animation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresE7presentABXDSo06UIViewC0C4from_Sb7animate_yycSg10onCompletet9animationtF">present(from:animation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience method that will present the UIImagePickerController. It will
+also do the following as default behavior, which can be overriden at anytime:</p>
+
+<ol>
+<li>Default the didCancel callback to dismiss the picker.</li>
+<li>Call the didFinishPickingMedia handler if one was set previously, usually
+from the convenience initiaizer&rsquo;s <code>didPick</code> parameter or by calling
+the <code>didFinishPickingMedia(_:)</code> method.</li>
+<li>Dismiss the picker after calling the <code>didFinishPickingMedia</code> handler.</li>
+</ol>
+
+<hr>
+<h4 id='an-example-of-calling-this-method-using-the-convenience-initializer' class='heading'>An example of calling this method using the convenience initializer:</h4>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">picker</span> <span class="o">=</span> <span class="kt">UIImagePickerController</span><span class="p">(</span>
+    <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="n">photoLibrary</span><span class="p">,</span>
+    <span class="nv">allow</span><span class="p">:</span> <span class="o">.</span><span class="n">image</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span><span class="n">_</span> <span class="k">in</span>
+        <span class="n">myImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">originalImage</span>
+<span class="p">}</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="n">from</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animation</span><span class="p">:</span> <span class="p">(</span><span class="nv">animate</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">onComplete</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span> <span class="o">=</span> <span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="kc">nil</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>viewController</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view controller that is able to present the
+picker. This view controller is also used to dismiss the picker for the default
+dismissing behavior.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An animation info tuple that describes whether to
+animate the presenting and what to do after the animation is complete.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Delegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/Delegate Overrides" class="dashAnchor"></a>
+                <a href="#/Delegate%20Overrides">
+                  <h3 class="section-name">Delegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresE21didFinishPickingMediaABXDys10DictionaryVySSypGc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didFinishPickingMedia(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresE21didFinishPickingMediaABXDys10DictionaryVySSypGc7handler_tF">didFinishPickingMedia(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UIImagePickerControllerDelegate&rsquo;s imagePickerController(_:didFinishPickingMediaWithInfo:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didFinishPickingMedia</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">withInfo</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresE9didCancelABXDyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/didCancel(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresE9didCancelABXDyyc7handler_tF">didCancel(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UIImagePickerControllerDelegate&rsquo;s imagePickerControllerDidCancel(_:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didCancel</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Helper%20Types"></a>
+                <a name="//apple_ref/swift/Section/Helper Types" class="dashAnchor"></a>
+                <a href="#/Helper%20Types">
+                  <h3 class="section-name">Helper Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresE11MediaFilterV"></a>
+                    <a name="//apple_ref/swift/Struct/MediaFilter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresE11MediaFilterV">MediaFilter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A wrapper around <code>kUTType</code>. Eventually these will
+be replaced by Apple with a Swifty enum, but until
+then, this simply wraps these values in a strongly
+typed <code>OptionSet</code>. You can use these when deciding
+which media types you want the user to select from
+the <code>UIImagePickerController</code> using the
+<code>init(source:allow:cameraOverlay:showsCameraControls:didPick:)</code>
+initializer.</p>
+
+<p>Since it is an <code>OptionSet</code>, you can use array literal
+syntax to describe more than one media type.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">picker</span> <span class="o">=</span> <span class="kt">UIImagePickerController</span><span class="p">(</span><span class="nv">allow</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="o">.</span><span class="n">movie</span><span class="p">])</span> <span class="p">{</span><span class="n">_</span><span class="p">,</span><span class="n">_</span> <span class="k">in</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="../Extensions/UIImagePickerController/MediaFilter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MediaFilter</span><span class="p">:</span> <span class="kt">OptionSet</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So23UIImagePickerControllerC8ClosuresE6ResultV"></a>
+                    <a name="//apple_ref/swift/Struct/Result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So23UIImagePickerControllerC8ClosuresE6ResultV">Result</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This result object is a only a wrapper around the loosely
+typed Dictionary returned from <code>UIImagePickerController</code>&lsquo;s
+<code>-imagePickerController:didFinishPickingMediaWithInfo:</code> delegate
+method. When using the
+<code>init(source:allow:cameraOverlay:showsCameraControls:didPick:)</code>
+initializer, the <code>didPick</code> closure passes this convenience struct.
+If the original Dictionary is needed, it can be found in the
+<code>rawInfo</code> property.</p>
+
+                        <a href="../Extensions/UIImagePickerController/Result.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Result</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Reset"></a>
+                <a name="//apple_ref/swift/Section/Reset" class="dashAnchor"></a>
+                <a href="#/Reset">
+                  <h3 class="section-name">Reset</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Closures@@objc(cs)UIImagePickerController(im)clearClosureDelegates"></a>
+                    <a name="//apple_ref/swift/Method/clearClosureDelegates()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Closures@@objc(cs)UIImagePickerController(im)clearClosureDelegates">clearClosureDelegates()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clears any delegate closures that were assigned to this
+<code>UIImagePickerController</code>. This cleans up memory as well as sets the
+<code>delegate</code> property to nil. This is typically only used for explicit
+cleanup. You are not required to call this method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2017 Vincent Hesener</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

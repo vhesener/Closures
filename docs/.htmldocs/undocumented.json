@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/vhesener/Documents/xcode/Closures/Xcode/Closures/Core.swift",
+      "line": 29,
+      "symbol": "DelegatorProtocol",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vhesener/Documents/xcode/Closures/Xcode/Closures/KVO.swift",
+      "line": 24,
+      "symbol": "NSObject.selfDeinits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vhesener/Documents/xcode/Closures/Xcode/Closures/UIImagePickerController.swift",
+      "line": 122,
+      "symbol": "UIImagePickerController.dismissFromPresenting(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/vhesener/Documents/xcode/Closures/Xcode"
+}

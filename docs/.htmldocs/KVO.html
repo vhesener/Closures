@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KVO  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="KVO  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Closures Docs</a></p>
+        <p class="header-right"><a href="https://github.com/vhesener/Closures"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Closures Reference</a>
+        <img id="carat" src="img/carat.png" />
+        KVO  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Controls.html">Controls</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISwitch.html">UISwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIDatePicker.html">UIDatePicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPageControl.html">UIPageControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISegmentedControl.html">UISegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIStepper.html">UIStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISlider.html">UISlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIControl.html">UIControl</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Scrolling Views.html">Scrolling Views</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UITableView.html">UITableView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UICollectionView.html">UICollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPickerView.html">UIPickerView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScrollView.html">UIScrollView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Gesture Recognizers.html">Gesture Recognizers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIGestureRecognizer.html">UIGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UITapGestureRecognizer.html">UITapGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UILongPressGestureRecognizer.html">UILongPressGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPinchGestureRecognizer.html">UIPinchGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIPanGestureRecognizer.html">UIPanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UISwipeGestureRecognizer.html">UISwipeGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIRotationGestureRecognizer.html">UIRotationGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIScreenEdgePanGestureRecognizer.html">UIScreenEdgePanGestureRecognizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIView.html">UIView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Controllers.html">Controllers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController.html">UIImagePickerController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController/MediaFilter.html">– MediaFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/UIImagePickerController/Result.html">– Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="KVO.html">KVO</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/_5FKeyValueCodingAndObserving.html">_KeyValueCodingAndObserving</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>KVO</h1>
+            <p>The Foundation team at Apple has made great
+ strides to become more closuresque, and Swift
+ 4 has truly proved that with KVO updates.</p>
+
+<p>The API is almost perfect so there isn&rsquo;t too
+ much to add. There is only one convenience
+ method to improve some of the boiler plate
+ code for a typical use case.</p>
+
+<p>The existing API requires you to save the observer
+ and store it for the duration of the observation.
+ Not bad, but with a little polish we can set and
+ forget. Although it looks like more effort to
+ provide a conditional remove handler, with the
+ helper var <code>selfDeinits</code> on every NSObject,
+ we don&rsquo;t have to hold onto distracting observer
+ variables in our view controllers.</p>
+
+<p>In this example we&rsquo;ll observe the <code>text</code>
+ property of a UITextField.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textField</span> <span class="o">=</span> <span class="kt">UITextField</span><span class="p">()</span>
+<span class="kd">class</span> <span class="kt">MyClass</span><span class="p">:</span> <span class="kt">NSObject</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span> <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">()</span>
+        <span class="n">textField</span><span class="o">.</span><span class="nf">observe</span><span class="p">(</span><span class="err">\</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="nv">until</span><span class="p">:</span> <span class="n">selfDeinits</span><span class="p">)</span> <span class="p">{</span> <span class="n">obj</span><span class="p">,</span><span class="n">change</span> <span class="k">in</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"Observed the change to </span><span class="se">\"\(</span><span class="n">obj</span><span class="o">.</span><span class="n">text</span><span class="o">!</span><span class="se">)\"</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">var</span> <span class="nv">myObject</span><span class="p">:</span> <span class="kt">MyClass</span><span class="p">?</span> <span class="o">=</span> <span class="kt">MyClass</span><span class="p">()</span>
+<span class="n">textField</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"🐒"</span> <span class="c1">// this will be observed</span>
+<span class="n">myObject</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="n">textField</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"This will NOT be observed"</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Foundation27_KeyValueCodingAndObservingP"></a>
+                    <a name="//apple_ref/swift/Extension/_KeyValueCodingAndObserving" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Foundation27_KeyValueCodingAndObservingP">_KeyValueCodingAndObserving</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Extensions/_5FKeyValueCodingAndObserving.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>2017 Vincent Hesener</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
