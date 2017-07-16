@@ -158,9 +158,7 @@
 <h2 id='a-href-usage-overview-usage-overview-a' class='heading'><a href="#usage-overview">Usage Overview</a></h2>
 <h3 id='strong-convenient-closures-strong' class='heading'><strong>Convenient Closures</strong></h3>
 
-<!--- TODO: Controls doc url -->
-
-<p>Some days, you just feel like dealing with <a href="https://google.com">UIControl</a>&lsquo;s target-action using a closure instead.</p>
+<p>Some days, you just feel like dealing with <a href="https://vhesener.github.io/Closures/Controls.html">UIControl</a>&lsquo;s target-action using a closure instead.</p>
 <pre class="highlight swift"><code><span class="n">button</span><span class="o">.</span><span class="n">onTap</span> <span class="p">{</span>
     <span class="c1">// UIButton tapped code</span>
 <span class="p">}</span>
@@ -172,9 +170,7 @@
 
 <hr>
 
-<!--- TODO: Gesture Recognizers doc url -->
-
-<p>Adding a <a href="https://google.com">gesture recognizer</a> can be compacted into one method.</p>
+<p>Adding a <a href="https://vhesener.github.io/Closures/Gesture%20Recognizers.html">gesture recognizer</a> can be compacted into one method.</p>
 <pre class="highlight swift"><code><span class="n">view</span><span class="o">.</span><span class="nf">addPanGesture</span><span class="p">()</span> <span class="p">{</span> <span class="n">pan</span> <span class="k">in</span>
     <span class="c1">// UIPanGesutreRecognizer recognized code</span>
 <span class="p">}</span>
@@ -199,9 +195,7 @@
 <hr>
 <h3 id='strong-daisy-chaining-strong' class='heading'><strong>Daisy Chaining</strong></h3>
 
-<!--- TODO: UITextField doc url -->
-
-<p>Almost all convenience methods allow for the use of <a href="https://en.wikipedia.org/wiki/Method_chaining">daisy chaining</a>. This allows us to have some nice syntax sugar while implementing optional delegate methods in a consise way. Using <a href="https://google.com">UITextField</a> as an example, we can organize and visualize all of the <code>UITextFieldDelegate</code> behavior.</p>
+<p>Almost all convenience methods allow for the use of <a href="https://en.wikipedia.org/wiki/Method_chaining">daisy chaining</a>. This allows us to have some nice syntax sugar while implementing optional delegate methods in a consise way. Using <a href="https://vhesener.github.io/Closures/Extensions/UITextField.html">UITextField</a> as an example, we can organize and visualize all of the <code>UITextFieldDelegate</code> behavior.</p>
 <pre class="highlight swift"><code><span class="n">textField</span>
     <span class="o">.</span><span class="n">didBeginEditing</span> <span class="p">{</span>
         <span class="c1">// UITextField did begin editing code</span>
@@ -216,9 +210,7 @@
 <hr>
 <h3 id='strong-retain-control-strong' class='heading'><strong>Retain Control</strong></h3>
 
-<!--- TODO: UITableView doc url -->
-
-<p>At no time are you locked into using these convenience methods. For instance, <a href="https://google.com">UITableView</a> does not need to be populated with an array. You can just as easily provide your own <code>UITableViewDelegate</code> and <code>UITableViewDataSource</code> handlers.</p>
+<p>At no time are you locked into using these convenience methods. For instance, <a href="https://vhesener.github.io/Closures/Extensions/UITableView.html">UITableView</a> does not need to be populated with an array. You can just as easily provide your own <code>UITableViewDelegate</code> and <code>UITableViewDataSource</code> handlers.</p>
 <pre class="highlight swift"><code><span class="n">tableView</span><span class="o">.</span><span class="nf">register</span><span class="p">(</span><span class="kt">MyTableViewCell</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">forCellReuseIdentifier</span><span class="p">:</span> <span class="s">"Cell"</span><span class="p">)</span>
 <span class="n">tableView</span>
     <span class="o">.</span><span class="n">numberOfRows</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
@@ -234,10 +226,8 @@
 
 <hr>
 
-<!--- TODO: UIControl doc url -->
-
 <p>You aren&rsquo;t limited to which delegate/dataSource methods you wish to implement. Similarly, you can act on any
-<a href="https://google.com">UIControl</a> events.</p>
+<a href="https://vhesener.github.io/Closures/Extensions/UIControl.html#/s:So9UIControlC8ClosuresE2onABXDSC0A6EventsV_yAB_So7UIEventCSgtc7handlertF">UIControl</a> events.</p>
 <pre class="highlight swift"><code><span class="n">anyControl</span><span class="o">.</span><span class="nf">on</span><span class="p">(</span><span class="o">.</span><span class="n">touchDown</span><span class="p">)</span> <span class="p">{</span> <span class="n">control</span><span class="p">,</span> <span class="n">event</span> <span class="k">in</span>
     <span class="c1">// UIControlEvents.touchDown event code</span>
 <span class="p">}</span>
@@ -245,9 +235,7 @@
 
 <hr>
 
-<!--- TODO: UIImagePickerController doc url -->
-
-<p>These two <a href="https://google.com">UIImagePickerController</a> snippets are equivalent. As you can see, there are lots of ways to provide more granular control by mixing and match various convenience methods and closure handlers.</p>
+<p>These two <a href="https://vhesener.github.io/Closures/Extensions/UIImagePickerController.html">UIImagePickerController</a> snippets are equivalent. As you can see, there are lots of ways to provide more granular control by mixing and match various convenience methods and closure handlers.</p>
 <pre class="highlight swift"><code><span class="kt">UIImagePickerController</span><span class="p">(</span><span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="n">camera</span><span class="p">,</span> <span class="nv">allow</span><span class="p">:</span> <span class="o">.</span><span class="n">image</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span><span class="p">,</span> <span class="n">picker</span> <span class="k">in</span>
     <span class="n">myImageView</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">editedImage</span>
 <span class="p">}</span><span class="o">.</span><span class="nf">present</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
@@ -279,11 +267,9 @@
 <hr>
 <h3 id='table-cellspacing-5-cellpadding-0-border-0-bordercolor-00ffffff-tr-td-img-src-https-raw-githubusercontent-com-vhesener-closures-assets-assets-reference_icon-png-width-50-height-50-td-td-valign-center-strong-class-reference-documentation-strong-td-tr-table' class='heading'><table cellspacing="5" cellpadding="0" border="0" bordercolor="#00FFFFFF"><tr><td><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_Icon.png" width="50" height="50"/></td><td valign="center"><strong>Class Reference Documentation</strong></td></tr></table></h3>
 
-<!--- TODO: reference url -->
+<p>The <a href="https://vhesener.github.io/Closures">Reference Documentation</a> has all of the detailed usage information including all the public methods, parameters, and convenience initializers.</p>
 
-<p>The <a href="https://google.com">Reference Documentation</a> has all of the detailed usage information including all the public methods, parameters, and convenience initializers.</p>
-
-<p><a href="https://google.com"><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_large.png" alt="Class Reference Documentation"></a></p>
+<p><a href="https://vhesener.github.io/Closures"><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_large.png" alt="Class Reference Documentation"></a></p>
 
 <hr>
 <h2 id='a-href-installation-installation-a' class='heading'><a href="#installation">Installation</a></h2>
