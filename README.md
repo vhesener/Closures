@@ -134,14 +134,14 @@ self.present(pickerController, animated: true)
 There are several ways to learn more about the `Closures`<sup><sup>beta</sup></sup> API, depending on your learning style. Some just like to open up Xcode and use autocomplete to view the various properties/functions. Others prefer a more documented approach. Below are some documentation options.
 
 ***
-### <table cellspacing="5" cellpadding="0" border="0" bordercolor="#00FFFFFF"><tr><td><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_Icon.png" width="50" height="50"/></td><td valign="center">**Playground**</td></tr></table>
+### <img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_Icon.png" width="50" height="50"/> &nbsp;&nbsp; **Playground**
 
 To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the `Closures` workspace (Closures.xcworkspace file), build the `Closures`<sup><sup>beta</sup></sup> framework target, then click on the `Closures Demo` playground. Be sure to show the Assistant Editor and Live View as shown below:
 
 ![Playgrounds](https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general.gif)
 
 ***
-### <table cellspacing="5" cellpadding="0" border="0" bordercolor="#00FFFFFF"><tr><td><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_Icon.png" width="50" height="50"/></td><td valign="center">**Class Reference Documentation**</td></tr></table>
+### <img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_Icon.png" width="50" height="50"/> &nbsp;&nbsp; **Class Reference Documentation**
 
 The [Reference Documentation](https://vhesener.github.io/Closures) has all of the detailed usage information including all the public methods, parameters, and convenience initializers.
 
@@ -170,7 +170,7 @@ github "vhesener/Closures"
 ### **Manual**
 
 Download or clone the project files found in the [master branch](https://github.com/vhesener/Closures). Drag and drop
-all .swift files located in the 'Closures' subdirectory into your Xcode project. Check the option *Copy items
+all .swift files located in the 'Closures/Source' subdirectory into your Xcode project. Check the option *Copy items
 if needed*. 
 
 ***
