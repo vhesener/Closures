@@ -1,0 +1,50 @@
+clean: true
+output: "../../docs/"
+min_acl: public
+author: Vinnie Hesener
+copyright: 2017 Vincent Hesener
+author_url: https://git.io/vQ6dA
+github_url: https://github.com/vhesener/Closures
+sdk: iphone
+skip_undocumented: true
+hide_documentation_coverage: true
+use_safe_filenames: true
+readme: "../../README.md"
+module: Closures
+abstract: "../Supporting/jazzy/abstracts/*.md"
+custom_categories:
+  - name: Controls
+    children:
+    - UIButton
+    - UISwitch
+    - UITextField
+    - UIDatePicker
+    - UIPageControl
+    - UISegmentedControl
+    - UIStepper
+    - UISlider
+    - UIControl
+  - name: Scrolling Views
+    children:
+      - UITableView
+      - UICollectionView
+      - UIPickerView
+      - UIScrollView
+  - name: Gesture Recognizers
+    children:
+      - UIGestureRecognizer
+      - UITapGestureRecognizer
+      - UILongPressGestureRecognizer
+      - UIPinchGestureRecognizer
+      - UIPanGestureRecognizer
+      - UISwipeGestureRecognizer
+      - UIRotationGestureRecognizer
+      - UIScreenEdgePanGestureRecognizer
+      - UIView
+      - "configure(gesture:handler:)"
+  - name: Controllers
+    children:
+      - UIImagePickerController
+  - name: KVO
+    children:
+      - _KeyValueCodingAndObserving

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionViewDemoViewController">
+            <connections>
+                <outlet property="collectionView" destination="NGI-55-KAK" id="MDj-0Q-WMd"/>
+                <outlet property="segmentedControl" destination="1ah-Cb-Xhu" id="WwS-t9-h18"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gDd-xQ-72k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-55-KAK">
+                    <rect key="frame" x="8" y="40" width="359" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1bL-7t-6Qc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1ah-Cb-Xhu">
+                    <rect key="frame" x="109.5" y="4" width="157" height="29"/>
+                    <segments>
+                        <segment title="Traditional"/>
+                        <segment title="Array"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NGI-55-KAK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="3eW-bG-VKW"/>
+                <constraint firstAttribute="bottom" secondItem="NGI-55-KAK" secondAttribute="bottom" id="FiE-FQ-chN"/>
+                <constraint firstItem="1ah-Cb-Xhu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="HXr-Mm-utv"/>
+                <constraint firstAttribute="trailingMargin" secondItem="NGI-55-KAK" secondAttribute="trailing" id="tEg-3o-Bhv"/>
+                <constraint firstItem="NGI-55-KAK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="40" id="tFA-jw-0Px"/>
+                <constraint firstItem="1ah-Cb-Xhu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ygj-P7-FnK"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
