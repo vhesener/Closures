@@ -154,7 +154,6 @@ The [Reference Documentation](https://vhesener.github.io/Closures) has all of th
 
 If using [CocoaPods](https://cocoapods.org/), add the following to your Podfile:
 
-<!--- TODO: real pod name -->
 ```ruby
 pod 'Closures'
 ```

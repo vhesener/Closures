@@ -20,8 +20,6 @@
 
 import Foundation
 
-// TODO: CocoaPods, Carthage, SPM
-
 protocol DelegateProtocol: class {
 }
 
