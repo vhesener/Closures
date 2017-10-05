@@ -4,12 +4,12 @@
 [![License](https://img.shields.io/github/license/vhesener/Closures.svg?style=plastic&colorB=68B7EB)]()
 [![Release](https://img.shields.io/github/release/vhesener/Closures.svg?style=plastic&colorB=68B7EB)]()
 
-`Closures`<sup><sup>beta</sup></sup> is an iOS Framework that adds [closure](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html) handlers to many of the popular UIKit and Foundation classes. Although this framework is a substitute for some Cocoa Touch design patterns, such as [Delegation & Data Sources](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html) and [Target-Action](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html), the authors make no claim regarding which is a *better* way to accomplish the same type of task. Most of the time it is a matter of style, preference, or convenience that will determine if any of these closure extensions are beneficial.
+`Closures` is an iOS Framework that adds [closure](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Closures.html) handlers to many of the popular UIKit and Foundation classes. Although this framework is a substitute for some Cocoa Touch design patterns, such as [Delegation & Data Sources](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html) and [Target-Action](https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html), the authors make no claim regarding which is a *better* way to accomplish the same type of task. Most of the time it is a matter of style, preference, or convenience that will determine if any of these closure extensions are beneficial.
 
 Whether you're a functional purist, dislike a particular API, or simply just want to organize your code a little bit, you might enjoy using this library.
 
 > ***<sub>note</sub>*** <br/>
-> `Closures`<sup><sup>beta</sup></sup> currently only supports projects written in **Swift 4.0**+. 
+> `Closures` currently only supports projects written in **Swift 4.0**+. 
 
 ***
 ## [Usage Overview](#usage-overview)
@@ -131,12 +131,12 @@ self.present(pickerController, animated: true)
 ***
 ## [Dive Deeper](#dive-deeper)
 
-There are several ways to learn more about the `Closures`<sup><sup>beta</sup></sup> API, depending on your learning style. Some just like to open up Xcode and use autocomplete to view the various properties/functions. Others prefer a more documented approach. Below are some documentation options.
+There are several ways to learn more about the `Closures` API, depending on your learning style. Some just like to open up Xcode and use autocomplete to view the various properties/functions. Others prefer a more documented approach. Below are some documentation options.
 
 ***
 ### <img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_Icon.png" width="50" height="50"/> &nbsp;&nbsp; **Playground**
 
-To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the `Closures` workspace (Closures.xcworkspace file), build the `Closures`<sup><sup>beta</sup></sup> framework target, then click on the `Closures Demo` playground. Be sure to show the Assistant Editor and Live View as shown below:
+To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the `Closures` workspace (Closures.xcworkspace file), build the `Closures` framework target, then click on the `Closures Demo` playground. Be sure to show the Assistant Editor and Live View as shown below:
 
 ![Playgrounds](https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general.gif)
 
