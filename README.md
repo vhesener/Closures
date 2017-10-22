@@ -64,7 +64,7 @@ pickerView.addStrings(myStrings) { title, component, row in
 ***
 ### **Daisy Chaining**
 
-Almost all convenience methods allow for the use of [daisy chaining](https://en.wikipedia.org/wiki/Method_chaining). This allows us to have some nice syntax sugar while implementing optional delegate methods in a consise way. Using [UITextField](https://vhesener.github.io/Closures/Extensions/UITextField.html) as an example, we can organize and visualize all of the `UITextFieldDelegate` behavior.
+Almost all convenience methods allow for the use of [daisy chaining](https://en.wikipedia.org/wiki/Method_chaining). This allows us to have some nice syntax sugar while implementing optional delegate methods in a concise way. Using [UITextField](https://vhesener.github.io/Closures/Extensions/UITextField.html) as an example, we can organize and visualize all of the `UITextFieldDelegate` behavior.
 
 ```swift
 textField
@@ -184,7 +184,7 @@ constraints:
 There are many reasons for this, but mostly because 
 	* It was arbitrarily challenging.
 	* It was in the spirit of Swift.
-* Create a scalable mechanism to easily add addtional closure wrappers in the future.
+* Create a scalable mechanism to easily add additional closure wrappers in the future.
 
 It is our goal to become irrelevant via [sherlock](http://www.urbandictionary.com/define.php?term=sherlocked).
 In addition to not having to support this library anymore, it would actually be flattering
