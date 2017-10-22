@@ -11,7 +11,8 @@ hide_documentation_coverage: true
 use_safe_filenames: true
 readme: "../../README.md"
 module: Closures
-abstract: "../Supporting/jazzy/abstracts/*.md"
+abstract: "abstracts/*.md"
+source_directory: "../../Xcode"
 custom_categories:
   - name: Controls
     children:
