@@ -68,13 +68,13 @@ Almost all convenience methods allow for the use of [daisy chaining](https://en.
 
 ```swift
 textField
-	.didBeginEditing {
-		// UITextField did begin editing code
-	}.shouldClear {
+    .didBeginEditing {
+        // UITextField did begin editing code
+    }.shouldClear {
         true
- 	}.shouldChangeCharacters { range, string in
-   		// some custom character change code
-   		return false
+    }.shouldChangeCharacters { range, string in
+        // some custom character change code
+        return false
 }
 ```
 ***
@@ -113,7 +113,7 @@ These two [UIImagePickerController](https://vhesener.github.io/Closures/Extensio
 	
 ```swift
 UIImagePickerController(source: .camera, allow: .image) { result, picker in
-	myImageView.image = result.editedImage
+    myImageView.image = result.editedImage
 }.present(from: self)
 ```
 ```swift
@@ -121,10 +121,10 @@ let pickerController = UIImagePickerController()
 pickerController.sourceType = .camera
 pickerController.mediaTypes = [kUTTypeImage]
 pickerController.didFinishPickingMedia { [weak self] info in
-	myImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
-	self?.dismiss(animated: true)
+    myImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+    self?.dismiss(animated: true)
 }.didCancel { [weak self] in
-	self?.dismiss(animated: true)
+    self?.dismiss(animated: true)
 }
 self.present(pickerController, animated: true)
 ```
