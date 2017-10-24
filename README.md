@@ -64,17 +64,17 @@ pickerView.addStrings(myStrings) { title, component, row in
 ***
 ### **Daisy Chaining**
 
-Almost all convenience methods allow for the use of [daisy chaining](https://en.wikipedia.org/wiki/Method_chaining). This allows us to have some nice syntax sugar while implementing optional delegate methods in a consise way. Using [UITextField](https://vhesener.github.io/Closures/Extensions/UITextField.html) as an example, we can organize and visualize all of the `UITextFieldDelegate` behavior.
+Almost all convenience methods allow for the use of [daisy chaining](https://en.wikipedia.org/wiki/Method_chaining). This allows us to have some nice syntax sugar while implementing optional delegate methods in a concise way. Using [UITextField](https://vhesener.github.io/Closures/Extensions/UITextField.html) as an example, we can organize and visualize all of the `UITextFieldDelegate` behavior.
 
 ```swift
 textField
-	.didBeginEditing {
-		// UITextField did begin editing code
-	}.shouldClear {
+    .didBeginEditing {
+        // UITextField did begin editing code
+    }.shouldClear {
         true
- 	}.shouldChangeCharacters { range, string in
-   		// some custom character change code
-   		return false
+    }.shouldChangeCharacters { range, string in
+        // some custom character change code
+        return false
 }
 ```
 ***
@@ -113,7 +113,7 @@ These two [UIImagePickerController](https://vhesener.github.io/Closures/Extensio
 	
 ```swift
 UIImagePickerController(source: .camera, allow: .image) { result, picker in
-	myImageView.image = result.editedImage
+    myImageView.image = result.editedImage
 }.present(from: self)
 ```
 ```swift
@@ -121,10 +121,10 @@ let pickerController = UIImagePickerController()
 pickerController.sourceType = .camera
 pickerController.mediaTypes = [kUTTypeImage]
 pickerController.didFinishPickingMedia { [weak self] info in
-	myImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
-	self?.dismiss(animated: true)
+    myImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+    self?.dismiss(animated: true)
 }.didCancel { [weak self] in
-	self?.dismiss(animated: true)
+    self?.dismiss(animated: true)
 }
 self.present(pickerController, animated: true)
 ```
@@ -184,7 +184,7 @@ constraints:
 There are many reasons for this, but mostly because 
 	* It was arbitrarily challenging.
 	* It was in the spirit of Swift.
-* Create a scalable mechanism to easily add addtional closure wrappers in the future.
+* Create a scalable mechanism to easily add additional closure wrappers in the future.
 
 It is our goal to become irrelevant via [sherlock](http://www.urbandictionary.com/define.php?term=sherlocked).
 In addition to not having to support this library anymore, it would actually be flattering
