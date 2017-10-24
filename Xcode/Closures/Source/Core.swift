@@ -105,12 +105,28 @@ extension NotificationCenter {
     func selfObserve<T>(name: Notification.Name,
                         target: T,
                         closure: @escaping (_ target: T, _ userInfo: [AnyHashable : Any]?) -> Void) where T: AnyObject {
+        
+        // Post a cleanup notification to remove any duplicates
+        let cleanupKey = "com.vhesener.notificationkey.selfobserved.cleanup"
+        post(name: name, object: target, userInfo: [cleanupKey: target])
+        
         var observer: NSObjectProtocol?
         observer = addObserver(
             forName: name,
+            // Can't use the object for this parameter. Since the object
+            // is the one sending the post, it will never clean up. The observer
+            // will always stay in the notification center and I'm not sure of
+            // the concequences of that yet.
             object: nil,
             queue: nil) { [weak target, weak self] in
-                // Cleanup opportunity for this notification name.
+                // Cleanup any notification with this name;target combo
+                if let cleanupTarget = $0.userInfo?[cleanupKey] as? T {
+                    if cleanupTarget === target,
+                        $0.name == name {
+                        self?.removeObserver(observer!)
+                    }
+                    return
+                }
                 // Remove if target is nil (target-action on self is fruitless)
                 guard let target = target else {
                     self?.removeObserver(observer!)
