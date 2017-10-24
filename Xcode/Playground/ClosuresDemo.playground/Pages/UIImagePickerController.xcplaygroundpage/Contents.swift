@@ -42,3 +42,7 @@ import Closures
  }.present(from: self)
  ```
  */
+
+//: * * * *
+//: [Click here to explore using **UIBarButtonItem** closures](@next)
+//: * * * *

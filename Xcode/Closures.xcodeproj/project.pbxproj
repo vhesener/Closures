@@ -25,6 +25,8 @@
 		3F7620EF1D849B5000E17BF5 /* Closures.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7620E11D849B5000E17BF5 /* Closures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FB42D941F01A97700740CB0 /* UIImagePickerControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB42D931F01A97700740CB0 /* UIImagePickerControllerTests.swift */; };
 		3FB77F311EE4DB5200C60F5C /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB77F301EE4DB5200C60F5C /* UITableViewTests.swift */; };
+		3FD393C61F9E583900DA155D /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD393C51F9E583900DA155D /* UIBarButtonItem.swift */; };
+		3FD393C81F9E61A900DA155D /* UIBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD393C71F9E61A900DA155D /* UIBarButtonItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		3F7620EE1D849B5000E17BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FB42D931F01A97700740CB0 /* UIImagePickerControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerTests.swift; sourceTree = "<group>"; };
 		3FB77F301EE4DB5200C60F5C /* UITableViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
+		3FD393C51F9E583900DA155D /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		3FD393C71F9E61A900DA155D /* UIBarButtonItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 				3F59C56A1F1C32AA00945666 /* UICollectionView.swift */,
 				3F59C56B1F1C32AA00945666 /* UIControl.swift */,
 				3F59C56C1F1C32AA00945666 /* UIGestureRecognizer.swift */,
+				3FD393C51F9E583900DA155D /* UIBarButtonItem.swift */,
 				3F59C56D1F1C32AA00945666 /* UIImagePickerController.swift */,
 				3F59C56E1F1C32AA00945666 /* UIPickerView.swift */,
 				3F59C56F1F1C32AA00945666 /* UIScrollView.swift */,
@@ -127,6 +132,7 @@
 		3F7620EB1D849B5000E17BF5 /* ClosuresTests */ = {
 			isa = PBXGroup;
 			children = (
+				3FD393C71F9E61A900DA155D /* UIBarButtonItemTests.swift */,
 				3FB42D931F01A97700740CB0 /* UIImagePickerControllerTests.swift */,
 				3F55FC3C1EFD6D5E001ED560 /* UIPickerViewTests.swift */,
 				3F1F3D211EF8E54300A62BF2 /* UIGestureRecognizerTests.swift */,
@@ -257,6 +263,7 @@
 				3F59C5751F1C32BF00945666 /* UIGestureRecognizer.swift in Sources */,
 				3F59C5711F1C32BF00945666 /* Core.swift in Sources */,
 				3F59C5791F1C32BF00945666 /* UITableView.swift in Sources */,
+				3FD393C61F9E583900DA155D /* UIBarButtonItem.swift in Sources */,
 				3F59C5781F1C32BF00945666 /* UIScrollView.swift in Sources */,
 				3F59C5761F1C32BF00945666 /* UIImagePickerController.swift in Sources */,
 				3F59C5771F1C32BF00945666 /* UIPickerView.swift in Sources */,
@@ -273,6 +280,7 @@
 				3F1F3D221EF8E54300A62BF2 /* UIGestureRecognizerTests.swift in Sources */,
 				3F7620ED1D849B5000E17BF5 /* UIControlTests.swift in Sources */,
 				3FB77F311EE4DB5200C60F5C /* UITableViewTests.swift in Sources */,
+				3FD393C81F9E61A900DA155D /* UIBarButtonItemTests.swift in Sources */,
 				3F5B9E411F0003C500B8555C /* KVOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

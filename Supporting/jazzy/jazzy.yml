@@ -25,6 +25,7 @@ custom_categories:
     - UIStepper
     - UISlider
     - UIControl
+    - UIBarButtonItem
   - name: Scrolling Views
     children:
       - UITableView
