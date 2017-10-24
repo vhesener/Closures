@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UIGestureRecognizer Extension Reference</title>
+    <title>UIBarButtonItem Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/UIGestureRecognizer" class="dashAnchor"></a>
-    <a title="UIGestureRecognizer Extension Reference"></a>
+    <a name="//apple_ref/swift/Extension/UIBarButtonItem" class="dashAnchor"></a>
+    <a title="UIBarButtonItem Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Closures Docs</a></p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Closures Reference</a>
         <img id="carat" src="../img/carat.png" />
-        UIGestureRecognizer Extension Reference
+        UIBarButtonItem Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -142,25 +142,36 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>UIGestureRecognizer</h1>
-            
+            <h1>UIBarButtonItem</h1>
+            <p><code>Closures</code> framework adds closures for <code>UIBarButtonItem</code> tap events, usually
+found in a UINavigationBar.</p>
+
+<p>All initializers that support the target-action pattern now have an equivalent
+initialier that contains a <code>handler</code> parameter.</p>
+<pre class="highlight swift"><code><span class="n">navigationItem</span><span class="o">.</span><span class="n">leftBarButtonItem</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Left item"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">plain</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// left bar button item tapped</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>To add the closure handler to an existing <code>UIBarButtonItem</code>, simply call the
+<code>onTap(handler:)</code> method. For instance, if you created your button
+in a storyboard, you could call the following in your <code>viewDidLoad</code> method.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myRightBarButton</span> <span class="o">=</span> <span class="n">navigationItem</span><span class="o">.</span><span class="n">rightBarButtonItem</span><span class="o">!</span>
+<span class="n">myRightBarButton</span><span class="o">.</span><span class="n">onTap</span> <span class="p">{</span>
+    <span class="c1">// right bar button item tapped</span>
+<span class="p">}</span>
+</code></pre>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Delegate%20Overrides"></a>
-                <a name="//apple_ref/swift/Section/Delegate Overrides" class="dashAnchor"></a>
-                <a href="#/Delegate%20Overrides">
-                  <h3 class="section-name">Delegate Overrides</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE11shouldBeginABXDSbyc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldBegin(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE11shouldBeginABXDSbyc7handler_tF">shouldBegin(handler:)</a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_SC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(image:style:handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_SC0abC5StyleO5styleyyc7handlertcfc">init(image:style:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -168,14 +179,312 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizerShouldBegin(:) method</p>
+                        <p>A convenience initializer for a UIBarButtonItem so that the tap event can
+be handled with a closure. This is equivalent of using the init(image:style:target:action:)
+initializer.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBegin</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to use for the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>UIBarButtonItemStyle</code> of the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the button is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_AF19landscapeImagePhoneSC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(image:landscapeImagePhone:style:handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_AF19landscapeImagePhoneSC0abC5StyleO5styleyyc7handlertcfc">init(image:landscapeImagePhone:style:handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience initializer for a UIBarButtonItem so that the tap event can
+be handled with a closure. This is equivalent of using the init(image:landscapeImagePhone:style:target:action:)
+initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">landscapeImagePhone</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to use for the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>landscapeImagePhone</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The image to use for the compressed landscape bar item</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>UIBarButtonItemStyle</code> of the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the button is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSSSg5title_SC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(title:style:handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSSSg5title_SC0abC5StyleO5styleyyc7handlertcfc">init(title:style:handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience initializer for a UIBarButtonItem so that the tap event can
+be handled with a closure. This is equivalent of using the init(title:style:target:action:)
+initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The text to use for the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>style</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>UIBarButtonItemStyle</code> of the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the button is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSC0ab6SystemC0O03barbeC0_yyc7handlertcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(barButtonSystemItem:handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSC0ab6SystemC0O03barbeC0_yyc7handlertcfc">init(barButtonSystemItem:handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A convenience initializer for a UIBarButtonItem so that the tap event can
+be handled with a closure. This is equivalent of using the init(barButtonSystemItem:target:action:)
+initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">barButtonSystemItem</span> <span class="nv">systemItem</span><span class="p">:</span> <span class="kt">UIBarButtonSystemItem</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>barButtonSystemItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>UIBarButtonSystemItem</code> to be used for the button</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that is called when the button is tapped</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE5onTapyyyc7handler_tF"></a>
+                    <a name="//apple_ref/swift/Method/onTap(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5onTapyyyc7handler_tF">onTap(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method is a convenience method to add a closure handler to a <code>UIBarButtonItem</code>.
+Use this method if you are creating a <code>UIBarButtonItem</code> using an initializer
+other than the convience ones provide, or if the item was created by a
+Storyboard or xib.</p>
+
+<hr>
+<h4 id='an-example-that-adds-a-closure-handler-to-an-existing-code-uibarbuttonitem-code' class='heading'>An example that adds a closure handler to an existing <code>UIBarButtonItem</code>:</h4>
+<pre class="highlight swift"><code><span class="n">myBarButtonItem</span><span class="o">.</span><span class="n">onTap</span> <span class="p">{</span>
+    <span class="c1">// bar button tapped code</span>
+<span class="p">}</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onTap</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -191,307 +500,12 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                  <p>The closure that will be called when the tap is recognized.</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWithABXDSbABc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldRecognizeSimultaneouslyWith(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWithABXDSbABc7handler_tF">shouldRecognizeSimultaneouslyWith(handler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizer(:shouldRecognizeSimultaneouslyWith:) method</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRecognizeSimultaneouslyWith</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>handler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOfABXDSbABc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldRequireFailureOf(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOfABXDSbABc7handler_tF">shouldRequireFailureOf(handler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizer(:shouldRequireFailureOf:) method</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRequireFailureOf</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>handler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailByABXDSbABc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldBeRequiredToFailBy(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailByABXDSbABc7handler_tF">shouldBeRequiredToFailBy(handler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizer(:shouldBeRequiredToFailBy:) method</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeRequiredToFailBy</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>handler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouchABXDSbSo7UITouchCc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldReceiveTouch(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouchABXDSbSo7UITouchCc7handler_tF">shouldReceiveTouch(handler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizer(:shouldReceive:) method</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceiveTouch</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>handler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePressABXDSbSo7UIPressCc7handler_tF"></a>
-                    <a name="//apple_ref/swift/Method/shouldReceivePress(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePressABXDSbSo7UIPressCc7handler_tF">shouldReceivePress(handler:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Equivalent to implementing UIGestureRecognizerDelegate&rsquo;s gestureRecognizer(:shouldReceive:) method</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceivePress</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">press</span><span class="p">:</span> <span class="kt">UIPress</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>handler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure that will be called in place of its equivalent delegate method</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>itself so you can daisy chain the other delegate calls</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Reset"></a>
-                <a name="//apple_ref/swift/Section/Reset" class="dashAnchor"></a>
-                <a href="#/Reset">
-                  <h3 class="section-name">Reset</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Closures@@objc(cs)UIGestureRecognizer(im)clearClosureDelegates"></a>
-                    <a name="//apple_ref/swift/Method/clearClosureDelegates()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Closures@@objc(cs)UIGestureRecognizer(im)clearClosureDelegates">clearClosureDelegates()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Clears any delegate closures that were assigned to this
-<code>UIGestureRecognizer</code>. This cleans up memory as well as sets the
-delegate property to nil. This is typically only used for explicit
-cleanup. You are not required to call this method.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>

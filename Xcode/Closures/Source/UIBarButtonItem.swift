@@ -20,6 +20,9 @@
 
 import UIKit
 
+/// :nodoc:
+private let jzyBug = 0 // Prevent the license header from showing up in Jazzy Docs for UICollectionView
+
 public extension UIBarButtonItem {
     /**
      A convenience initializer for a UIBarButtonItem so that the tap event can
