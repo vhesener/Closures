@@ -111,7 +111,7 @@ extension UIImagePickerController {
             cameraOverlayView = cameraOverlay
             self.showsCameraControls = showsCameraControls
         }
-        mediaTypes = UIImagePickerController.MediaFilter.allTypes.flatMap {
+        mediaTypes = UIImagePickerController.MediaFilter.allTypes.compactMap {
             allow.contains($0) ? $0.mediaType : nil
         }
         didFinishPickingMedia { [unowned self] in
