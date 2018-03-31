@@ -26,7 +26,7 @@ open class BaseViewController: UIViewController {}
 
 public func getAllCountries() -> [String] {
     let locale = Locale(identifier:"en_US")
-    return Locale.isoRegionCodes.flatMap {
+    return Locale.isoRegionCodes.compactMap {
         locale.localizedString(forRegionCode: $0)!
         }.sorted()
 }
