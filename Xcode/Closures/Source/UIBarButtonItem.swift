@@ -33,7 +33,7 @@ public extension UIBarButtonItem {
      * parameter style: The `UIBarButtonItemStyle` of the button
      * parameter handler: The closure that is called when the button is tapped
      */
-    public convenience init(image: UIImage?, style: UIBarButtonItemStyle, handler: @escaping () -> Void) {
+    public convenience init(image: UIImage?, style: UIBarButtonItem.Style, handler: @escaping () -> Void) {
         self.init(image: image, style: style, target: nil, action: nil)
         onTap(handler: handler)
     }
@@ -49,7 +49,7 @@ public extension UIBarButtonItem {
      * parameter handler: The closure that is called when the button is tapped
      */
     @available(iOS 5.0, *)
-    public convenience init(image: UIImage?, landscapeImagePhone: UIImage?, style: UIBarButtonItemStyle, handler: @escaping () -> Void) {
+    public convenience init(image: UIImage?, landscapeImagePhone: UIImage?, style: UIBarButtonItem.Style, handler: @escaping () -> Void) {
         self.init(image: image, landscapeImagePhone: landscapeImagePhone, style: style, target: nil, action: nil)
         onTap(handler: handler)
     }
@@ -63,7 +63,7 @@ public extension UIBarButtonItem {
      * parameter style: The `UIBarButtonItemStyle` of the button
      * parameter handler: The closure that is called when the button is tapped
      */
-    public convenience init(title: String?, style: UIBarButtonItemStyle, handler: @escaping () -> Void) {
+    public convenience init(title: String?, style: UIBarButtonItem.Style, handler: @escaping () -> Void) {
         self.init(title: title, style: style, target: nil, action: nil)
         onTap(handler: handler)
     }
@@ -76,7 +76,7 @@ public extension UIBarButtonItem {
      * parameter barButtonSystemItem: The `UIBarButtonSystemItem` to be used for the button
      * parameter handler: The closure that is called when the button is tapped
      */
-    public convenience init(barButtonSystemItem systemItem: UIBarButtonSystemItem, handler: @escaping () -> Void) {
+    public convenience init(barButtonSystemItem systemItem: UIBarButtonItem.SystemItem, handler: @escaping () -> Void) {
         self.init(barButtonSystemItem: systemItem, target: nil, action: nil)
         onTap(handler: handler)
     }

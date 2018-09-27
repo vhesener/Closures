@@ -198,7 +198,7 @@ extension UISwipeGestureRecognizer {
      * parameter touchesRequired: Defaults UISwipeGestureRecognizer's `numberOfTouchesRequired` property value
      * parameter handler: The closure that is called when the gesture is recognized
      */
-    public convenience init(direction: UISwipeGestureRecognizerDirection = .right,
+    public convenience init(direction: UISwipeGestureRecognizer.Direction = .right,
                             touchesRequired: Int = 1,
                             handler: @escaping (_ gesture: UISwipeGestureRecognizer) -> Void) {
         self.init()
@@ -221,7 +221,7 @@ extension UIView {
      customizations
      */
     @discardableResult
-    public func addSwipeGesture(direction: UISwipeGestureRecognizerDirection = .right,
+    public func addSwipeGesture(direction: UISwipeGestureRecognizer.Direction = .right,
                                 touchesRequired: Int = 1,
                                 handler: @escaping (_ gesture: UISwipeGestureRecognizer) -> Void) -> UISwipeGestureRecognizer {
         let gesture = UISwipeGestureRecognizer(direction: direction,

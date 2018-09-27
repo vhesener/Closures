@@ -25,9 +25,10 @@ import PhotosUI
 fileprivate final class ImagePickerControllerDelegate: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, DelegateProtocol {
     static var delegates = Set<DelegateWrapper<UIImagePickerController, ImagePickerControllerDelegate>>()
     
-    fileprivate var didFinishPickingMedia: ((_ withInfo: [String: Any]) -> Void)?
+    fileprivate var didFinishPickingMedia: ((_ withInfo: [UIImagePickerController.InfoKey: Any]) -> Void)?
+    
     fileprivate func imagePickerController(_ picker: UIImagePickerController,
-                                      didFinishPickingMediaWithInfo info: [String: Any]) {
+                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         didFinishPickingMedia?(info)
     }
     
@@ -93,7 +94,7 @@ extension UIImagePickerController {
      delegate call in a `Result` struct. The original Dictionary can
      be found in the `rawInfo` property.
      */
-    public convenience init(source: UIImagePickerControllerSourceType = .photoLibrary,
+    public convenience init(source: UIImagePickerController.SourceType = .photoLibrary,
                             allow: UIImagePickerController.MediaFilter = .image,
                             cameraOverlay: UIView? = nil,
                             showsCameraControls: Bool = true,
@@ -178,7 +179,7 @@ extension UIImagePickerController {
      * returns: itself so you can daisy chain the other delegate calls
      */
     @discardableResult
-    public func didFinishPickingMedia(handler: @escaping (_ withInfo: [String: Any]) -> Void) -> Self {
+    public func didFinishPickingMedia(handler: @escaping (_ withInfo: [UIImagePickerController.InfoKey: Any]) -> Void) -> Self {
         return update { $0.didFinishPickingMedia = handler }
     }
     
@@ -270,7 +271,7 @@ extension UIImagePickerController {
          `-imagePickerController:didFinishPickingMediaWithInfo:` delegate
          method.
          */
-        public let rawInfo: [String: Any]
+        public let rawInfo: [UIImagePickerController.InfoKey: Any]
         /**
          The type of media picked by the user, converted to a
          MediaFilter option. This is equivalent to the
@@ -304,14 +305,14 @@ extension UIImagePickerController {
          */
         public let metaData: NSDictionary?
         
-        init(rawInfo: [String: Any]) {
+        init(rawInfo: [UIImagePickerController.InfoKey: Any]) {
             self.rawInfo = rawInfo
-            type = (rawInfo[UIImagePickerControllerMediaType] as! CFString).mediaFilter
-            originalImage = rawInfo[UIImagePickerControllerOriginalImage] as? UIImage
-            editedImage = rawInfo[UIImagePickerControllerEditedImage] as? UIImage
-            cropRect = rawInfo[UIImagePickerControllerCropRect] as? CGRect
-            movieUrl = rawInfo[UIImagePickerControllerMediaURL] as? URL
-            metaData = rawInfo[UIImagePickerControllerMediaMetadata] as? NSDictionary
+            type = (rawInfo[UIImagePickerController.InfoKey.mediaType] as! CFString).mediaFilter
+            originalImage = rawInfo[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            editedImage = rawInfo[UIImagePickerController.InfoKey.editedImage] as? UIImage
+            cropRect = rawInfo[UIImagePickerController.InfoKey.cropRect] as? CGRect
+            movieUrl = rawInfo[UIImagePickerController.InfoKey.mediaURL] as? URL
+            metaData = rawInfo[UIImagePickerController.InfoKey.mediaMetadata] as? NSDictionary
         }
     }
 }

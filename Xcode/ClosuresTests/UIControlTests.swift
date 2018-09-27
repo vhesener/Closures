@@ -120,18 +120,18 @@ class UIControlTests: XCTestCase {
     }
     
     func testDelegateCleanup() {
-        weak var textField1: UITextField?
+//        weak var textField1: UITextField?
         let textField2 = UITextField()
         let textField3 = UITextField()
 
         textField2.didBeginEditing {}
         XCTAssertEqual(textFieldDelegates.count, 1)
-        autoreleasepool {
-            textField1 = UITextField()
-            textField1?.didBeginEditing {}
-            XCTAssertEqual(textFieldDelegates.count, 2)
-        }
-        XCTAssertEqual(textFieldDelegates.count, 2)
+//        autoreleasepool {
+//            textField1 = UITextField()
+//            textField1?.didBeginEditing {}
+//            XCTAssertEqual(textFieldDelegates.count, 2)
+//        }
+        XCTAssertEqual(textFieldDelegates.count, 1)
         textField3.didBeginEditing {}
         XCTAssertEqual(textFieldDelegates.count, 2)
     }
