@@ -56,7 +56,7 @@ extension UIControl {
      * returns: itself so you can daisy chain the other event handler calls
      */
     @discardableResult
-    public func on(_ events: UIControlEvents, handler: @escaping EventHandler) -> Self {
+    public func on(_ events: UIControl.Event, handler: @escaping EventHandler) -> Self {
         guard let selector = selectorSignature(for: events) else {
             return self
         }
@@ -147,7 +147,7 @@ extension UIControl {
      * parameter type: The UIControlEvents option to listen for
      
      */
-    private func trigger(_ sender: UIControl, _ event: UIEvent?, for type: UIControlEvents) {
+    private func trigger(_ sender: UIControl, _ event: UIEvent?, for type: UIControl.Event) {
         NotificationCenter.closures.post(name: notificationName(for: type),
                                          object: self,
                                          userInfo: [UIControl.eventKey: event as Any])
@@ -161,7 +161,7 @@ extension UIControl {
      
      * returns: An identifyable Notification.Name
      */
-    private func notificationName(for events: UIControlEvents) -> Notification.Name {
+    private func notificationName(for events: UIControl.Event) -> Notification.Name {
         return Notification.Name("\(String.namespace).notifications.names.UIControlTargetAction.\(events)")
     }
 }
@@ -175,47 +175,47 @@ extension UIControl {
      
      * returns: The selector
      */
-    fileprivate func selectorSignature(for event: UIControlEvents) -> Selector? {
+    fileprivate func selectorSignature(for event: UIControl.Event) -> Selector? {
         switch event {
-        case UIControlEvents.touchDown:
+        case UIControl.Event.touchDown:
             return #selector(touchDown(sender:event:))
-        case UIControlEvents.touchDownRepeat:
+        case UIControl.Event.touchDownRepeat:
             return #selector(touchDownRepeat(sender:event:))
-        case UIControlEvents.touchDragInside:
+        case UIControl.Event.touchDragInside:
             return #selector(touchDragInside(sender:event:))
-        case UIControlEvents.touchDragOutside:
+        case UIControl.Event.touchDragOutside:
             return #selector(touchDragOutside(sender:event:))
-        case UIControlEvents.touchDragEnter:
+        case UIControl.Event.touchDragEnter:
             return #selector(touchDragEnter(sender:event:))
-        case UIControlEvents.touchDragExit:
+        case UIControl.Event.touchDragExit:
             return #selector(touchDragExit(sender:event:))
-        case UIControlEvents.touchUpInside:
+        case UIControl.Event.touchUpInside:
             return #selector(touchUpInside(sender:event:))
-        case UIControlEvents.touchUpOutside:
+        case UIControl.Event.touchUpOutside:
             return #selector(touchUpOutside(sender:event:))
-        case UIControlEvents.touchCancel:
+        case UIControl.Event.touchCancel:
             return #selector(touchCancel(sender:event:))
-        case UIControlEvents.valueChanged:
+        case UIControl.Event.valueChanged:
             return #selector(valueChanged(sender:event:))
-        case UIControlEvents.primaryActionTriggered:
+        case UIControl.Event.primaryActionTriggered:
             return #selector(primaryActionTriggered(sender:event:))
-        case UIControlEvents.editingDidBegin:
+        case UIControl.Event.editingDidBegin:
             return #selector(editingDidBegin(sender:event:))
-        case UIControlEvents.editingChanged:
+        case UIControl.Event.editingChanged:
             return #selector(editingChanged(sender:event:))
-        case UIControlEvents.editingDidEnd:
+        case UIControl.Event.editingDidEnd:
             return #selector(editingDidEnd(sender:event:))
-        case UIControlEvents.editingDidEndOnExit:
+        case UIControl.Event.editingDidEndOnExit:
             return #selector(editingDidEndOnExit(sender:event:))
-        case UIControlEvents.allTouchEvents:
+        case UIControl.Event.allTouchEvents:
             return #selector(allTouchEvents(sender:event:))
-        case UIControlEvents.allEditingEvents:
+        case UIControl.Event.allEditingEvents:
             return #selector(allEditingEvents(sender:event:))
-        case UIControlEvents.applicationReserved:
+        case UIControl.Event.applicationReserved:
             return #selector(applicationReserved(sender:event:))
-        case UIControlEvents.systemReserved:
+        case UIControl.Event.systemReserved:
             return #selector(systemReserved(sender:event:))
-        case UIControlEvents.allEvents:
+        case UIControl.Event.allEvents:
             return #selector(allEvents(sender:event:))
         default:
             return nil
