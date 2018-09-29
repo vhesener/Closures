@@ -266,7 +266,7 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
     fileprivate var willDeselectRowAt: ((_ indexPath: IndexPath) -> IndexPath?)?
     fileprivate var didSelectRowAt: ((_ indexPath: IndexPath) -> Void)?
     fileprivate var didDeselectRowAt: ((_ indexPath: IndexPath) -> Void)?
-    fileprivate var editingStyleForRowAt: ((_ indexPath: IndexPath) -> UITableViewCellEditingStyle)?
+    fileprivate var editingStyleForRowAt: ((_ indexPath: IndexPath) -> UITableViewCell.EditingStyle)?
     fileprivate var titleForDeleteConfirmationButtonForRowAt: ((_ indexPath: IndexPath) -> String?)?
     fileprivate var editActionsForRowAt: ((_ indexPath: IndexPath) -> [UITableViewRowAction]?)?
     fileprivate var shouldIndentWhileEditingRowAt: ((_ indexPath: IndexPath) -> Bool)?
@@ -290,7 +290,7 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
     fileprivate var canMoveRowAt: ((_ indexPath: IndexPath) -> Bool)?
     fileprivate var sectionIndexTitles: (() -> [String]?)?
     fileprivate var sectionForSectionIndexTitle: ((_ title: String, _ index: Int) -> Int)?
-    fileprivate var commit: ((_ editingStyle: UITableViewCellEditingStyle, _ indexPath: IndexPath) -> Void)?
+    fileprivate var commit: ((_ editingStyle: UITableViewCell.EditingStyle, _ indexPath: IndexPath) -> Void)?
     fileprivate var moveRowAt: ((_ sourceIndexPath: IndexPath, _ destinationIndexPath: IndexPath) -> Void)?
     private var _leadingSwipeActionsConfigurationForRowAt: Any?
     @available(iOS 11, *)
@@ -478,7 +478,7 @@ extension TableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return estimatedHeightForRowAt?(indexPath) ??  UITableViewAutomaticDimension
+        return estimatedHeightForRowAt?(indexPath) ??  UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
@@ -529,7 +529,7 @@ extension TableViewDelegate {
         didDeselectRowAt?(indexPath)
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return editingStyleForRowAt?(indexPath) ??  .delete
     }
     
@@ -624,7 +624,7 @@ extension TableViewDelegate {
         return sectionForSectionIndexTitle?(title, index) ??  0
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         commit?(editingStyle, indexPath)
     }
     
@@ -922,7 +922,7 @@ extension UITableView {
      * returns: itself so you can daisy chain the other delegate calls
      */
     @discardableResult
-    public func editingStyleForRowAt(handler: @escaping (_ indexPath: IndexPath) -> UITableViewCellEditingStyle) -> Self {
+    public func editingStyleForRowAt(handler: @escaping (_ indexPath: IndexPath) -> UITableViewCell.EditingStyle) -> Self {
         return update { $0.editingStyleForRowAt = handler }
     }
     
@@ -1210,7 +1210,7 @@ extension UITableView {
      * returns: itself so you can daisy chain the other datasource calls
      */
     @discardableResult
-    public func commit(handler: @escaping (_ editingStyle: UITableViewCellEditingStyle, _ indexPath: IndexPath) -> Void) -> Self {
+    public func commit(handler: @escaping (_ editingStyle: UITableViewCell.EditingStyle, _ indexPath: IndexPath) -> Void) -> Self {
         return update { $0.commit = handler }
     }
     
