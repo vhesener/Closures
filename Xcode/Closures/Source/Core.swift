@@ -80,7 +80,7 @@ class DelegateWrapper<Delegator: DelegatorProtocol, Delegate: DelegateProtocol>:
                               delegates:  inout Set<DelegateWrapper<Delegator,Delegate>>,
                               bind: (_ delegator: Delegator, _ delegate: Delegate) -> Void,
                               with updateHandler: (_ wrapper: DelegateWrapper<Delegator, Delegate>) -> Void)  {
-        let wrapper = self.wrapper(delegator: delegator, delegate: delegate, delegates: &delegates, bind: bind)
+        let wrapper = self.wrapper(delegator: delegator, delegate: delegate(), delegates: &delegates, bind: bind)
         updateHandler(wrapper)
         bind(delegator, wrapper.delegate)
     }

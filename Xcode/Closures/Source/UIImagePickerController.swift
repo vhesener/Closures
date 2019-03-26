@@ -325,7 +325,7 @@ extension UIImagePickerController.MediaFilter: ExpressibleByIntegerLiteral {
 }
 
 fileprivate extension CFString {
-    fileprivate var mediaFilter: UIImagePickerController.MediaFilter {
+    var mediaFilter: UIImagePickerController.MediaFilter {
         switch self {
         case kUTTypeImage:
             return .image
