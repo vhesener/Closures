@@ -21,7 +21,7 @@
 import UIKit
 
 fileprivate extension UIControl {
-    fileprivate func _onChange<ControlType, ValueType>(
+    func _onChange<ControlType, ValueType>(
         callerHandler: @escaping (_ value: ValueType) -> (Void),
         valueHandler: @escaping (_ control: ControlType) -> (ValueType)) {
         on(.valueChanged) { control, _ in
