@@ -9,7 +9,7 @@
 Whether you're a functional purist, dislike a particular API, or simply just want to organize your code a little bit, you might enjoy using this library.
 
 > ***<sub>note</sub>*** <br/>
-> `Closures` currently only supports projects written in **Swift 4.0**+. 
+> `Closures` currently only supports projects written in **Swift 5.0**+. 
 
 ***
 ## [Usage Overview](#usage-overview)
