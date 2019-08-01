@@ -20,6 +20,7 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 class ScrollViewDelegate: NSObject, UIScrollViewDelegate, DelegateProtocol {
     fileprivate static var delegates = Set<DelegateWrapper<UIScrollView, ScrollViewDelegate>>()
     
@@ -129,6 +130,7 @@ class ScrollViewDelegate: NSObject, UIScrollViewDelegate, DelegateProtocol {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIScrollView {
     // MARK: Delegate Overrides
     /**
@@ -300,6 +302,7 @@ extension UIScrollView {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIScrollView: DelegatorProtocol {
     @discardableResult
     @objc func update(handler: (_ delegate: ScrollViewDelegate) -> Void) -> Self {

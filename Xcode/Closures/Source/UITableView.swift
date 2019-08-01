@@ -23,6 +23,7 @@ import UIKit
 /// :nodoc:
 private let jzyBug = 0 // Prevent the license header from showing up in Jazzy Docs for UITableView
 
+@available(iOS 9.0, *)
 extension UITableView {
     // MARK: Common Array Usage
     /**
@@ -241,6 +242,7 @@ extension UITableView {
     }
 }
 
+@available(iOS 9.0, *)
 class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     fileprivate static var delegates = Set<DelegateWrapper<UITableView, TableViewDelegate>>()
     
@@ -440,6 +442,7 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
     }
 }
 
+@available(iOS 9.0, *)
 extension TableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         willDisplay?(cell, indexPath)
@@ -648,6 +651,7 @@ extension TableViewDelegate {
     }
 }
 
+@available(iOS 9.0, *)
 extension UITableView {
     // MARK: Delegate and DataSource Overrides
     /**
@@ -1263,6 +1267,7 @@ extension UITableView {
     }
 }
 
+@available(iOS 9.0, *)
 extension UITableView {
     @discardableResult
     @objc override func update(handler: (_ delegate: TableViewDelegate) -> Void) -> Self {

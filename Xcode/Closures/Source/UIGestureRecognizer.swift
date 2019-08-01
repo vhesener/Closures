@@ -343,6 +343,7 @@ extension UIView {
     }
 }
 
+@available(iOS 9.0, *)
 fileprivate final class GestureRecognizerDelegate: NSObject, UIGestureRecognizerDelegate, DelegateProtocol {
     static var delegates = Set<DelegateWrapper<UIGestureRecognizer, GestureRecognizerDelegate>>()
     
@@ -396,6 +397,7 @@ fileprivate final class GestureRecognizerDelegate: NSObject, UIGestureRecognizer
     }
 }
 
+@available(iOS 9.0, *)
 extension UIGestureRecognizer {
     // MARK: Delegate Overrides
     /**
@@ -471,6 +473,7 @@ extension UIGestureRecognizer {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIGestureRecognizer: DelegatorProtocol {
     @discardableResult
     fileprivate func update(handler: (_ delegate: GestureRecognizerDelegate) -> Void) -> Self {
