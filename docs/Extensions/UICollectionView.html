@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UICollectionView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UICollectionView</span></code></pre>
+
+                </div>
+              </div>
             <h2 id='delegate-and-datasource' class='heading'>Delegate and DataSource</h2>
 
 <p><code>UICollectionView</code> closures make it easy to implement <code>UICollectionViewDelegate</code> and
@@ -208,9 +214,9 @@ need to call <code>addFlowElements</code> again, just before you call reloadData
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE15addFlowElementsABXDSayxG_q_m4cellSSSg0G7NibNameyx_q_zSitc4itemtSo0aB4CellCRb_r0_lF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE15addFlowElements_4cell0G7NibName4itemABXDSayxG_q_mSSSgyx_q_zSitctSo0aB4CellCRb_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/addFlowElements(_:cell:cellNibName:item:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15addFlowElementsABXDSayxG_q_m4cellSSSg0G7NibNameyx_q_zSitc4itemtSo0aB4CellCRb_r0_lF">addFlowElements(_:cell:cellNibName:item:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15addFlowElements_4cell0G7NibName4itemABXDSayxG_q_mSSSgyx_q_zSitctSo0aB4CellCRb_r0_lF">addFlowElements(_:cell:cellNibName:item:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -261,12 +267,13 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addFlowElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
-        <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-        <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">item</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
-        <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addFlowElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
+    <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">item</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
 
                         </div>
                       </div>
@@ -346,9 +353,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldHighlightItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldHighlightItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE21shouldHighlightItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldHighlightItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -363,7 +370,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -396,9 +404,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE18didHighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18didHighlightItemAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didHighlightItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18didHighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF">didHighlightItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18didHighlightItemAt7handlerABXDy10Foundation9IndexPathVc_tF">didHighlightItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -413,7 +421,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didHighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -446,9 +455,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didUnhighlightItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAtABXDy10Foundation9IndexPathVc7handler_tF">didUnhighlightItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20didUnhighlightItemAt7handlerABXDy10Foundation9IndexPathVc_tF">didUnhighlightItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -463,7 +472,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUnhighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUnhighlightItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -496,9 +506,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldSelectItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldSelectItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18shouldSelectItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldSelectItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -513,7 +523,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -546,9 +557,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldDeselectItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldDeselectItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE20shouldDeselectItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldDeselectItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -563,7 +574,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -596,9 +608,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE15didSelectItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE15didSelectItemAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didSelectItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15didSelectItemAtABXDy10Foundation9IndexPathVc7handler_tF">didSelectItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE15didSelectItemAt7handlerABXDy10Foundation9IndexPathVc_tF">didSelectItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -613,7 +625,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -646,9 +659,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE17didDeselectItemAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE17didDeselectItemAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didDeselectItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17didDeselectItemAtABXDy10Foundation9IndexPathVc7handler_tF">didDeselectItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17didDeselectItemAt7handlerABXDy10Foundation9IndexPathVc_tF">didDeselectItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -663,7 +676,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDeselectItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -696,9 +710,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE11willDisplay7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDisplay(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">willDisplay(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE11willDisplay7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF">willDisplay(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -713,7 +727,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplay</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplay</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -746,9 +761,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB07handlerABXDySS_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDisplaySupplementaryView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF">willDisplaySupplementaryView(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE024willDisplaySupplementaryB07handlerABXDySS_10Foundation9IndexPathVtc_tF">willDisplaySupplementaryView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -763,7 +778,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplaySupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplaySupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -796,9 +812,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16didEndDisplaying7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndDisplaying(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">didEndDisplaying(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didEndDisplaying7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF">didEndDisplaying(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -813,7 +829,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplaying</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplaying</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -846,9 +863,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB07handlerABXDySS_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndDisplayingSupplementaryView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB0ABXDySS_10Foundation9IndexPathVtc7handler_tF">didEndDisplayingSupplementaryView(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE029didEndDisplayingSupplementaryB07handlerABXDySS_10Foundation9IndexPathVtc_tF">didEndDisplayingSupplementaryView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -863,7 +880,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingSupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingSupplementaryView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">elementKind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -896,9 +914,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldShowMenuForItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldShowMenuForItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE23shouldShowMenuForItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldShowMenuForItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -913,7 +931,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldShowMenuForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldShowMenuForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -946,9 +965,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16canPerformAction7handlerABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/canPerformAction(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">canPerformAction(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16canPerformAction7handlerABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF">canPerformAction(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -963,7 +982,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canPerformAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canPerformAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -996,9 +1016,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13performAction7handlerABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/performAction(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">performAction(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13performAction7handlerABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF">performAction(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1013,7 +1033,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">performAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">performAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1046,9 +1067,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE0ABXDSo0ab10TransitionE0CSo0abE0C_AHtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE07handlerABXDSo0ab10TransitionE0CSo0abE0C_AItc_tF"></a>
                     <a name="//apple_ref/swift/Method/transitionLayoutForOldLayout(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE0ABXDSo0ab10TransitionE0CSo0abE0C_AHtc7handler_tF">transitionLayoutForOldLayout(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE022transitionLayoutForOldE07handlerABXDSo0ab10TransitionE0CSo0abE0C_AItc_tF">transitionLayoutForOldLayout(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1063,7 +1084,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">transitionLayoutForOldLayout</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">fromLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="n">_</span> <span class="nv">toLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewTransitionLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">transitionLayoutForOldLayout</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">fromLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="n">_</span> <span class="nv">toLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewTransitionLayout</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1096,9 +1118,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE14canFocusItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE14canFocusItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/canFocusItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14canFocusItemAtABXDSb10Foundation9IndexPathVc7handler_tF">canFocusItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14canFocusItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">canFocusItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1113,7 +1135,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canFocusItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canFocusItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1146,9 +1169,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusInABXDSbSo0abfE7ContextCc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusIn7handlerABXDSbSo0abfE7ContextCc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldUpdateFocusIn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusInABXDSbSo0abfE7ContextCc7handler_tF">shouldUpdateFocusIn(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE19shouldUpdateFocusIn7handlerABXDSbSo0abfE7ContextCc_tF">shouldUpdateFocusIn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1163,7 +1186,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1196,9 +1220,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE16didUpdateFocusInABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE16didUpdateFocusIn7handlerABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc_tF"></a>
                     <a name="//apple_ref/swift/Method/didUpdateFocusIn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didUpdateFocusInABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF">didUpdateFocusIn(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE16didUpdateFocusIn7handlerABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc_tF">didUpdateFocusIn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1213,7 +1237,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">,</span> <span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">UIFocusAnimationCoordinator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUpdateFocusIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UICollectionViewFocusUpdateContext</span><span class="p">,</span> <span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">UIFocusAnimationCoordinator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1246,9 +1271,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2InABXD10Foundation05IndexE0VSgyc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2In7handlerABXD10Foundation05IndexE0VSgyc_tF"></a>
                     <a name="//apple_ref/swift/Method/indexPathForPreferredFocusedViewIn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2InABXD10Foundation05IndexE0VSgyc7handler_tF">indexPathForPreferredFocusedViewIn(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE028indexPathForPreferredFocusedB2In7handlerABXD10Foundation05IndexE0VSgyc_tF">indexPathForPreferredFocusedViewIn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1263,7 +1288,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForPreferredFocusedViewIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForPreferredFocusedViewIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1296,9 +1322,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAtABXD10Foundation0eF0VAG_AGtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAt7handlerABXD10Foundation0eF0VAH_AHtc_tF"></a>
                     <a name="//apple_ref/swift/Method/targetIndexPathForMoveFromItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAtABXD10Foundation0eF0VAG_AGtc7handler_tF">targetIndexPathForMoveFromItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE32targetIndexPathForMoveFromItemAt7handlerABXD10Foundation0eF0VAH_AHtc_tF">targetIndexPathForMoveFromItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1313,7 +1339,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetIndexPathForMoveFromItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">originalIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proposedIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetIndexPathForMoveFromItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">originalIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proposedIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1346,9 +1373,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF0ABXDSC7CGPointVAFc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF07handlerABXDSo7CGPointVAGc_tF"></a>
                     <a name="//apple_ref/swift/Method/targetContentOffsetForProposedContentOffset(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF0ABXDSC7CGPointVAFc7handler_tF">targetContentOffsetForProposedContentOffset(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE030targetContentOffsetForProposedeF07handlerABXDSo7CGPointVAGc_tF">targetContentOffsetForProposedContentOffset(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1363,7 +1390,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetContentOffsetForProposedContentOffset</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">proposedContentOffset</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetContentOffsetForProposedContentOffset</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">proposedContentOffset</span><span class="p">:</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1396,9 +1424,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAt7handlerABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldSpringLoadItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF">shouldSpringLoadItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22shouldSpringLoadItemAt7handlerABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc_tF">shouldSpringLoadItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1413,7 +1441,9 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSpringLoadItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UISpringLoadedInteractionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 11, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSpringLoadItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UISpringLoadedInteractionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1446,9 +1476,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSectionABXDS2ic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSection7handlerABXDS2ic_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfItemsInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSectionABXDS2ic7handler_tF">numberOfItemsInSection(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22numberOfItemsInSection7handlerABXDS2ic_tF">numberOfItemsInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1463,7 +1493,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfItemsInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfItemsInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1496,9 +1527,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE13cellForItemAtABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13cellForItemAt7handlerABXDSo0aB4CellC10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/cellForItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13cellForItemAtABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF">cellForItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13cellForItemAt7handlerABXDSo0aB4CellC10Foundation9IndexPathVc_tF">cellForItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1513,7 +1544,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1546,9 +1578,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE18numberOfSectionsIn7handlerABXDSiyc_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfSectionsIn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF">numberOfSectionsIn(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE18numberOfSectionsIn7handlerABXDSiyc_tF">numberOfSectionsIn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1563,7 +1595,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSectionsIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSectionsIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1596,9 +1629,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKindABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKind7handlerABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/viewForSupplementaryElementOfKind(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKindABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc7handler_tF">viewForSupplementaryElementOfKind(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE33viewForSupplementaryElementOfKind7handlerABXDSo0a8ReusableB0CSS_10Foundation9IndexPathVtc_tF">viewForSupplementaryElementOfKind(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1613,7 +1646,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForSupplementaryElementOfKind</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForSupplementaryElementOfKind</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionReusableView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1646,9 +1680,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE13canMoveItemAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13canMoveItemAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/canMoveItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13canMoveItemAtABXDSb10Foundation9IndexPathVc7handler_tF">canMoveItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13canMoveItemAt7handlerABXDSb10Foundation9IndexPathVc_tF">canMoveItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1663,7 +1697,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMoveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMoveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1696,9 +1731,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE10moveItemAtABXDy10Foundation9IndexPathV_AGtc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE10moveItemAt7handlerABXDy10Foundation9IndexPathV_AHtc_tF"></a>
                     <a name="//apple_ref/swift/Method/moveItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE10moveItemAtABXDy10Foundation9IndexPathV_AGtc7handler_tF">moveItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE10moveItemAt7handlerABXDy10Foundation9IndexPathV_AHtc_tF">moveItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1713,7 +1748,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1746,9 +1782,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE14indexTitlesForABXDSaySSGyc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE14indexTitlesFor7handlerABXDSaySSGyc_tF"></a>
                     <a name="//apple_ref/swift/Method/indexTitlesFor(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14indexTitlesForABXDSaySSGyc7handler_tF">indexTitlesFor(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE14indexTitlesFor7handlerABXDSaySSGyc_tF">indexTitlesFor(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1763,7 +1799,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexTitlesFor</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexTitlesFor</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1796,9 +1833,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitleABXD10Foundation0gE0VSS_Sitc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitle7handlerABXD10Foundation0gE0VSS_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/indexPathForIndexTitle(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitleABXD10Foundation0gE0VSS_Sitc7handler_tF">indexPathForIndexTitle(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE22indexPathForIndexTitle7handlerABXD10Foundation0gE0VSS_Sitc_tF">indexPathForIndexTitle(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1813,7 +1850,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForIndexTitle</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForIndexTitle</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1846,9 +1884,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE13sizeForItemAtABXDSC6CGSizeV10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE13sizeForItemAt7handlerABXDSo6CGSizeV10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/sizeForItemAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13sizeForItemAtABXDSC6CGSizeV10Foundation9IndexPathVc7handler_tF">sizeForItemAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE13sizeForItemAt7handlerABXDSo6CGSizeV10Foundation9IndexPathVc_tF">sizeForItemAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1863,7 +1901,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sizeForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sizeForItemAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1896,9 +1935,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE17insetForSectionAtABXDSC12UIEdgeInsetsVSic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE17insetForSectionAt7handlerABXDSo12UIEdgeInsetsVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/insetForSectionAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17insetForSectionAtABXDSC12UIEdgeInsetsVSic7handler_tF">insetForSectionAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE17insetForSectionAt7handlerABXDSo12UIEdgeInsetsVSic_tF">insetForSectionAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1913,7 +1952,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">insetForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIEdgeInsets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">insetForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIEdgeInsets</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1946,9 +1986,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAt7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/minimumLineSpacingForSectionAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF">minimumLineSpacingForSectionAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE30minimumLineSpacingForSectionAt7handlerABXD12CoreGraphics7CGFloatVSic_tF">minimumLineSpacingForSectionAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1963,7 +2003,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumLineSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumLineSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1996,9 +2037,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAt7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/minimumInteritemSpacingForSectionAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAtABXD12CoreGraphics7CGFloatVSic7handler_tF">minimumInteritemSpacingForSectionAt(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE35minimumInteritemSpacingForSectionAt7handlerABXD12CoreGraphics7CGFloatVSic_tF">minimumInteritemSpacingForSectionAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2013,7 +2054,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumInteritemSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">minimumInteritemSpacingForSectionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2046,9 +2088,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSectionABXDSC6CGSizeVSic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSection7handlerABXDSo6CGSizeVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/referenceSizeForHeaderInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSectionABXDSC6CGSizeVSic7handler_tF">referenceSizeForHeaderInSection(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForHeaderInSection7handlerABXDSo6CGSizeVSic_tF">referenceSizeForHeaderInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2063,7 +2105,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2096,9 +2139,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSectionABXDSC6CGSizeVSic7handler_tF"></a>
+                    <a name="/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSection7handlerABXDSo6CGSizeVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/referenceSizeForFooterInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSectionABXDSC6CGSizeVSic7handler_tF">referenceSizeForFooterInSection(handler:)</a>
+                    <a class="token" href="#/s:So16UICollectionViewC8ClosuresE31referenceSizeForFooterInSection7handlerABXDSo6CGSizeVSic_tF">referenceSizeForFooterInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2113,7 +2156,8 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">referenceSizeForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGSize</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2177,7 +2221,8 @@ cleanup. You are not required to call this method.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2190,7 +2235,7 @@ cleanup. You are not required to call this method.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

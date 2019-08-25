@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UIGestureRecognizer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIGestureRecognizer</span></code></pre>
+
+                </div>
+              </div>
             
           </section>
           <section class="section task-group-section">
@@ -158,9 +164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE11shouldBeginABXDSbyc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE11shouldBegin7handlerABXDSbyc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldBegin(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE11shouldBeginABXDSbyc7handler_tF">shouldBegin(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE11shouldBegin7handlerABXDSbyc_tF">shouldBegin(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,7 +181,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBegin</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBegin</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -208,9 +215,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWithABXDSbABc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWith7handlerABXDSbABc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldRecognizeSimultaneouslyWith(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWithABXDSbABc7handler_tF">shouldRecognizeSimultaneouslyWith(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE33shouldRecognizeSimultaneouslyWith7handlerABXDSbABc_tF">shouldRecognizeSimultaneouslyWith(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -225,7 +232,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRecognizeSimultaneouslyWith</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRecognizeSimultaneouslyWith</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -258,9 +266,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOfABXDSbABc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOf7handlerABXDSbABc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldRequireFailureOf(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOfABXDSbABc7handler_tF">shouldRequireFailureOf(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE22shouldRequireFailureOf7handlerABXDSbABc_tF">shouldRequireFailureOf(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -275,7 +283,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRequireFailureOf</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldRequireFailureOf</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -308,9 +317,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailByABXDSbABc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailBy7handlerABXDSbABc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldBeRequiredToFailBy(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailByABXDSbABc7handler_tF">shouldBeRequiredToFailBy(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE24shouldBeRequiredToFailBy7handlerABXDSbABc_tF">shouldBeRequiredToFailBy(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -325,7 +334,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeRequiredToFailBy</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeRequiredToFailBy</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">otherGestureRecognizer</span><span class="p">:</span> <span class="kt">UIGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -358,9 +368,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouchABXDSbSo7UITouchCc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouch7handlerABXDSbSo7UITouchCc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldReceiveTouch(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouchABXDSbSo7UITouchCc7handler_tF">shouldReceiveTouch(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceiveTouch7handlerABXDSbSo7UITouchCc_tF">shouldReceiveTouch(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -375,7 +385,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceiveTouch</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceiveTouch</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">touch</span><span class="p">:</span> <span class="kt">UITouch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -408,9 +419,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePressABXDSbSo7UIPressCc7handler_tF"></a>
+                    <a name="/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePress7handlerABXDSbSo7UIPressCc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldReceivePress(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePressABXDSbSo7UIPressCc7handler_tF">shouldReceivePress(handler:)</a>
+                    <a class="token" href="#/s:So19UIGestureRecognizerC8ClosuresE18shouldReceivePress7handlerABXDSbSo7UIPressCc_tF">shouldReceivePress(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -425,7 +436,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceivePress</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">press</span><span class="p">:</span> <span class="kt">UIPress</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReceivePress</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">press</span><span class="p">:</span> <span class="kt">UIPress</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -489,7 +501,8 @@ cleanup. You are not required to call this method.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -502,7 +515,7 @@ cleanup. You are not required to call this method.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

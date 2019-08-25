@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UITableView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UITableView</span></code></pre>
+
+                </div>
+              </div>
             <h2 id='delegate-and-datasource' class='heading'>Delegate and DataSource</h2>
 
 <p><code>UITableView</code> closures make it easy to implement <code>UITableViewDelegate</code> and
@@ -229,9 +235,9 @@ need to call <code>addElements</code> again, just before you call reloadData().
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE11addElementsABXDSayxG_q_m4cellSSSg0F7NibNameyx_q_zSitc3rowtSo0aB4CellCRb_r0_lF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE11addElements_4cell0F7NibName3rowABXDSayxG_q_mSSSgyx_q_zSitctSo0aB4CellCRb_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/addElements(_:cell:cellNibName:row:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addElementsABXDSayxG_q_m4cellSSSg0F7NibNameyx_q_zSitc3rowtSo0aB4CellCRb_r0_lF">addElements(_:cell:cellNibName:row:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addElements_4cell0F7NibName3rowABXDSayxG_q_mSSSgyx_q_zSitctSo0aB4CellCRb_r0_lF">addElements(_:cell:cellNibName:row:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -282,12 +288,13 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
-        <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-        <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
-        <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
+    <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
 
                         </div>
                       </div>
@@ -356,9 +363,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE11addSectionsABXDSaySayxGG_q_m4cellSSSg0F7NibNameSo6UIViewCAE_Sitc06headerB0yx_q_zSitc3rowtSo0aB4CellCRb_r0_lF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE11addSections_4cell0F7NibName06headerB03rowABXDSaySayxGG_q_mSSSgSo6UIViewCAI_Sitcyx_q_zSitctSo0aB4CellCRb_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/addSections(_:cell:cellNibName:headerView:row:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addSectionsABXDSaySayxGG_q_m4cellSSSg0F7NibNameSo6UIViewCAE_Sitc06headerB0yx_q_zSitc3rowtSo0aB4CellCRb_r0_lF">addSections(_:cell:cellNibName:headerView:row:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addSections_4cell0F7NibName06headerB03rowABXDSaySayxGG_q_mSSSgSo6UIViewCAI_Sitcyx_q_zSitctSo0aB4CellCRb_r0_lF">addSections(_:cell:cellNibName:headerView:row:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -415,13 +422,14 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addSections</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
-        <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-        <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">headerView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">),</span>
-        <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
-        <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addSections</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
+    <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">headerView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">),</span>
+    <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
 
                         </div>
                       </div>
@@ -503,9 +511,9 @@ as an instance of <code>UIView</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE11addSectionsABXDSaySayxGG_q_m4cellSSSg0F7NibNameSSAE_SitcSg11headerTitleyx_q_zSitc3rowtSo0aB4CellCRb_r0_lF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE11addSections_4cell0F7NibName11headerTitle3rowABXDSaySayxGG_q_mSSSgSSAI_SitcSgyx_q_zSitctSo0aB4CellCRb_r0_lF"></a>
                     <a name="//apple_ref/swift/Method/addSections(_:cell:cellNibName:headerTitle:row:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addSectionsABXDSaySayxGG_q_m4cellSSSg0F7NibNameSSAE_SitcSg11headerTitleyx_q_zSitc3rowtSo0aB4CellCRb_r0_lF">addSections(_:cell:cellNibName:headerTitle:row:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11addSections_4cell0F7NibName11headerTitle3rowABXDSaySayxGG_q_mSSSgSSAI_SitcSgyx_q_zSitctSo0aB4CellCRb_r0_lF">addSections(_:cell:cellNibName:headerTitle:row:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -562,13 +570,14 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addSections</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
-        <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
-        <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">headerTitle</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
-        <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addSections</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span><span class="kt">Cell</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
+    <span class="nv">cell</span><span class="p">:</span> <span class="kt">Cell</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+    <span class="nv">cellNibName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">headerTitle</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">row</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Cell</span><span class="p">,</span><span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+    <span class="k">where</span> <span class="kt">Cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
 
                         </div>
                       </div>
@@ -661,9 +670,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE11willDisplay7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDisplay(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11willDisplayABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">willDisplay(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE11willDisplay7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF">willDisplay(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -678,7 +687,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplay</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">forRowAt</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplay</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">forRowAt</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -711,9 +721,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE017willDisplayHeaderB0ABXDySo6UIViewC_Sitc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE017willDisplayHeaderB07handlerABXDySo6UIViewC_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDisplayHeaderView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE017willDisplayHeaderB0ABXDySo6UIViewC_Sitc7handler_tF">willDisplayHeaderView(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE017willDisplayHeaderB07handlerABXDySo6UIViewC_Sitc_tF">willDisplayHeaderView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -728,7 +738,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplayHeaderView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">forSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplayHeaderView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">forSection</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -761,9 +772,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE017willDisplayFooterB0ABXDySo6UIViewC_Sitc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE017willDisplayFooterB07handlerABXDySo6UIViewC_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDisplayFooterView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE017willDisplayFooterB0ABXDySo6UIViewC_Sitc7handler_tF">willDisplayFooterView(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE017willDisplayFooterB07handlerABXDySo6UIViewC_Sitc_tF">willDisplayFooterView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -778,7 +789,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplayFooterView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDisplayFooterView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -811,9 +823,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE16didEndDisplaying7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndDisplaying(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16didEndDisplayingABXDySo0aB4CellC_10Foundation9IndexPathVtc7handler_tF">didEndDisplaying(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16didEndDisplaying7handlerABXDySo0aB4CellC_10Foundation9IndexPathVtc_tF">didEndDisplaying(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -828,7 +840,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplaying</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplaying</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">cell</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -861,9 +874,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE022didEndDisplayingHeaderB0ABXDySo6UIViewC_Sitc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE022didEndDisplayingHeaderB07handlerABXDySo6UIViewC_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndDisplayingHeaderView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE022didEndDisplayingHeaderB0ABXDySo6UIViewC_Sitc7handler_tF">didEndDisplayingHeaderView(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE022didEndDisplayingHeaderB07handlerABXDySo6UIViewC_Sitc_tF">didEndDisplayingHeaderView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -878,7 +891,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingHeaderView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingHeaderView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -911,9 +925,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE022didEndDisplayingFooterB0ABXDySo6UIViewC_Sitc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE022didEndDisplayingFooterB07handlerABXDySo6UIViewC_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndDisplayingFooterView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE022didEndDisplayingFooterB0ABXDySo6UIViewC_Sitc7handler_tF">didEndDisplayingFooterView(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE022didEndDisplayingFooterB07handlerABXDySo6UIViewC_Sitc_tF">didEndDisplayingFooterView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -928,7 +942,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingFooterView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndDisplayingFooterView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -961,9 +976,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE14heightForRowAtABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE14heightForRowAt7handlerABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/heightForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14heightForRowAtABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc7handler_tF">heightForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14heightForRowAt7handlerABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc_tF">heightForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -978,7 +993,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,9 +1027,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE24heightForHeaderInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE24heightForHeaderInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/heightForHeaderInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24heightForHeaderInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF">heightForHeaderInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24heightForHeaderInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF">heightForHeaderInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1028,7 +1044,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1061,9 +1078,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE24heightForFooterInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE24heightForFooterInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/heightForFooterInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24heightForFooterInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF">heightForFooterInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24heightForFooterInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF">heightForFooterInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1078,7 +1095,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">heightForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1111,9 +1129,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE23estimatedHeightForRowAtABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE23estimatedHeightForRowAt7handlerABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/estimatedHeightForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23estimatedHeightForRowAtABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc7handler_tF">estimatedHeightForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23estimatedHeightForRowAt7handlerABXD12CoreGraphics7CGFloatV10Foundation9IndexPathVc_tF">estimatedHeightForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1128,7 +1146,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1161,9 +1180,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE33estimatedHeightForHeaderInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE33estimatedHeightForHeaderInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/estimatedHeightForHeaderInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE33estimatedHeightForHeaderInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF">estimatedHeightForHeaderInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE33estimatedHeightForHeaderInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF">estimatedHeightForHeaderInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1178,7 +1197,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1211,9 +1231,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE33estimatedHeightForFooterInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE33estimatedHeightForFooterInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/estimatedHeightForFooterInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE33estimatedHeightForFooterInSectionABXD12CoreGraphics7CGFloatVSic7handler_tF">estimatedHeightForFooterInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE33estimatedHeightForFooterInSection7handlerABXD12CoreGraphics7CGFloatVSic_tF">estimatedHeightForFooterInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1228,7 +1248,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">estimatedHeightForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1261,9 +1282,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE22viewForHeaderInSectionABXDSo6UIViewCSgSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE22viewForHeaderInSection7handlerABXDSo6UIViewCSgSic_tF"></a>
                     <a name="//apple_ref/swift/Method/viewForHeaderInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22viewForHeaderInSectionABXDSo6UIViewCSgSic7handler_tF">viewForHeaderInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22viewForHeaderInSection7handlerABXDSo6UIViewCSgSic_tF">viewForHeaderInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1278,7 +1299,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1311,9 +1333,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE22viewForFooterInSectionABXDSo6UIViewCSgSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE22viewForFooterInSection7handlerABXDSo6UIViewCSgSic_tF"></a>
                     <a name="//apple_ref/swift/Method/viewForFooterInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22viewForFooterInSectionABXDSo6UIViewCSgSic7handler_tF">viewForFooterInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22viewForFooterInSection7handlerABXDSo6UIViewCSgSic_tF">viewForFooterInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1328,7 +1350,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1361,9 +1384,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE31accessoryButtonTappedForRowWithABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE31accessoryButtonTappedForRowWith7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/accessoryButtonTappedForRowWith(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE31accessoryButtonTappedForRowWithABXDy10Foundation9IndexPathVc7handler_tF">accessoryButtonTappedForRowWith(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE31accessoryButtonTappedForRowWith7handlerABXDy10Foundation9IndexPathVc_tF">accessoryButtonTappedForRowWith(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1378,7 +1401,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">accessoryButtonTappedForRowWith</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">accessoryButtonTappedForRowWith</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1411,9 +1435,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE20shouldHighlightRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE20shouldHighlightRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldHighlightRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE20shouldHighlightRowAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldHighlightRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE20shouldHighlightRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldHighlightRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1428,7 +1452,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldHighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldHighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1461,9 +1486,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE17didHighlightRowAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE17didHighlightRowAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didHighlightRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17didHighlightRowAtABXDy10Foundation9IndexPathVc7handler_tF">didHighlightRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17didHighlightRowAt7handlerABXDy10Foundation9IndexPathVc_tF">didHighlightRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1478,7 +1503,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didHighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didHighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1511,9 +1537,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE19didUnhighlightRowAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE19didUnhighlightRowAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didUnhighlightRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE19didUnhighlightRowAtABXDy10Foundation9IndexPathVc7handler_tF">didUnhighlightRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE19didUnhighlightRowAt7handlerABXDy10Foundation9IndexPathVc_tF">didUnhighlightRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1528,7 +1554,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUnhighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUnhighlightRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1561,9 +1588,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE15willSelectRowAtABXD10Foundation9IndexPathVSgAGc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE15willSelectRowAt7handlerABXD10Foundation9IndexPathVSgAHc_tF"></a>
                     <a name="//apple_ref/swift/Method/willSelectRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE15willSelectRowAtABXD10Foundation9IndexPathVSgAGc7handler_tF">willSelectRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE15willSelectRowAt7handlerABXD10Foundation9IndexPathVSgAHc_tF">willSelectRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1578,7 +1605,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willSelectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willSelectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1611,9 +1639,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE17willDeselectRowAtABXD10Foundation9IndexPathVSgAGc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE17willDeselectRowAt7handlerABXD10Foundation9IndexPathVSgAHc_tF"></a>
                     <a name="//apple_ref/swift/Method/willDeselectRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17willDeselectRowAtABXD10Foundation9IndexPathVSgAGc7handler_tF">willDeselectRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17willDeselectRowAt7handlerABXD10Foundation9IndexPathVSgAHc_tF">willDeselectRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1628,7 +1656,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDeselectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willDeselectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1661,9 +1690,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE14didSelectRowAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE14didSelectRowAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didSelectRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14didSelectRowAtABXDy10Foundation9IndexPathVc7handler_tF">didSelectRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14didSelectRowAt7handlerABXDy10Foundation9IndexPathVc_tF">didSelectRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1678,7 +1707,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1711,9 +1741,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE16didDeselectRowAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE16didDeselectRowAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/didDeselectRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16didDeselectRowAtABXDy10Foundation9IndexPathVc7handler_tF">didDeselectRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16didDeselectRowAt7handlerABXDy10Foundation9IndexPathVc_tF">didDeselectRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1728,7 +1758,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDeselectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didDeselectRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1761,9 +1792,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE20editingStyleForRowAtABXDSC0ab11CellEditingE0O10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE20editingStyleForRowAt7handlerABXDSo0ab11CellEditingE0V10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/editingStyleForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE20editingStyleForRowAtABXDSC0ab11CellEditingE0O10Foundation9IndexPathVc7handler_tF">editingStyleForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE20editingStyleForRowAt7handlerABXDSo0ab11CellEditingE0V10Foundation9IndexPathVc_tF">editingStyleForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1778,7 +1809,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">editingStyleForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCellEditingStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">editingStyleForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span><span class="o">.</span><span class="kt">EditingStyle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1811,9 +1843,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE032titleForDeleteConfirmationButtonE5RowAtABXDSSSg10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE032titleForDeleteConfirmationButtonE5RowAt7handlerABXDSSSg10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/titleForDeleteConfirmationButtonForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE032titleForDeleteConfirmationButtonE5RowAtABXDSSSg10Foundation9IndexPathVc7handler_tF">titleForDeleteConfirmationButtonForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE032titleForDeleteConfirmationButtonE5RowAt7handlerABXDSSSg10Foundation9IndexPathVc_tF">titleForDeleteConfirmationButtonForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1828,7 +1860,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForDeleteConfirmationButtonForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForDeleteConfirmationButtonForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1861,9 +1894,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE19editActionsForRowAtABXDSaySo0abG6ActionCGSg10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE19editActionsForRowAt7handlerABXDSaySo0abG6ActionCGSg10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/editActionsForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE19editActionsForRowAtABXDSaySo0abG6ActionCGSg10Foundation9IndexPathVc7handler_tF">editActionsForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE19editActionsForRowAt7handlerABXDSaySo0abG6ActionCGSg10Foundation9IndexPathVc_tF">editActionsForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1878,7 +1911,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">editActionsForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UITableViewRowAction</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated: 13.0)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">editActionsForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">UITableViewRowAction</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1911,9 +1946,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE29shouldIndentWhileEditingRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE29shouldIndentWhileEditingRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldIndentWhileEditingRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE29shouldIndentWhileEditingRowAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldIndentWhileEditingRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE29shouldIndentWhileEditingRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldIndentWhileEditingRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1928,7 +1963,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldIndentWhileEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldIndentWhileEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1961,9 +1997,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE21willBeginEditingRowAtABXDy10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE21willBeginEditingRowAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/willBeginEditingRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE21willBeginEditingRowAtABXDy10Foundation9IndexPathVc7handler_tF">willBeginEditingRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE21willBeginEditingRowAt7handlerABXDy10Foundation9IndexPathVc_tF">willBeginEditingRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1978,7 +2014,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">willBeginEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">willBeginEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2011,9 +2048,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE18didEndEditingRowAtABXDy10Foundation9IndexPathVSgc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE18didEndEditingRowAt7handlerABXDy10Foundation9IndexPathVSgc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndEditingRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18didEndEditingRowAtABXDy10Foundation9IndexPathVSgc7handler_tF">didEndEditingRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18didEndEditingRowAt7handlerABXDy10Foundation9IndexPathVSgc_tF">didEndEditingRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2028,7 +2065,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndEditingRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2061,9 +2099,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE31targetIndexPathForMoveFromRowAtABXD10Foundation0eF0VAG_AGtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE31targetIndexPathForMoveFromRowAt7handlerABXD10Foundation0eF0VAH_AHtc_tF"></a>
                     <a name="//apple_ref/swift/Method/targetIndexPathForMoveFromRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE31targetIndexPathForMoveFromRowAtABXD10Foundation0eF0VAG_AGtc7handler_tF">targetIndexPathForMoveFromRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE31targetIndexPathForMoveFromRowAt7handlerABXD10Foundation0eF0VAH_AHtc_tF">targetIndexPathForMoveFromRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2078,7 +2116,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetIndexPathForMoveFromRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proposedDestinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">targetIndexPathForMoveFromRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proposedDestinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2111,9 +2150,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE24indentationLevelForRowAtABXDSi10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE24indentationLevelForRowAt7handlerABXDSi10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/indentationLevelForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24indentationLevelForRowAtABXDSi10Foundation9IndexPathVc7handler_tF">indentationLevelForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE24indentationLevelForRowAt7handlerABXDSi10Foundation9IndexPathVc_tF">indentationLevelForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2128,7 +2167,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indentationLevelForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">indentationLevelForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2161,9 +2201,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE22shouldShowMenuForRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE22shouldShowMenuForRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldShowMenuForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22shouldShowMenuForRowAtABXDSb10Foundation9IndexPathVc7handler_tF">shouldShowMenuForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE22shouldShowMenuForRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">shouldShowMenuForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2178,7 +2218,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldShowMenuForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated: 13.0)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldShowMenuForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2211,9 +2253,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE16canPerformAction7handlerABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/canPerformAction(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16canPerformActionABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">canPerformAction(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE16canPerformAction7handlerABXDSb10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF">canPerformAction(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2228,7 +2270,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canPerformAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated: 13.0)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canPerformAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2261,9 +2305,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE13performAction7handlerABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/performAction(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE13performActionABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc7handler_tF">performAction(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE13performAction7handlerABXDy10ObjectiveC8SelectorV_10Foundation9IndexPathVypSgtc_tF">performAction(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2278,7 +2322,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">performAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS, deprecated: 13.0)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">performAction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">action</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2311,9 +2357,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE13canFocusRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE13canFocusRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/canFocusRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE13canFocusRowAtABXDSb10Foundation9IndexPathVc7handler_tF">canFocusRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE13canFocusRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">canFocusRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2328,7 +2374,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canFocusRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canFocusRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2361,9 +2408,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE17shouldUpdateFocusABXDSbSo0abfE7ContextCc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE17shouldUpdateFocus7handlerABXDSbSo0abfE7ContextCc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldUpdateFocus(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17shouldUpdateFocusABXDSbSo0abfE7ContextCc7handler_tF">shouldUpdateFocus(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE17shouldUpdateFocus7handlerABXDSbSo0abfE7ContextCc_tF">shouldUpdateFocus(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2378,7 +2425,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldUpdateFocus</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UITableViewFocusUpdateContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldUpdateFocus</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UITableViewFocusUpdateContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2411,9 +2459,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE14didUpdateFocusABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE14didUpdateFocus7handlerABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc_tF"></a>
                     <a name="//apple_ref/swift/Method/didUpdateFocus(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14didUpdateFocusABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc7handler_tF">didUpdateFocus(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE14didUpdateFocus7handlerABXDySo0abfE7ContextC_So27UIFocusAnimationCoordinatorCtc_tF">didUpdateFocus(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2428,7 +2476,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUpdateFocus</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UITableViewFocusUpdateContext</span><span class="p">,</span> <span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">UIFocusAnimationCoordinator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didUpdateFocus</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UITableViewFocusUpdateContext</span><span class="p">,</span> <span class="n">_</span> <span class="nv">coordinator</span><span class="p">:</span> <span class="kt">UIFocusAnimationCoordinator</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2461,9 +2510,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE028indexPathForPreferredFocusedB0ABXD10Foundation05IndexE0VSgyc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE028indexPathForPreferredFocusedB07handlerABXD10Foundation05IndexE0VSgyc_tF"></a>
                     <a name="//apple_ref/swift/Method/indexPathForPreferredFocusedView(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE028indexPathForPreferredFocusedB0ABXD10Foundation05IndexE0VSgyc7handler_tF">indexPathForPreferredFocusedView(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE028indexPathForPreferredFocusedB07handlerABXD10Foundation05IndexE0VSgyc_tF">indexPathForPreferredFocusedView(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2478,7 +2527,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForPreferredFocusedView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexPathForPreferredFocusedView</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">IndexPath</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2511,9 +2561,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE12numberOfRowsABXDS2ic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE12numberOfRows7handlerABXDS2ic_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfRows(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12numberOfRowsABXDS2ic7handler_tF">numberOfRows(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12numberOfRows7handlerABXDS2ic_tF">numberOfRows(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2528,7 +2578,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfRows</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfRows</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2561,9 +2612,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE10cellForRowABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE10cellForRow7handlerABXDSo0aB4CellC10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/cellForRow(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE10cellForRowABXDSo0aB4CellC10Foundation9IndexPathVc7handler_tF">cellForRow(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE10cellForRow7handlerABXDSo0aB4CellC10Foundation9IndexPathVc_tF">cellForRow(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2578,7 +2629,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cellForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITableViewCell</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2611,9 +2663,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE18numberOfSectionsIn7handlerABXDSiyc_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfSectionsIn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18numberOfSectionsInABXDSiyc7handler_tF">numberOfSectionsIn(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18numberOfSectionsIn7handlerABXDSiyc_tF">numberOfSectionsIn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2628,7 +2680,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSectionsIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSectionsIn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2661,9 +2714,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE23titleForHeaderInSectionABXDSSSgSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE23titleForHeaderInSection7handlerABXDSSSgSic_tF"></a>
                     <a name="//apple_ref/swift/Method/titleForHeaderInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23titleForHeaderInSectionABXDSSSgSic7handler_tF">titleForHeaderInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23titleForHeaderInSection7handlerABXDSSSgSic_tF">titleForHeaderInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2678,7 +2731,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForHeaderInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2711,9 +2765,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE23titleForFooterInSectionABXDSSSgSic7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE23titleForFooterInSection7handlerABXDSSSgSic_tF"></a>
                     <a name="//apple_ref/swift/Method/titleForFooterInSection(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23titleForFooterInSectionABXDSSSgSic7handler_tF">titleForFooterInSection(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE23titleForFooterInSection7handlerABXDSSSgSic_tF">titleForFooterInSection(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2728,7 +2782,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForFooterInSection</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2761,9 +2816,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE12canEditRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE12canEditRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/canEditRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12canEditRowAtABXDSb10Foundation9IndexPathVc7handler_tF">canEditRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12canEditRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">canEditRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2778,7 +2833,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canEditRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canEditRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2811,9 +2867,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE12canMoveRowAtABXDSb10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE12canMoveRowAt7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/canMoveRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12canMoveRowAtABXDSb10Foundation9IndexPathVc7handler_tF">canMoveRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE12canMoveRowAt7handlerABXDSb10Foundation9IndexPathVc_tF">canMoveRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2828,7 +2884,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMoveRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">canMoveRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2861,9 +2918,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE18sectionIndexTitlesABXDSaySSGSgyc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE18sectionIndexTitles7handlerABXDSaySSGSgyc_tF"></a>
                     <a name="//apple_ref/swift/Method/sectionIndexTitles(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18sectionIndexTitlesABXDSaySSGSgyc7handler_tF">sectionIndexTitles(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE18sectionIndexTitles7handlerABXDSaySSGSgyc_tF">sectionIndexTitles(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2878,7 +2935,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sectionIndexTitles</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sectionIndexTitles</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2911,9 +2969,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE27sectionForSectionIndexTitleABXDSiSS_Sitc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE27sectionForSectionIndexTitle7handlerABXDSiSS_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/sectionForSectionIndexTitle(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE27sectionForSectionIndexTitleABXDSiSS_Sitc7handler_tF">sectionForSectionIndexTitle(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE27sectionForSectionIndexTitle7handlerABXDSiSS_Sitc_tF">sectionForSectionIndexTitle(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2928,7 +2986,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sectionForSectionIndexTitle</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">sectionForSectionIndexTitle</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -2961,9 +3020,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE6commitABXDySC0aB16CellEditingStyleO_10Foundation9IndexPathVtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE6commit7handlerABXDySo0aB16CellEditingStyleV_10Foundation9IndexPathVtc_tF"></a>
                     <a name="//apple_ref/swift/Method/commit(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE6commitABXDySC0aB16CellEditingStyleO_10Foundation9IndexPathVtc7handler_tF">commit(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE6commit7handlerABXDySo0aB16CellEditingStyleV_10Foundation9IndexPathVtc_tF">commit(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2978,7 +3037,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">commit</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">editingStyle</span><span class="p">:</span> <span class="kt">UITableViewCellEditingStyle</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">commit</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">editingStyle</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="o">.</span><span class="kt">EditingStyle</span><span class="p">,</span> <span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -3011,9 +3071,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE9moveRowAtABXDy10Foundation9IndexPathV_AGtc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE9moveRowAt7handlerABXDy10Foundation9IndexPathV_AHtc_tF"></a>
                     <a name="//apple_ref/swift/Method/moveRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE9moveRowAtABXDy10Foundation9IndexPathV_AGtc7handler_tF">moveRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE9moveRowAt7handlerABXDy10Foundation9IndexPathV_AHtc_tF">moveRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3028,7 +3088,8 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">moveRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">sourceIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">destinationIndexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -3061,9 +3122,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE40leadingSwipeActionsConfigurationForRowAtABXDSo07UISwipefG0CSg10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE40leadingSwipeActionsConfigurationForRowAt7handlerABXDSo07UISwipefG0CSg10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/leadingSwipeActionsConfigurationForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE40leadingSwipeActionsConfigurationForRowAtABXDSo07UISwipefG0CSg10Foundation9IndexPathVc7handler_tF">leadingSwipeActionsConfigurationForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE40leadingSwipeActionsConfigurationForRowAt7handlerABXDSo07UISwipefG0CSg10Foundation9IndexPathVc_tF">leadingSwipeActionsConfigurationForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3078,7 +3139,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">leadingSwipeActionsConfigurationForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeActionsConfiguration</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 11, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">leadingSwipeActionsConfigurationForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeActionsConfiguration</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -3111,9 +3174,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE41trailingSwipeActionsConfigurationForRowAtABXDSo07UISwipefG0CSg10Foundation9IndexPathVc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE41trailingSwipeActionsConfigurationForRowAt7handlerABXDSo07UISwipefG0CSg10Foundation9IndexPathVc_tF"></a>
                     <a name="//apple_ref/swift/Method/trailingSwipeActionsConfigurationForRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE41trailingSwipeActionsConfigurationForRowAtABXDSo07UISwipefG0CSg10Foundation9IndexPathVc7handler_tF">trailingSwipeActionsConfigurationForRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE41trailingSwipeActionsConfigurationForRowAt7handlerABXDSo07UISwipefG0CSg10Foundation9IndexPathVc_tF">trailingSwipeActionsConfigurationForRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3128,7 +3191,9 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trailingSwipeActionsConfigurationForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeActionsConfiguration</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 11, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">trailingSwipeActionsConfigurationForRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeActionsConfiguration</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -3161,9 +3226,9 @@ as a <code>String</code>.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITableViewC8ClosuresE21shouldSpringLoadRowAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF"></a>
+                    <a name="/s:So11UITableViewC8ClosuresE21shouldSpringLoadRowAt7handlerABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldSpringLoadRowAt(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITableViewC8ClosuresE21shouldSpringLoadRowAtABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc7handler_tF">shouldSpringLoadRowAt(handler:)</a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE21shouldSpringLoadRowAt7handlerABXDSb10Foundation9IndexPathV_So32UISpringLoadedInteractionContext_ptc_tF">shouldSpringLoadRowAt(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3178,7 +3243,165 @@ as a <code>String</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSpringLoadRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UISpringLoadedInteractionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 11, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldSpringLoadRowAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">,</span> <span class="n">_</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UISpringLoadedInteractionContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC8ClosuresE39shouldBeginMultipleSelectionInteraction7handlerABXDSb10Foundation9IndexPathVc_tF"></a>
+                    <a name="//apple_ref/swift/Method/shouldBeginMultipleSelectionInteraction(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE39shouldBeginMultipleSelectionInteraction7handlerABXDSb10Foundation9IndexPathVc_tF">shouldBeginMultipleSelectionInteraction(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UITableViewDelegate&rsquo;s tableView(_:shouldBeginMultipleSelectionInteractionAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 13, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeginMultipleSelectionInteraction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC8ClosuresE38didBeginMultipleSelectionInteractionAt7handlerABXDy10Foundation9IndexPathVc_tF"></a>
+                    <a name="//apple_ref/swift/Method/didBeginMultipleSelectionInteractionAt(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE38didBeginMultipleSelectionInteractionAt7handlerABXDy10Foundation9IndexPathVc_tF">didBeginMultipleSelectionInteractionAt(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UITableViewDelegate&rsquo;s tableView(_:didBeginMultipleSelectionInteractionAt:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 13, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didBeginMultipleSelectionInteractionAt</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>handler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure that will be called in place of its equivalent delegate method</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>itself so you can daisy chain the other delegate calls</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:So11UITableViewC8ClosuresE34didEndMultipleSelectionInteraction7handlerABXDyyc_tF"></a>
+                    <a name="//apple_ref/swift/Method/didEndMultipleSelectionInteraction(handler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:So11UITableViewC8ClosuresE34didEndMultipleSelectionInteraction7handlerABXDyyc_tF">didEndMultipleSelectionInteraction(handler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Equivalent to implementing UITableViewDelegate&rsquo;s tableViewDidEndMultipleSelectionInteraction(_:) method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 13, *)</span>
+<span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndMultipleSelectionInteraction</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -3242,7 +3465,8 @@ cleanup. You are not required to call this method.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -3255,7 +3479,7 @@ cleanup. You are not required to call this method.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

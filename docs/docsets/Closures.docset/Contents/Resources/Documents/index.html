@@ -110,7 +110,7 @@
                 <a href="Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -144,7 +144,7 @@
             
             <p><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/logo3.1.png" alt="Closures logo"></p>
 
-<p><a href=""><img src="https://img.shields.io/badge/Swift-4.0-blue.svg?style=plastic&colorB=68B7EB" alt="Language"></a>
+<p><a href=""><img src="https://img.shields.io/badge/Swift-5.1-blue.svg?style=plastic&colorB=68B7EB" alt="Language"></a>
 <a href=""><img src="https://img.shields.io/github/license/vhesener/Closures.svg?style=plastic&colorB=68B7EB" alt="License"></a>
 <a href=""><img src="https://img.shields.io/github/release/vhesener/Closures.svg?style=plastic&colorB=68B7EB" alt="Release"></a></p>
 
@@ -152,16 +152,11 @@
 
 <p>Whether you&rsquo;re a functional purist, dislike a particular API, or simply just want to organize your code a little bit, you might enjoy using this library.</p>
 
-<blockquote>
-<p><strong><em><sub>note</sub></em></strong> <br/>
-<code>Closures</code> currently only supports projects written in <strong>Swift 4.0</strong>+. </p>
-</blockquote>
-
 <hr>
 <h2 id='a-href-usage-overview-usage-overview-a' class='heading'><a href="#usage-overview">Usage Overview</a></h2>
 <h3 id='strong-convenient-closures-strong' class='heading'><strong>Convenient Closures</strong></h3>
 
-<p>Some days, you just feel like dealing with <a href="https://vhesener.github.io/Closures/Controls.html">UIControl</a>&lsquo;s target-action using a closure instead.</p>
+<p>Some days, you just feel like dealing with <a href="https://vhesener.github.io/Closures/Controls.html">UIControl</a>&rsquo;s target-action using a closure instead.</p>
 <pre class="highlight swift"><code><span class="n">button</span><span class="o">.</span><span class="n">onTap</span> <span class="p">{</span>
     <span class="c1">// UIButton tapped code</span>
 <span class="p">}</span>
@@ -263,9 +258,9 @@
 <hr>
 <h3 id='img-src-https-raw-githubusercontent-com-vhesener-closures-assets-assets-playground_icon-png-width-50-height-50-nbsp-nbsp-strong-playground-strong' class='heading'><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_Icon.png" width="50" height="50"/> &nbsp;&nbsp; <strong>Playground</strong></h3>
 
-<p>To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the <code>Closures</code> workspace (Closures.xcworkspace file), build the <code>Closures</code> framework target, then click on the <code>Closures Demo</code> playground. Be sure to show the Assistant Editor and Live View as shown below:</p>
+<p>To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the <code>Closures</code> workspace (Closures.xcworkspace file), build the <code>Closures</code> framework target, then click on the <code>ClosuresDemo</code> playground, and click on the play button:</p>
 
-<p><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general.gif" alt="Playgrounds"></p>
+<p><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general2.gif" alt="Playgrounds"></p>
 
 <hr>
 <h3 id='img-src-https-raw-githubusercontent-com-vhesener-closures-assets-assets-reference_icon-png-width-50-height-50-nbsp-nbsp-strong-class-reference-documentation-strong' class='heading'><img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_Icon.png" width="50" height="50"/> &nbsp;&nbsp; <strong>Class Reference Documentation</strong></h3>
@@ -276,6 +271,11 @@
 
 <hr>
 <h2 id='a-href-installation-installation-a' class='heading'><a href="#installation">Installation</a></h2>
+<h3 id='strong-swift-package-manager-strong' class='heading'><strong>Swift Package Manager</strong></h3>
+
+<p>If using <a href="">Swift Package Manager</a>, in Xcode, go to <code>File &gt; Swift Packages &gt; Add Package Dependency...</code> and enter the following URL:</p>
+<pre class="highlight plaintext"><code>https://github.com/vhesener/Closures
+</code></pre>
 <h3 id='strong-cocoapods-strong' class='heading'><strong>CocoaPods</strong></h3>
 
 <p>If using <a href="https://cocoapods.org/">CocoaPods</a>, add the following to your Podfile:</p>
@@ -289,7 +289,7 @@
 <h3 id='strong-manual-strong' class='heading'><strong>Manual</strong></h3>
 
 <p>Download or clone the project files found in the <a href="https://github.com/vhesener/Closures">master branch</a>. Drag and drop
-all .swift files located in the &#39;Closures/Source&rsquo; subdirectory into your Xcode project. Check the option <em>Copy items
+all .swift files located in the &lsquo;Closures/Source&rsquo; subdirectory into your Xcode project. Check the option <em>Copy items
 if needed</em>. </p>
 
 <hr>
@@ -348,7 +348,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

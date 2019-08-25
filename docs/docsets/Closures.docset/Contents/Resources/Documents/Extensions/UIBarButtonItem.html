@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UIBarButtonItem</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">UIBarButtonItem</span></code></pre>
+
+                </div>
+              </div>
             <p><code>Closures</code> framework adds closures for <code>UIBarButtonItem</code> tap events, usually
 found in a UINavigationBar.</p>
 
@@ -169,9 +175,9 @@ in a storyboard, you could call the following in your <code>viewDidLoad</code> m
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_SC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE5image5style7handlerABSo7UIImageCSg_So0abC5StyleVyyctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(image:style:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_SC0abC5StyleO5styleyyc7handlertcfc">init(image:style:handler:)</a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5image5style7handlerABSo7UIImageCSg_So0abC5StyleVyyctcfc">init(image:style:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -188,7 +194,7 @@ initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="o">.</span><span class="kt">Style</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -241,9 +247,9 @@ initializer.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_AF19landscapeImagePhoneSC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE5image19landscapeImagePhone5style7handlerABSo7UIImageCSg_AJSo0abC5StyleVyyctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(image:landscapeImagePhone:style:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSo7UIImageCSg5image_AF19landscapeImagePhoneSC0abC5StyleO5styleyyc7handlertcfc">init(image:landscapeImagePhone:style:handler:)</a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5image19landscapeImagePhone5style7handlerABSo7UIImageCSg_AJSo0abC5StyleVyyctcfc">init(image:landscapeImagePhone:style:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -260,7 +266,8 @@ initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">landscapeImagePhone</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 5.0, *)</span>
+<span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">landscapeImagePhone</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="o">.</span><span class="kt">Style</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -325,9 +332,9 @@ initializer.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSSSg5title_SC0abC5StyleO5styleyyc7handlertcfc"></a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE5title5style7handlerABSSSg_So0abC5StyleVyyctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(title:style:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSSSg5title_SC0abC5StyleO5styleyyc7handlertcfc">init(title:style:handler:)</a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5title5style7handlerABSSSg_So0abC5StyleVyyctcfc">init(title:style:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -344,7 +351,7 @@ initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="o">.</span><span class="kt">Style</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -397,9 +404,9 @@ initializer.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So15UIBarButtonItemC8ClosuresEABSC0ab6SystemC0O03barbeC0_yyc7handlertcfc"></a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE03barb6SystemC07handlerABSo0abfC0V_yyctcfc"></a>
                     <a name="//apple_ref/swift/Method/init(barButtonSystemItem:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresEABSC0ab6SystemC0O03barbeC0_yyc7handlertcfc">init(barButtonSystemItem:handler:)</a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE03barb6SystemC07handlerABSo0abfC0V_yyctcfc">init(barButtonSystemItem:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -416,7 +423,7 @@ initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">barButtonSystemItem</span> <span class="nv">systemItem</span><span class="p">:</span> <span class="kt">UIBarButtonSystemItem</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">barButtonSystemItem</span> <span class="nv">systemItem</span><span class="p">:</span> <span class="kt">UIBarButtonItem</span><span class="o">.</span><span class="kt">SystemItem</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -457,9 +464,9 @@ initializer.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So15UIBarButtonItemC8ClosuresE5onTapyyyc7handler_tF"></a>
+                    <a name="/s:So15UIBarButtonItemC8ClosuresE5onTap7handleryyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/onTap(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5onTapyyyc7handler_tF">onTap(handler:)</a>
+                    <a class="token" href="#/s:So15UIBarButtonItemC8ClosuresE5onTap7handleryyyc_tF">onTap(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -484,7 +491,7 @@ Storyboard or xib.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onTap</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onTap</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -516,7 +523,7 @@ Storyboard or xib.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

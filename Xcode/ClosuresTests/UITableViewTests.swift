@@ -305,7 +305,7 @@ class UITableViewTests: XCTestCase {
     func testTableViewMethodExpectations() {
         let lastKnownDelegateCount: Int
         if #available(iOS 13, *) {
-            lastKnownDelegateCount = 48
+            lastKnownDelegateCount = 49
         } else {
             lastKnownDelegateCount = 41
         }

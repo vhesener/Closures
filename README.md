@@ -1,6 +1,6 @@
 ![Closures logo](https://raw.githubusercontent.com/vhesener/Closures/assets/assets/logo3.1.png)
 
-[![Language](https://img.shields.io/badge/Swift-4.0-blue.svg?style=plastic&colorB=68B7EB)]()
+[![Language](https://img.shields.io/badge/Swift-5.1-blue.svg?style=plastic&colorB=68B7EB)]()
 [![License](https://img.shields.io/github/license/vhesener/Closures.svg?style=plastic&colorB=68B7EB)]()
 [![Release](https://img.shields.io/github/release/vhesener/Closures.svg?style=plastic&colorB=68B7EB)]()
 
@@ -8,8 +8,6 @@
 
 Whether you're a functional purist, dislike a particular API, or simply just want to organize your code a little bit, you might enjoy using this library.
 
-> ***<sub>note</sub>*** <br/>
-> `Closures` currently only supports projects written in **Swift 5.0**+. 
 
 ***
 ## [Usage Overview](#usage-overview)
@@ -136,9 +134,9 @@ There are several ways to learn more about the `Closures` API, depending on your
 ***
 ### <img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_Icon.png" width="50" height="50"/> &nbsp;&nbsp; **Playground**
 
-To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the `Closures` workspace (Closures.xcworkspace file), build the `Closures` framework target, then click on the `Closures Demo` playground. Be sure to show the Assistant Editor and Live View as shown below:
+To play with the <a href="https://developer.apple.com/swift/blog/?id=35">Playground</a> demo, open the `Closures` workspace (Closures.xcworkspace file), build the `Closures` framework target, then click on the `ClosuresDemo` playground, and click on the play button:
 
-![Playgrounds](https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general.gif)
+![Playgrounds](https://raw.githubusercontent.com/vhesener/Closures/assets/assets/playground_general2.gif)
 
 ***
 ### <img src="https://raw.githubusercontent.com/vhesener/Closures/assets/assets/reference_Icon.png" width="50" height="50"/> &nbsp;&nbsp; **Class Reference Documentation**
@@ -149,6 +147,14 @@ The [Reference Documentation](https://vhesener.github.io/Closures) has all of th
 
 ***
 ## [Installation](#installation)
+
+### **Swift Package Manager**
+
+If using [Swift Package Manager](), in Xcode, go to `File > Swift Packages > Add Package Dependency...` and enter the following URL:
+
+```
+https://github.com/vhesener/Closures
+```
 
 ### **CocoaPods**
 
