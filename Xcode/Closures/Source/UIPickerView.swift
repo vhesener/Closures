@@ -20,6 +20,7 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 fileprivate final class PickerViewDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource, DelegateProtocol {
     static var delegates = Set<DelegateWrapper<UIPickerView, PickerViewDelegate>>()
     
@@ -87,6 +88,7 @@ fileprivate final class PickerViewDelegate: NSObject, UIPickerViewDelegate, UIPi
     }
 }
 
+@available(iOS 9.0, *)
 extension UIPickerView {
     // MARK: Common Array Usage
     /**
@@ -422,6 +424,7 @@ extension UIPickerView {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIPickerView {
     // MARK: Delegate and DataSource Overrides
     /**
@@ -521,6 +524,7 @@ extension UIPickerView {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIPickerView: DelegatorProtocol {
     @discardableResult
     fileprivate func update(handler: (_ delegate: PickerViewDelegate) -> Void) -> Self {

@@ -23,15 +23,18 @@ import Foundation
 protocol DelegateProtocol: class {
 }
 
+@available(iOS 9.0, *)
 public protocol DelegatorProtocol: class {
     /**
      Clears any delegates/datasources that were assigned by the `Closures`
      framework for this object. This cleans up memory as well as sets the
      delegate/datasource properties to nil.
      */
+    @available(iOS 9.0, *)
     func clearClosureDelegates()
 }
 
+@available(iOS 9.0, *)
 class DelegateWrapper<Delegator: DelegatorProtocol, Delegate: DelegateProtocol>: NSObject {
     weak var delegator: Delegator?
     let delegate: Delegate
@@ -75,6 +78,7 @@ class DelegateWrapper<Delegator: DelegatorProtocol, Delegate: DelegateProtocol>:
         }
     }
     
+    @available(iOS 9.0, *)
     public static func update(_ delegator: Delegator,
                               delegate: @autoclosure () -> Delegate,
                               delegates:  inout Set<DelegateWrapper<Delegator,Delegate>>,

@@ -113,9 +113,13 @@ class UITableViewTests: XCTestCase {
             exp.fulfill()
             return nil
         }
-        tableView.editActionsForRowAt { _ in
-            exp.fulfill()
-            return nil
+        if #available(iOS 13, *) {
+            exp.expectedFulfillmentCount -= 1
+        } else {
+            tableView.editActionsForRowAt { _ in
+                exp.fulfill()
+                return nil
+            }
         }
         tableView.shouldIndentWhileEditingRowAt { _ in
             exp.fulfill()
@@ -135,16 +139,20 @@ class UITableViewTests: XCTestCase {
             exp.fulfill()
             return 0
         }
-        tableView.shouldShowMenuForRowAt { _ in
-            exp.fulfill()
-            return true
-        }
-        tableView.canPerformAction {_,_,_ in 
-            exp.fulfill()
-            return true
-        }
-        tableView.performAction { _,_,_ in
-            exp.fulfill()
+        if #available(iOS 13, *) {
+            exp.expectedFulfillmentCount -= 3
+        } else {
+            tableView.shouldShowMenuForRowAt { _ in
+                exp.fulfill()
+                return true
+            }
+            tableView.canPerformAction {_,_,_ in
+                exp.fulfill()
+                return true
+            }
+            tableView.performAction { _,_,_ in
+                exp.fulfill()
+            }
         }
         tableView.canFocusRowAt { _ in
             exp.fulfill()
@@ -196,6 +204,19 @@ class UITableViewTests: XCTestCase {
         tableView.moveRowAt { _,_ in
             exp.fulfill()
         }
+        if #available(iOS 13, *) {
+            exp.expectedFulfillmentCount += 3
+            tableView.shouldBeginMultipleSelectionInteraction { (_) -> Bool in
+                exp.fulfill()
+                return false
+            }
+            tableView.didBeginMultipleSelectionInteractionAt { (_) in
+                exp.fulfill()
+            }
+            tableView.didEndMultipleSelectionInteraction {
+                exp.fulfill()
+            }
+        }
         
         XCTAssertNotNil(tableView.delegate)
         XCTAssertNotNil(tableView.dataSource)
@@ -228,15 +249,21 @@ class UITableViewTests: XCTestCase {
         delegate.tableView!(tableView, didDeselectRowAt: iPath)
         _ = delegate.tableView!(tableView, editingStyleForRowAt: iPath)
         _ = delegate.tableView!(tableView, titleForDeleteConfirmationButtonForRowAt: iPath)
-        _ = delegate.tableView!(tableView, editActionsForRowAt: iPath)
+        if #available(iOS 13, *) {
+        } else {
+            _ = delegate.tableView!(tableView, editActionsForRowAt: iPath)
+        }
         _ = delegate.tableView!(tableView, shouldIndentWhileEditingRowAt: iPath)
         delegate.tableView!(tableView, willBeginEditingRowAt: iPath)
         delegate.tableView!(tableView, didEndEditingRowAt: iPath)
         _ = delegate.tableView!(tableView, targetIndexPathForMoveFromRowAt: iPath, toProposedIndexPath: iPath)
         _ = delegate.tableView!(tableView, indentationLevelForRowAt: iPath)
-        _ = delegate.tableView!(tableView, shouldShowMenuForRowAt: iPath)
-        _ = delegate.tableView!(tableView, canPerformAction: #selector(UITableViewTests.setUp), forRowAt: iPath, withSender: nil)
-        _ = delegate.tableView!(tableView, performAction: #selector(UITableViewTests.setUp), forRowAt: iPath, withSender: nil)
+        if #available(iOS 13, *) {
+        } else {
+            _ = delegate.tableView!(tableView, shouldShowMenuForRowAt: iPath)
+            _ = delegate.tableView!(tableView, canPerformAction: #selector(UITableViewTests.setUp), forRowAt: iPath, withSender: nil)
+            _ = delegate.tableView!(tableView, performAction: #selector(UITableViewTests.setUp), forRowAt: iPath, withSender: nil)
+        }
         _ = delegate.tableView!(tableView, canFocusRowAt: iPath)
         _ = delegate.indexPathForPreferredFocusedView!(in: tableView)
         _ = datasource.tableView(tableView, numberOfRowsInSection: 0)
@@ -250,7 +277,12 @@ class UITableViewTests: XCTestCase {
         _ = datasource.tableView!(tableView, sectionForSectionIndexTitle: "", at: 0)
         datasource.tableView!(tableView, commit: .delete, forRowAt: iPath)
         datasource.tableView!(tableView, moveRowAt: iPath, to: iPath)
-        
+        if #available(iOS 13, *) {
+            _ = delegate.tableView!(tableView, shouldBeginMultipleSelectionInteractionAt: iPath)
+            delegate.tableView!(tableView, didBeginMultipleSelectionInteractionAt: iPath)
+            delegate.tableViewDidEndMultipleSelectionInteraction!(tableView)
+        }
+
         waitForExpectations(timeout: 0.2)
     }
     
@@ -271,7 +303,12 @@ class UITableViewTests: XCTestCase {
     }
     
     func testTableViewMethodExpectations() {
-        let lastKnownDelegateCount = 41
+        let lastKnownDelegateCount: Int
+        if #available(iOS 13, *) {
+            lastKnownDelegateCount = 48
+        } else {
+            lastKnownDelegateCount = 41
+        }
         let lastKnownDataSourceCount = 11
         
         let delegateCount = numberOfMethods(in: UITableViewDelegate.self)

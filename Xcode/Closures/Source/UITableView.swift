@@ -23,6 +23,7 @@ import UIKit
 /// :nodoc:
 private let jzyBug = 0 // Prevent the license header from showing up in Jazzy Docs for UITableView
 
+@available(iOS 9.0, *)
 extension UITableView {
     // MARK: Common Array Usage
     /**
@@ -241,6 +242,7 @@ extension UITableView {
     }
 }
 
+@available(iOS 9.0, *)
 class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     fileprivate static var delegates = Set<DelegateWrapper<UITableView, TableViewDelegate>>()
     
@@ -268,14 +270,18 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
     fileprivate var didDeselectRowAt: ((_ indexPath: IndexPath) -> Void)?
     fileprivate var editingStyleForRowAt: ((_ indexPath: IndexPath) -> UITableViewCell.EditingStyle)?
     fileprivate var titleForDeleteConfirmationButtonForRowAt: ((_ indexPath: IndexPath) -> String?)?
+    @available(iOS, deprecated: 13.0)
     fileprivate var editActionsForRowAt: ((_ indexPath: IndexPath) -> [UITableViewRowAction]?)?
     fileprivate var shouldIndentWhileEditingRowAt: ((_ indexPath: IndexPath) -> Bool)?
     fileprivate var willBeginEditingRowAt: ((_ indexPath: IndexPath) -> Void)?
     fileprivate var didEndEditingRowAt: ((_ indexPath: IndexPath?) -> Void)?
     fileprivate var targetIndexPathForMoveFromRowAt: ((_ sourceIndexPath: IndexPath, _ proposedDestinationIndexPath: IndexPath) -> IndexPath)?
     fileprivate var indentationLevelForRowAt: ((_ indexPath: IndexPath) -> Int)?
+    @available(iOS, deprecated: 13.0)
     fileprivate var shouldShowMenuForRowAt: ((_ indexPath: IndexPath) -> Bool)?
+    @available(iOS, deprecated: 13.0)
     fileprivate var canPerformAction: ((_ action: Selector, _ indexPath: IndexPath, _ sender: Any?) -> Bool)?
+    @available(iOS, deprecated: 13.0)
     fileprivate var performAction: ((_ action: Selector, _ indexPath: IndexPath, _ sender: Any?) -> Void)?
     fileprivate var canFocusRowAt: ((_ indexPath: IndexPath) -> Bool)?
     fileprivate var shouldUpdateFocus: ((_ context: UITableViewFocusUpdateContext) -> Bool)?
@@ -322,6 +328,38 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
             _shouldSpringLoadRowAt = newValue
         }
     }
+    private var _shouldBeginMultipleSelectionInteractionAt: Any?
+    @available(iOS 13.0, *)
+    fileprivate var shouldBeginMultipleSelectionInteractionAt: ((_ indexPath: IndexPath) -> Bool)?  {
+        get {
+            return _shouldBeginMultipleSelectionInteractionAt as? (_ indexPath: IndexPath) -> Bool
+        }
+        set {
+            _shouldBeginMultipleSelectionInteractionAt = newValue
+        }
+    }
+
+    private var _didBeginMultipleSelectionInteractionAt: Any?
+    @available(iOS 13.0, *)
+    fileprivate var didBeginMultipleSelectionInteractionAt: ((_ indexPath: IndexPath) -> Void)? {
+        get {
+            return _didBeginMultipleSelectionInteractionAt as? (_ indexPath: IndexPath) -> Void
+        }
+        set {
+            _didBeginMultipleSelectionInteractionAt = newValue
+        }
+    }
+
+    private var _didEndMultipleSelectionInteraction: Any?
+    @available(iOS 13.0, *)
+    fileprivate var didEndMultipleSelectionInteraction: (() -> Void)? {
+         get {
+             return _didEndMultipleSelectionInteraction as? () -> Void
+         }
+         set {
+             _didEndMultipleSelectionInteraction = newValue
+         }
+     }
     
     override func responds(to aSelector: Selector!) -> Bool {
         if #available(iOS 11, *) {
@@ -332,6 +370,33 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
                 return _trailingSwipeActionsConfigurationForRowAt != nil
             case #selector(TableViewDelegate.tableView(_:shouldSpringLoadRowAt:with:)):
                 return _shouldSpringLoadRowAt != nil
+            default:
+                break
+            }
+        }
+
+        if #available(iOS 13, *) {
+            switch aSelector {
+            case #selector(TableViewDelegate.tableView(_:shouldBeginMultipleSelectionInteractionAt:)):
+                return _shouldBeginMultipleSelectionInteractionAt != nil
+            case #selector(TableViewDelegate.tableView(_:didBeginMultipleSelectionInteractionAt:)):
+                return _didBeginMultipleSelectionInteractionAt != nil
+            case #selector(TableViewDelegate.tableView(_:didEndEditingRowAt:)):
+                return _didEndMultipleSelectionInteraction != nil
+            default:
+                break
+            }
+        } else {
+            switch aSelector {
+                case #selector(TableViewDelegate.tableView(_:editActionsForRowAt:)):
+                    return editActionsForRowAt != nil
+                case #selector(TableViewDelegate.tableView(_:shouldShowMenuForRowAt:)):
+                    return shouldShowMenuForRowAt != nil
+                case #selector(TableViewDelegate.tableView(_:canPerformAction:forRowAt:withSender:)):
+                    return canPerformAction != nil
+                case #selector(TableViewDelegate.tableView(_:performAction:forRowAt:withSender:)):
+                    return performAction != nil
+
             default:
                 break
             }
@@ -386,8 +451,6 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
             return editingStyleForRowAt != nil
         case #selector(TableViewDelegate.tableView(_:titleForDeleteConfirmationButtonForRowAt:)):
             return titleForDeleteConfirmationButtonForRowAt != nil
-        case #selector(TableViewDelegate.tableView(_:editActionsForRowAt:)):
-            return editActionsForRowAt != nil
         case #selector(TableViewDelegate.tableView(_:shouldIndentWhileEditingRowAt:)):
             return shouldIndentWhileEditingRowAt != nil
         case #selector(TableViewDelegate.tableView(_:willBeginEditingRowAt:)):
@@ -398,12 +461,6 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
             return targetIndexPathForMoveFromRowAt != nil
         case #selector(TableViewDelegate.tableView(_:indentationLevelForRowAt:)):
             return indentationLevelForRowAt != nil
-        case #selector(TableViewDelegate.tableView(_:shouldShowMenuForRowAt:)):
-            return shouldShowMenuForRowAt != nil
-        case #selector(TableViewDelegate.tableView(_:canPerformAction:forRowAt:withSender:)):
-            return canPerformAction != nil
-        case #selector(TableViewDelegate.tableView(_:canPerformAction:forRowAt:withSender:)):
-            return performAction != nil
         case #selector(TableViewDelegate.tableView(_:canFocusRowAt:)):
             return canFocusRowAt != nil
         case #selector(TableViewDelegate.tableView(_:shouldUpdateFocusIn:)):
@@ -440,6 +497,7 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
     }
 }
 
+@available(iOS 9.0, *)
 extension TableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         willDisplay?(cell, indexPath)
@@ -537,6 +595,7 @@ extension TableViewDelegate {
         return titleForDeleteConfirmationButtonForRowAt?(indexPath) ??  Bundle(identifier: "com.apple.UIKit")?.localizedString(forKey: "Delete", value: nil, table: nil)
     }
     
+    @available(iOS, deprecated: 13.0)
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?  {
         return editActionsForRowAt?(indexPath) ??  nil
     }
@@ -561,14 +620,17 @@ extension TableViewDelegate {
         return indentationLevelForRowAt?(indexPath) ??  0
     }
     
+    @available(iOS, deprecated: 13.0)
     func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
         return shouldShowMenuForRowAt?(indexPath) ??  false
     }
     
+    @available(iOS, deprecated: 13.0)
     func tableView(_ tableView: UITableView, canPerformAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
         return canPerformAction?(action, indexPath, sender) ??  false
     }
     
+    @available(iOS, deprecated: 13.0)
     func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
         performAction?(action, indexPath, sender)
     }
@@ -646,8 +708,24 @@ extension TableViewDelegate {
     func tableView(_ tableView: UITableView, shouldSpringLoadRowAt indexPath: IndexPath, with context: UISpringLoadedInteractionContext) -> Bool {
         return shouldSpringLoadRowAt?(indexPath, context) ?? true
     }
+
+    @available(iOS 13, *)
+    func tableView(_ tableView: UITableView, shouldBeginMultipleSelectionInteractionAt indexPath: IndexPath) -> Bool {
+        return shouldBeginMultipleSelectionInteractionAt?(indexPath) ?? false
+    }
+
+    @available(iOS 13, *)
+    func tableView(_ tableView: UITableView, didBeginMultipleSelectionInteractionAt indexPath: IndexPath) {
+        didBeginMultipleSelectionInteractionAt?(indexPath)
+    }
+
+    @available(iOS 13, *)
+    func tableViewDidEndMultipleSelectionInteraction(_ tableView: UITableView) {
+        didEndMultipleSelectionInteraction?()
+    }
 }
 
+@available(iOS 9.0, *)
 extension UITableView {
     // MARK: Delegate and DataSource Overrides
     /**
@@ -945,6 +1023,7 @@ extension UITableView {
      
      * returns: itself so you can daisy chain the other delegate calls
      */
+    @available(iOS, deprecated: 13.0)
     @discardableResult
     public func editActionsForRowAt(handler: @escaping (_ indexPath: IndexPath) -> [UITableViewRowAction]?) -> Self {
         return update { $0.editActionsForRowAt = handler }
@@ -1017,6 +1096,7 @@ extension UITableView {
      
      * returns: itself so you can daisy chain the other delegate calls
      */
+    @available(iOS, deprecated: 13.0)
     @discardableResult
     public func shouldShowMenuForRowAt(handler: @escaping (_ indexPath: IndexPath) -> Bool) -> Self {
         return update { $0.shouldShowMenuForRowAt = handler }
@@ -1029,6 +1109,7 @@ extension UITableView {
      
      * returns: itself so you can daisy chain the other delegate calls
      */
+    @available(iOS, deprecated: 13.0)
     @discardableResult
     public func canPerformAction(handler: @escaping (_ action: Selector, _ indexPath: IndexPath, _ sender: Any?) -> Bool) -> Self {
         return update { $0.canPerformAction = handler }
@@ -1041,6 +1122,7 @@ extension UITableView {
      
      * returns: itself so you can daisy chain the other delegate calls
      */
+    @available(iOS, deprecated: 13.0)
     @discardableResult
     public func performAction(handler: @escaping (_ action: Selector, _ indexPath: IndexPath, _ sender: Any?) -> Void) -> Self {
         return update { $0.performAction = handler }
@@ -1261,8 +1343,27 @@ extension UITableView {
     public func shouldSpringLoadRowAt(handler: @escaping (_ indexPath: IndexPath, _ context: UISpringLoadedInteractionContext) -> Bool) -> Self {
         return update { $0.shouldSpringLoadRowAt = handler }
     }
+
+
+
+
+    @available(iOS 13, *) @discardableResult
+    public func shouldBeginMultipleSelectionInteraction(handler: @escaping (_ indexPath: IndexPath) -> Bool) -> Self {
+        return update { $0.shouldBeginMultipleSelectionInteractionAt = handler }
+    }
+
+    @available(iOS 13, *) @discardableResult
+    public func didBeginMultipleSelectionInteractionAt(handler: @escaping (_ indexPath: IndexPath) -> Void) -> Self {
+        return update { $0.didBeginMultipleSelectionInteractionAt = handler }
+    }
+
+    @available(iOS 13, *) @discardableResult
+    public func didEndMultipleSelectionInteraction(handler: @escaping () -> Void) -> Self {
+        return update { $0.didEndMultipleSelectionInteraction = handler }
+    }
 }
 
+@available(iOS 9.0, *)
 extension UITableView {
     @discardableResult
     @objc override func update(handler: (_ delegate: TableViewDelegate) -> Void) -> Self {

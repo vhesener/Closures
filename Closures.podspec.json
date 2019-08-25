@@ -18,5 +18,6 @@
   },
   "source_files": "Xcode/Closures/Source",
   "documentation_url": "https://vhesener.github.io/Closures/",
-  "description": "Closures is an iOS Framework that adds closure handlers to many of the popular\nUIKit and Foundation classes. Although this framework is a substitute for \nsome Cocoa Touch design patterns, such as Delegation and Data Sources, and \nTarget-Action, the authors make no claim regarding which is a better way to \naccomplish the same type of task. Most of the time it is a matter of style, \npreference, or convenience that will determine if any of these closure extensions \nare beneficial.\n\nWhether you’re a functional purist, dislike a particular API, or simply just \nwant to organize your code a little bit, you might enjoy using this library."
+  "description": "Closures is an iOS Framework that adds closure handlers to many of the popular\nUIKit and Foundation classes. Although this framework is a substitute for \nsome Cocoa Touch design patterns, such as Delegation and Data Sources, and \nTarget-Action, the authors make no claim regarding which is a better way to \naccomplish the same type of task. Most of the time it is a matter of style, \npreference, or convenience that will determine if any of these closure extensions \nare beneficial.\n\nWhether you’re a functional purist, dislike a particular API, or simply just \nwant to organize your code a little bit, you might enjoy using this library.",
+  "pushed_with_swift_version": "5.0"
 }

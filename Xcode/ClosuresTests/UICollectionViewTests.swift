@@ -170,9 +170,13 @@ class UICollectionViewTests: XCTestCase {
         _ = delegate.collectionView!(collectionView, shouldDeselectItemAt: iPath)
         delegate.collectionView!(collectionView, didSelectItemAt: iPath)
         delegate.collectionView!(collectionView, didDeselectItemAt: iPath)
-        _ = delegate.collectionView!(collectionView, shouldShowMenuForItemAt: iPath)
-        _ = delegate.collectionView!(collectionView, canPerformAction: #selector(UICollectionViewTests.setUp), forItemAt: iPath, withSender: nil)
-        delegate.collectionView!(collectionView, performAction: #selector(UICollectionViewTests.setUp), forItemAt: iPath, withSender: nil)
+        if #available(iOS 13, *) {
+            exp.expectedFulfillmentCount -= 3
+        } else {
+            _ = delegate.collectionView!(collectionView, shouldShowMenuForItemAt: iPath)
+            _ = delegate.collectionView!(collectionView, canPerformAction: #selector(UICollectionViewTests.setUp), forItemAt: iPath, withSender: nil)
+            delegate.collectionView!(collectionView, performAction: #selector(UICollectionViewTests.setUp), forItemAt: iPath, withSender: nil)
+        }
         _ = delegate.collectionView!(collectionView, transitionLayoutForOldLayout: collectionView.collectionViewLayout, newLayout: collectionView.collectionViewLayout)
         _ = delegate.collectionView!(collectionView, targetContentOffsetForProposedContentOffset: .zero)
         _ = delegate.collectionView!(collectionView, targetIndexPathForMoveFromItemAt: iPath, toProposedIndexPath: iPath)

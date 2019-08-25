@@ -20,6 +20,7 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 fileprivate extension UIControl {
     func _onChange<ControlType, ValueType>(
         callerHandler: @escaping (_ value: ValueType) -> (Void),
@@ -33,6 +34,7 @@ fileprivate extension UIControl {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIControl {
     public typealias EventHandler = (_ sender: UIControl, _ forEvent: UIEvent?) -> Void
     /**
@@ -166,6 +168,7 @@ extension UIControl {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIControl {
     /**
      Provides the proper internal selector to call for the type of UIControlEvent
@@ -223,6 +226,7 @@ extension UIControl {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIButton {
     // MARK: Common Events
     /**
@@ -251,6 +255,7 @@ extension UIButton {
     }
 }
 
+@available(iOS 9.0, *)
 extension UITextField {
     // MARK: Common Events
     /**
@@ -337,6 +342,7 @@ extension UITextField {
     }
 }
 
+@available(iOS 9.0, *)
 extension UITextField {
     // MARK: Delegate Overrides
     /**
@@ -457,6 +463,7 @@ extension UITextField {
     }
 }
 
+@available(iOS 9.0, *)
 extension UITextField: DelegatorProtocol {
     @discardableResult
     fileprivate func update(handler: (_ delegate: TextFieldDelegate) -> Void) -> Self {
@@ -488,11 +495,13 @@ extension UITextField: DelegatorProtocol {
 }
 
 #if DEBUG
+@available(iOS 9.0, *)
 var textFieldDelegates: Set<AnyHashable> {
     return TextFieldDelegate.delegates
 }
 #endif
 
+@available(iOS 9.0, *)
 fileprivate final class TextFieldDelegate: NSObject, UITextFieldDelegate, DelegateProtocol {
     fileprivate static var delegates = Set<DelegateWrapper<UITextField, TextFieldDelegate>>()
     
@@ -557,6 +566,7 @@ fileprivate final class TextFieldDelegate: NSObject, UITextFieldDelegate, Delega
     }
 }
 
+@available(iOS 9.0, *)
 extension UISwitch {
     // MARK: Common Events
     /**
@@ -576,6 +586,7 @@ extension UISwitch {
     }
 }
 
+@available(iOS 9.0, *)
 extension UISlider {
     // MARK: Common Events
     /**
@@ -595,6 +606,7 @@ extension UISlider {
     }
 }
 
+@available(iOS 9.0, *)
 extension UISegmentedControl {
     // MARK: Common Events
     /**
@@ -614,6 +626,7 @@ extension UISegmentedControl {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIStepper {
     // MARK: Common Events
     /**
@@ -633,6 +646,7 @@ extension UIStepper {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIPageControl {
     // MARK: Common Events
     /**
@@ -652,6 +666,7 @@ extension UIPageControl {
     }
 }
 
+@available(iOS 9.0, *)
 extension UIDatePicker {
     // MARK: Common Events
     /**
