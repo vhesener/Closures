@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>_KeyValueCodingAndObserving</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="n">_KeyValueCodingAndObserving</span></code></pre>
+
+                </div>
+              </div>
             
           </section>
           <section class="section task-group-section">
@@ -151,9 +157,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10Foundation27_KeyValueCodingAndObservingP8ClosuresE7observeAA05NSKeyC11ObservationCs0B4PathCyxqd__G_SC0icF7OptionsV7optionsSbxc5untilyx_AA0iC14ObservedChangeVyqd__Gtc13changeHandlertlF"></a>
+                    <a name="/s:10Foundation27_KeyValueCodingAndObservingP8ClosuresE7observe_7options5until13changeHandlerAA05NSKeyC11ObservationCs0B4PathCyxqd__G_So0mcF7OptionsVSbxcyx_AA0mC14ObservedChangeVyqd__GtctlF"></a>
                     <a name="//apple_ref/swift/Method/observe(_:options:until:changeHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10Foundation27_KeyValueCodingAndObservingP8ClosuresE7observeAA05NSKeyC11ObservationCs0B4PathCyxqd__G_SC0icF7OptionsV7optionsSbxc5untilyx_AA0iC14ObservedChangeVyqd__Gtc13changeHandlertlF">observe(_:options:until:changeHandler:)</a>
+                    <a class="token" href="#/s:10Foundation27_KeyValueCodingAndObservingP8ClosuresE7observe_7options5until13changeHandlerAA05NSKeyC11ObservationCs0B4PathCyxqd__G_So0mcF7OptionsVSbxcyx_AA0mC14ObservedChangeVyqd__GtctlF">observe(_:options:until:changeHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -192,7 +198,7 @@ when <code>self</code> is deallocated.</p>
 
 <hr>
 <h4 id='an-example-of-calling-this-method' class='heading'>An example of calling this method:</h4>
-<pre class="highlight swift"><code><span class="o">&lt;</span><span class="err">#</span><span class="n">someObject</span><span class="err">#</span><span class="o">&gt;.</span><span class="nf">observe</span><span class="p">(</span><span class="err">\</span><span class="o">.&lt;</span><span class="err">#</span><span class="n">some</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">path</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">until</span><span class="p">:</span> <span class="n">selfDeinits</span><span class="p">)</span> <span class="p">{</span> <span class="n">obj</span><span class="p">,</span><span class="n">change</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="o">&lt;</span><span class="err">#</span><span class="n">someObject</span><span class="err">#</span><span class="o">&gt;.</span><span class="nf">observe</span><span class="p">(\</span><span class="o">.&lt;</span><span class="err">#</span><span class="n">some</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">path</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">until</span><span class="p">:</span> <span class="n">selfDeinits</span><span class="p">)</span> <span class="p">{</span> <span class="n">obj</span><span class="p">,</span><span class="n">change</span> <span class="k">in</span>
     <span class="o">&lt;</span><span class="err">#</span><span class="k">do</span> <span class="n">something</span><span class="err">#</span><span class="o">&gt;</span>
 <span class="p">}</span>
 </code></pre>
@@ -202,12 +208,13 @@ when <code>self</code> is deallocated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">observe</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
-        <span class="nv">options</span><span class="p">:</span> <span class="kt">NSKeyValueObservingOptions</span> <span class="o">=</span> <span class="p">[],</span>
-        <span class="n">until</span> <span class="nv">removeCondition</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span>
-        <span class="nv">changeHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">NSKeyValueObservedChange</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">NSKeyValueObservation</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">observe</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="k">Self</span><span class="p">,</span> <span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="nv">options</span><span class="p">:</span> <span class="kt">NSKeyValueObservingOptions</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="n">until</span> <span class="nv">removeCondition</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">Self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span>
+    <span class="nv">changeHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">Self</span><span class="p">,</span> <span class="kt">NSKeyValueObservedChange</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">NSKeyValueObservation</span></code></pre>
 
                         </div>
                       </div>
@@ -281,7 +288,7 @@ the keyPath change has occurred.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

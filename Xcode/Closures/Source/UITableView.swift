@@ -1344,19 +1344,37 @@ extension UITableView {
         return update { $0.shouldSpringLoadRowAt = handler }
     }
 
-
-
-
+    /**
+    Equivalent to implementing UITableViewDelegate's tableView(_:shouldBeginMultipleSelectionInteractionAt:) method
+    
+    * parameter handler: The closure that will be called in place of its equivalent delegate method
+    
+    * returns: itself so you can daisy chain the other delegate calls
+    */
     @available(iOS 13, *) @discardableResult
     public func shouldBeginMultipleSelectionInteraction(handler: @escaping (_ indexPath: IndexPath) -> Bool) -> Self {
         return update { $0.shouldBeginMultipleSelectionInteractionAt = handler }
     }
 
+    /**
+    Equivalent to implementing UITableViewDelegate's tableView(_:didBeginMultipleSelectionInteractionAt:) method
+    
+    * parameter handler: The closure that will be called in place of its equivalent delegate method
+    
+    * returns: itself so you can daisy chain the other delegate calls
+    */
     @available(iOS 13, *) @discardableResult
     public func didBeginMultipleSelectionInteractionAt(handler: @escaping (_ indexPath: IndexPath) -> Void) -> Self {
         return update { $0.didBeginMultipleSelectionInteractionAt = handler }
     }
 
+    /**
+    Equivalent to implementing UITableViewDelegate's tableViewDidEndMultipleSelectionInteraction(_:) method
+    
+    * parameter handler: The closure that will be called in place of its equivalent delegate method
+    
+    * returns: itself so you can daisy chain the other delegate calls
+    */
     @available(iOS 13, *) @discardableResult
     public func didEndMultipleSelectionInteraction(handler: @escaping () -> Void) -> Self {
         return update { $0.didEndMultipleSelectionInteraction = handler }

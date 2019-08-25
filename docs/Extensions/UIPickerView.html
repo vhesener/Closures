@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UIPickerView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIPickerView</span></code></pre>
+
+                </div>
+              </div>
             <h2 id='delegate-and-datasource' class='heading'>Delegate and DataSource</h2>
 
 <p><code>UIPickerView</code> closures make it easy to implement <code>UIPickerViewDelegate</code> and
@@ -235,9 +241,9 @@ parameters on the <code>add</code> methods switch the order and send <code>compo
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE10addStringsABXDSaySSG_ySS_S2itc9didSelecttF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE10addStrings_9didSelectABXDSaySSG_ySS_S2itctF"></a>
                     <a name="//apple_ref/swift/Method/addStrings(_:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE10addStringsABXDSaySSG_ySS_S2itc9didSelecttF">addStrings(_:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE10addStrings_9didSelectABXDSaySSG_ySS_S2itctF">addStrings(_:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -285,8 +291,9 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addStrings</span><span class="p">(</span><span class="n">_</span> <span class="nv">strings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
-                           <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addStrings</span><span class="p">(</span><span class="n">_</span> <span class="nv">strings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                       <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -331,9 +338,9 @@ closure handlers instead of this method.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE11addElementsABXDSayxG_SSx_S2itc8rowTitleyx_S2itc9didSelecttlF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE11addElements_8rowTitle9didSelectABXDSayxG_SSx_S2itcyx_S2itctlF"></a>
                     <a name="//apple_ref/swift/Method/addElements(_:rowTitle:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11addElementsABXDSayxG_SSx_S2itc8rowTitleyx_S2itc9didSelecttlF">addElements(_:rowTitle:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11addElements_8rowTitle9didSelectABXDSayxG_SSx_S2itcyx_S2itctlF">addElements(_:rowTitle:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -393,9 +400,10 @@ handlers&rsquo; parameters on the <code>add</code> methods send component,row.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
-                                     <span class="nv">rowTitle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">,</span>
-                                     <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
+                                 <span class="nv">rowTitle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">,</span>
+                                 <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -452,9 +460,9 @@ handlers&rsquo; parameters on the <code>add</code> methods send component,row.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE11addElementsABXDSayxG_So6UIViewCx_AGSgS2itc03rowB0yx_S2itc9didSelecttlF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE11addElements_03rowB09didSelectABXDSayxG_So6UIViewCx_AISgS2itcyx_S2itctlF"></a>
                     <a name="//apple_ref/swift/Method/addElements(_:rowView:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11addElementsABXDSayxG_So6UIViewCx_AGSgS2itc03rowB0yx_S2itc9didSelecttlF">addElements(_:rowView:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11addElements_03rowB09didSelectABXDSayxG_So6UIViewCx_AISgS2itcyx_S2itctlF">addElements(_:rowView:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -514,9 +522,10 @@ handlers&rsquo; parameters on the <code>add</code> methods send component,row.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
-                                     <span class="nv">rowView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reuseView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">,</span>
-                                     <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addElements</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">elements</span><span class="p">:</span> <span class="p">[</span><span class="kt">Element</span><span class="p">],</span>
+                                 <span class="nv">rowView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reuseView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">,</span>
+                                 <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -573,9 +582,9 @@ handlers&rsquo; parameters on the <code>add</code> methods send component,row.</
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySaySSGG_ySS_S2itc9didSelecttF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponents_9didSelectABXDSaySaySSGG_ySS_S2itctF"></a>
                     <a name="//apple_ref/swift/Method/addComponents(_:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySaySSGG_ySS_S2itc9didSelecttF">addComponents(_:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponents_9didSelectABXDSaySaySSGG_ySS_S2itctF">addComponents(_:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -623,8 +632,9 @@ closure handlers instead of this method.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addComponents</span><span class="p">(</span><span class="n">_</span> <span class="nv">strings</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">]],</span>
-                              <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addComponents</span><span class="p">(</span><span class="n">_</span> <span class="nv">strings</span><span class="p">:</span> <span class="p">[[</span><span class="kt">String</span><span class="p">]],</span>
+                          <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -671,9 +681,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySayxGG_SSx_S2itc8rowTitleyx_S2itc9didSelecttlF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponents_8rowTitle9didSelectABXDSaySayxGG_SSx_S2itcyx_S2itctlF"></a>
                     <a name="//apple_ref/swift/Method/addComponents(_:rowTitle:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySayxGG_SSx_S2itc8rowTitleyx_S2itc9didSelecttlF">addComponents(_:rowTitle:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponents_8rowTitle9didSelectABXDSaySayxGG_SSx_S2itcyx_S2itctlF">addComponents(_:rowTitle:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -733,9 +743,10 @@ handlers&rsquo; parameters on the <code>add</code> methods send component,row.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addComponents</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">components</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
-                                       <span class="nv">rowTitle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">,</span>
-                                       <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addComponents</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">components</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
+                                   <span class="nv">rowTitle</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">,</span>
+                                   <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -794,9 +805,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySayxGG_So6UIViewCx_AHSgS2itc03rowB0yx_S2itc9didSelecttlF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE13addComponents_03rowB09didSelectABXDSaySayxGG_So6UIViewCx_AJSgS2itcyx_S2itctlF"></a>
                     <a name="//apple_ref/swift/Method/addComponents(_:rowView:didSelect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponentsABXDSaySayxGG_So6UIViewCx_AHSgS2itc03rowB0yx_S2itc9didSelecttlF">addComponents(_:rowView:didSelect:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE13addComponents_03rowB09didSelectABXDSaySayxGG_So6UIViewCx_AJSgS2itcyx_S2itctlF">addComponents(_:rowView:didSelect:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -860,9 +871,10 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">addComponents</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">components</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
-                                       <span class="nv">rowView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reuseView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">,</span>
-                                       <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">addComponents</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">components</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Element</span><span class="p">]],</span>
+                                   <span class="nv">rowView</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reuseView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">,</span>
+                                   <span class="nv">didSelect</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">element</span><span class="p">:</span> <span class="kt">Element</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -918,9 +930,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE21rowHeightForComponentABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE21rowHeightForComponent7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/rowHeightForComponent(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE21rowHeightForComponentABXD12CoreGraphics7CGFloatVSic7handler_tF">rowHeightForComponent(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE21rowHeightForComponent7handlerABXD12CoreGraphics7CGFloatVSic_tF">rowHeightForComponent(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -935,7 +947,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rowHeightForComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">rowHeightForComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -968,9 +981,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE17widthForComponentABXD12CoreGraphics7CGFloatVSic7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE17widthForComponent7handlerABXD12CoreGraphics7CGFloatVSic_tF"></a>
                     <a name="//apple_ref/swift/Method/widthForComponent(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE17widthForComponentABXD12CoreGraphics7CGFloatVSic7handler_tF">widthForComponent(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE17widthForComponent7handlerABXD12CoreGraphics7CGFloatVSic_tF">widthForComponent(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -985,7 +998,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">widthForComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">widthForComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CGFloat</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1018,9 +1032,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE11titleForRowABXDSSSgSi_Sitc7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE11titleForRow7handlerABXDSSSgSi_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/titleForRow(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11titleForRowABXDSSSgSi_Sitc7handler_tF">titleForRow(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE11titleForRow7handlerABXDSSSgSi_Sitc_tF">titleForRow(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1035,7 +1049,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">titleForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1068,9 +1083,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE21attributedTitleForRowABXDSo18NSAttributedStringCSgSi_Sitc7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE21attributedTitleForRow7handlerABXDSo18NSAttributedStringCSgSi_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/attributedTitleForRow(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE21attributedTitleForRowABXDSo18NSAttributedStringCSgSi_Sitc7handler_tF">attributedTitleForRow(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE21attributedTitleForRow7handlerABXDSo18NSAttributedStringCSgSi_Sitc_tF">attributedTitleForRow(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1085,7 +1100,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">attributedTitleForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">attributedTitleForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1118,9 +1134,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE10viewForRowABXDSo6UIViewCSi_SiAFSgtc7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE10viewForRow7handlerABXDSo6UIViewCSi_SiAGSgtc_tF"></a>
                     <a name="//apple_ref/swift/Method/viewForRow(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE10viewForRowABXDSo6UIViewCSi_SiAFSgtc7handler_tF">viewForRow(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE10viewForRow7handlerABXDSo6UIViewCSi_SiAGSgtc_tF">viewForRow(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1135,7 +1151,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reusingView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">viewForRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">reusingView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1168,9 +1185,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE12didSelectRowABXDySi_Sitc7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE12didSelectRow7handlerABXDySi_Sitc_tF"></a>
                     <a name="//apple_ref/swift/Method/didSelectRow(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE12didSelectRowABXDySi_Sitc7handler_tF">didSelectRow(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE12didSelectRow7handlerABXDySi_Sitc_tF">didSelectRow(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1185,7 +1202,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didSelectRow</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1218,9 +1236,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE18numberOfComponentsABXDSiyc7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE18numberOfComponents7handlerABXDSiyc_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfComponents(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE18numberOfComponentsABXDSiyc7handler_tF">numberOfComponents(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE18numberOfComponents7handlerABXDSiyc_tF">numberOfComponents(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1235,7 +1253,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfComponents</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfComponents</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1268,9 +1287,9 @@ e.g. myTwoDArray[component][row]</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So12UIPickerViewC8ClosuresE23numberOfRowsInComponentABXDS2ic7handler_tF"></a>
+                    <a name="/s:So12UIPickerViewC8ClosuresE23numberOfRowsInComponent7handlerABXDS2ic_tF"></a>
                     <a name="//apple_ref/swift/Method/numberOfRowsInComponent(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE23numberOfRowsInComponentABXDS2ic7handler_tF">numberOfRowsInComponent(handler:)</a>
+                    <a class="token" href="#/s:So12UIPickerViewC8ClosuresE23numberOfRowsInComponent7handlerABXDS2ic_tF">numberOfRowsInComponent(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1285,7 +1304,8 @@ e.g. myTwoDArray[component][row]</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfRowsInComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfRowsInComponent</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1349,7 +1369,8 @@ cleanup. You are not required to call this method.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1362,7 +1383,7 @@ cleanup. You are not required to call this method.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

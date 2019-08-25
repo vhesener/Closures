@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UIView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
             
           </section>
           <section class="section task-group-section">
@@ -158,9 +164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE13addTapGestureSo05UITapE10RecognizerCSi12tapsRequired_Si07touchesI0yAFc7handlertF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE13addTapGesture12tapsRequired07touchesG07handlerSo05UITapE10RecognizerCSi_SiyAIctF"></a>
                     <a name="//apple_ref/swift/Method/addTapGesture(tapsRequired:touchesRequired:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE13addTapGestureSo05UITapE10RecognizerCSi12tapsRequired_Si07touchesI0yAFc7handlertF">addTapGesture(tapsRequired:touchesRequired:handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE13addTapGesture12tapsRequired07touchesG07handlerSo05UITapE10RecognizerCSi_SiyAIctF">addTapGesture(tapsRequired:touchesRequired:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,9 +182,10 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTapGesture</span><span class="p">(</span><span class="nv">tapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                              <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                              <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UITapGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITapGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addTapGesture</span><span class="p">(</span><span class="nv">tapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                          <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                          <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UITapGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UITapGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -240,9 +247,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE19addLongPressGestureSo06UILongeF10RecognizerCSi12tapsRequired_Si07touchesJ0Sd11minDuration12CoreGraphics7CGFloatV17allowableMovementyAFc7handlertF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE19addLongPressGesture12tapsRequired07touchesH011minDuration17allowableMovement7handlerSo06UILongeF10RecognizerCSi_SiSd12CoreGraphics7CGFloatVyAKctF"></a>
                     <a name="//apple_ref/swift/Method/addLongPressGesture(tapsRequired:touchesRequired:minDuration:allowableMovement:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE19addLongPressGestureSo06UILongeF10RecognizerCSi12tapsRequired_Si07touchesJ0Sd11minDuration12CoreGraphics7CGFloatV17allowableMovementyAFc7handlertF">addLongPressGesture(tapsRequired:touchesRequired:minDuration:allowableMovement:handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE19addLongPressGesture12tapsRequired07touchesH011minDuration17allowableMovement7handlerSo06UILongeF10RecognizerCSi_SiSd12CoreGraphics7CGFloatVyAKctF">addLongPressGesture(tapsRequired:touchesRequired:minDuration:allowableMovement:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -258,11 +265,12 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addLongPressGesture</span><span class="p">(</span><span class="nv">tapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-                                    <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                                    <span class="nv">minDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
-                                    <span class="nv">allowableMovement</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                                    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UILongPressGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UILongPressGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addLongPressGesture</span><span class="p">(</span><span class="nv">tapsRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="nv">minDuration</span><span class="p">:</span> <span class="kt">CFTimeInterval</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                                <span class="nv">allowableMovement</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                                <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UILongPressGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UILongPressGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -348,9 +356,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE15addPinchGestureSo07UIPinchE10RecognizerCyAFc7handler_tF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE15addPinchGesture7handlerSo07UIPinchE10RecognizerCyAGc_tF"></a>
                     <a name="//apple_ref/swift/Method/addPinchGesture(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE15addPinchGestureSo07UIPinchE10RecognizerCyAFc7handler_tF">addPinchGesture(handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE15addPinchGesture7handlerSo07UIPinchE10RecognizerCyAGc_tF">addPinchGesture(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -366,7 +374,8 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPinchGesture</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIPinchGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIPinchGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPinchGesture</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIPinchGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIPinchGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -404,9 +413,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE15addSwipeGestureSo07UISwipeE10RecognizerCSC0feG9DirectionV9direction_Si15touchesRequiredyAFc7handlertF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE15addSwipeGesture9direction15touchesRequired7handlerSo07UISwipeE10RecognizerCSo0jeK9DirectionV_SiyAIctF"></a>
                     <a name="//apple_ref/swift/Method/addSwipeGesture(direction:touchesRequired:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE15addSwipeGestureSo07UISwipeE10RecognizerCSC0feG9DirectionV9direction_Si15touchesRequiredyAFc7handlertF">addSwipeGesture(direction:touchesRequired:handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE15addSwipeGesture9direction15touchesRequired7handlerSo07UISwipeE10RecognizerCSo0jeK9DirectionV_SiyAIctF">addSwipeGesture(direction:touchesRequired:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -422,9 +431,10 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addSwipeGesture</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt">UISwipeGestureRecognizerDirection</span> <span class="o">=</span> <span class="o">.</span><span class="k">right</span><span class="p">,</span>
-                                <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                                <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UISwipeGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addSwipeGesture</span><span class="p">(</span><span class="nv">direction</span><span class="p">:</span> <span class="kt">UISwipeGestureRecognizer</span><span class="o">.</span><span class="kt">Direction</span> <span class="o">=</span> <span class="o">.</span><span class="n">right</span><span class="p">,</span>
+                            <span class="nv">touchesRequired</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UISwipeGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UISwipeGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -486,9 +496,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE18addRotationGestureSo010UIRotationE10RecognizerCyAFc7handler_tF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE18addRotationGesture7handlerSo010UIRotationE10RecognizerCyAGc_tF"></a>
                     <a name="//apple_ref/swift/Method/addRotationGesture(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE18addRotationGestureSo010UIRotationE10RecognizerCyAFc7handler_tF">addRotationGesture(handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE18addRotationGesture7handlerSo010UIRotationE10RecognizerCyAGc_tF">addRotationGesture(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -504,7 +514,8 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRotationGesture</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIRotationGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIRotationGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addRotationGesture</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIRotationGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIRotationGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -542,9 +553,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE13addPanGestureSo05UIPanE10RecognizerCSi10minTouches_Si03maxI0yAFc7handlertF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE13addPanGesture10minTouches03maxG07handlerSo05UIPanE10RecognizerCSi_SiyAIctF"></a>
                     <a name="//apple_ref/swift/Method/addPanGesture(minTouches:maxTouches:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE13addPanGestureSo05UIPanE10RecognizerCSi10minTouches_Si03maxI0yAFc7handlertF">addPanGesture(minTouches:maxTouches:handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE13addPanGesture10minTouches03maxG07handlerSo05UIPanE10RecognizerCSi_SiyAIctF">addPanGesture(minTouches:maxTouches:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -560,9 +571,10 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPanGesture</span><span class="p">(</span><span class="nv">minTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-                              <span class="nv">maxTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">.</span><span class="n">max</span><span class="p">,</span>
-                              <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIPanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIPanGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addPanGesture</span><span class="p">(</span><span class="nv">minTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+                          <span class="nv">maxTouches</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">.</span><span class="n">max</span><span class="p">,</span>
+                          <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIPanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIPanGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -624,9 +636,9 @@ customizations</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So6UIViewC8ClosuresE23addScreenEdgePanGestureSo08UIScreenefG10RecognizerCSC06UIRectE0V5edges_yAFc7handlertF"></a>
+                    <a name="/s:So6UIViewC8ClosuresE23addScreenEdgePanGesture5edges7handlerSo08UIScreenefG10RecognizerCSo06UIRectE0V_yAHctF"></a>
                     <a name="//apple_ref/swift/Method/addScreenEdgePanGesture(edges:handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So6UIViewC8ClosuresE23addScreenEdgePanGestureSo08UIScreenefG10RecognizerCSC06UIRectE0V5edges_yAFc7handlertF">addScreenEdgePanGesture(edges:handler:)</a>
+                    <a class="token" href="#/s:So6UIViewC8ClosuresE23addScreenEdgePanGesture5edges7handlerSo08UIScreenefG10RecognizerCSo06UIRectE0V_yAHctF">addScreenEdgePanGesture(edges:handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -642,8 +654,9 @@ passing default values to its convenience initializer.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addScreenEdgePanGesture</span><span class="p">(</span><span class="nv">edges</span><span class="p">:</span> <span class="kt">UIRectEdge</span> <span class="o">=</span> <span class="o">.</span><span class="n">all</span><span class="p">,</span>
-                                        <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIScreenEdgePanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIScreenEdgePanGestureRecognizer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addScreenEdgePanGesture</span><span class="p">(</span><span class="nv">edges</span><span class="p">:</span> <span class="kt">UIRectEdge</span> <span class="o">=</span> <span class="o">.</span><span class="n">all</span><span class="p">,</span>
+                                    <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">gesture</span><span class="p">:</span> <span class="kt">UIScreenEdgePanGestureRecognizer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIScreenEdgePanGestureRecognizer</span></code></pre>
 
                         </div>
                       </div>
@@ -692,7 +705,7 @@ customizations</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

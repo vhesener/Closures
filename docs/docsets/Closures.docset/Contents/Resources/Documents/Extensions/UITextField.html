@@ -111,7 +111,7 @@
                 <a href="../Extensions/UIView.html">UIView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Gesture Recognizers.html#/s:8Closures9configureyx7gesture_yxc7handlertSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
+                <a href="../Gesture Recognizers.html#/s:8Closures9configure7gesture7handleryx_yxctSo19UIGestureRecognizerCRbzlF">configure(gesture:handler:)</a>
               </li>
             </ul>
           </li>
@@ -143,6 +143,12 @@
         <section>
           <section class="section">
             <h1>UITextField</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">UITextField</span></code></pre>
+
+                </div>
+              </div>
             
           </section>
           <section class="section task-group-section">
@@ -158,9 +164,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE8onChangeABXDySSc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE8onChange7handlerABXDySSc_tF"></a>
                     <a name="//apple_ref/swift/Method/onChange(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onChangeABXDySSc7handler_tF">onChange(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onChange7handlerABXDySSc_tF">onChange(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -193,7 +199,8 @@ for you to have, please use the text field&rsquo;s <code>text</code> property di
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onChange</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">onChange</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -226,9 +233,9 @@ for you to have, please use the text field&rsquo;s <code>text</code> property di
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingEndedABXDyyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingEnded7handlerABXDyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/onEditingEnded(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingEndedABXDyyc7handler_tF">onEditingEnded(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingEnded7handlerABXDyyc_tF">onEditingEnded(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -244,7 +251,8 @@ This occurs when the UITextField resigns as first responder.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingEnded</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingEnded</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -277,9 +285,9 @@ This occurs when the UITextField resigns as first responder.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingBeganABXDyyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE14onEditingBegan7handlerABXDyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/onEditingBegan(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingBeganABXDyyc7handler_tF">onEditingBegan(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE14onEditingBegan7handlerABXDyyc_tF">onEditingBegan(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,7 +303,8 @@ This occurs when the UITextField becomes the first responder.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingBegan</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">onEditingBegan</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -328,9 +337,9 @@ This occurs when the UITextField becomes the first responder.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE8onReturnABXDyyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE8onReturn7handlerABXDyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/onReturn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onReturnABXDyyc7handler_tF">onReturn(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE8onReturn7handlerABXDyyc_tF">onReturn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -346,7 +355,8 @@ This occurs when the user taps the return key on the keyboard.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">onReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">onReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -390,9 +400,9 @@ This occurs when the user taps the return key on the keyboard.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE18shouldBeginEditingABXDSbyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE18shouldBeginEditing7handlerABXDSbyc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldBeginEditing(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldBeginEditingABXDSbyc7handler_tF">shouldBeginEditing(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldBeginEditing7handlerABXDSbyc_tF">shouldBeginEditing(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -408,7 +418,8 @@ to implementing the textFieldShouldBeginEditing(_:) method in UITextFieldDelegat
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -441,9 +452,9 @@ to implementing the textFieldShouldBeginEditing(_:) method in UITextFieldDelegat
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE15didBeginEditingABXDyyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE15didBeginEditing7handlerABXDyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/didBeginEditing(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE15didBeginEditingABXDyyc7handler_tF">didBeginEditing(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE15didBeginEditing7handlerABXDyyc_tF">didBeginEditing(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -459,7 +470,8 @@ to implementing the textFieldDidBeginEditing(_:) method in UITextFieldDelegate.<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didBeginEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -492,9 +504,9 @@ to implementing the textFieldDidBeginEditing(_:) method in UITextFieldDelegate.<
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE16shouldEndEditingABXDSbyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE16shouldEndEditing7handlerABXDSbyc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldEndEditing(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE16shouldEndEditingABXDSbyc7handler_tF">shouldEndEditing(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE16shouldEndEditing7handlerABXDSbyc_tF">shouldEndEditing(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -510,7 +522,8 @@ to implementing the textFieldShouldEndEditing(_:) method in UITextFieldDelegate.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -543,9 +556,9 @@ to implementing the textFieldShouldEndEditing(_:) method in UITextFieldDelegate.
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE13didEndEditingABXDyyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE13didEndEditing7handlerABXDyyc_tF"></a>
                     <a name="//apple_ref/swift/Method/didEndEditing(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE13didEndEditingABXDyyc7handler_tF">didEndEditing(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE13didEndEditing7handlerABXDyyc_tF">didEndEditing(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -561,7 +574,8 @@ to implementing the textFieldDidEndEditing(_:) method in UITextFieldDelegate.</p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">didEndEditing</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -594,9 +608,9 @@ to implementing the textFieldDidEndEditing(_:) method in UITextFieldDelegate.</p
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE22shouldChangeCharactersABXDSbSC8_NSRangeV_SStc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE22shouldChangeCharacters7handlerABXDSbSo8_NSRangeV_SStc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldChangeCharacters(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE22shouldChangeCharactersABXDSbSC8_NSRangeV_SStc7handler_tF">shouldChangeCharacters(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE22shouldChangeCharacters7handlerABXDSbSo8_NSRangeV_SStc_tF">shouldChangeCharacters(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -607,14 +621,15 @@ to implementing the textFieldDidEndEditing(_:) method in UITextFieldDelegate.</p
                         <p>This method determines if the text field should change its characters based on user input.
 This is equivalent to implementing the textField(_:shouldChangeCharactersIn:replacementString:) 
 method in UITextFieldDelegate. This closure passed here will conflict with any closure 
-passed to <code><a href="../Extensions/UITextField.html#/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF">shouldChangeString(handler:)</a></code> and the last closure passed will be the one that&rsquo;s called.</p>
+passed to <code><a href="../Extensions/UITextField.html#/s:So11UITextFieldC8ClosuresE18shouldChangeString7handlerABXDSbSS_SStc_tF">shouldChangeString(handler:)</a></code> and the last closure passed will be the one that&rsquo;s called.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeCharacters</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">_</span> <span class="nv">replacementString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeCharacters</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">_</span> <span class="nv">replacementString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -647,9 +662,9 @@ passed to <code><a href="../Extensions/UITextField.html#/s:So11UITextFieldC8Clos
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE18shouldChangeString7handlerABXDSbSS_SStc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldChangeString(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldChangeStringABXDSbSS_SStc7handler_tF">shouldChangeString(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE18shouldChangeString7handlerABXDSbSS_SStc_tF">shouldChangeString(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -668,7 +683,8 @@ and the last closure passed will be the one that&rsquo;s called.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeString</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldChangeString</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="n">_</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -702,9 +718,9 @@ the first parameter string <code>to</code> the second parameter string.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE11shouldClearABXDSbyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE11shouldClear7handlerABXDSbyc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldClear(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE11shouldClearABXDSbyc7handler_tF">shouldClear(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE11shouldClear7handlerABXDSbyc_tF">shouldClear(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -720,7 +736,8 @@ to implementing the textFieldShouldClear(_:) method in UITextFieldDelegate.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldClear</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldClear</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -753,9 +770,9 @@ to implementing the textFieldShouldClear(_:) method in UITextFieldDelegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:So11UITextFieldC8ClosuresE12shouldReturnABXDSbyc7handler_tF"></a>
+                    <a name="/s:So11UITextFieldC8ClosuresE12shouldReturn7handlerABXDSbyc_tF"></a>
                     <a name="//apple_ref/swift/Method/shouldReturn(handler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE12shouldReturnABXDSbyc7handler_tF">shouldReturn(handler:)</a>
+                    <a class="token" href="#/s:So11UITextFieldC8ClosuresE12shouldReturn7handlerABXDSbyc_tF">shouldReturn(handler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -771,7 +788,8 @@ to implementing the textFieldShouldReturn(_:) method in UITextFieldDelegate.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">shouldReturn</span><span class="p">(</span><span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -835,7 +853,8 @@ cleanup. You are not required to call this method.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearClosureDelegates</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -848,7 +867,7 @@ cleanup. You are not required to call this method.</p>
         </section>
         <section id="footer">
           <p>2017 Vincent Hesener</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
