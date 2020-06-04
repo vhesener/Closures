@@ -27,6 +27,7 @@
 		3FB77F311EE4DB5200C60F5C /* UITableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB77F301EE4DB5200C60F5C /* UITableViewTests.swift */; };
 		3FD393C61F9E583900DA155D /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD393C51F9E583900DA155D /* UIBarButtonItem.swift */; };
 		3FD393C81F9E61A900DA155D /* UIBarButtonItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD393C71F9E61A900DA155D /* UIBarButtonItemTests.swift */; };
+		CC095542241EA9C0000125E1 /* MFMailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC095541241EA9C0000125E1 /* MFMailComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3FB77F301EE4DB5200C60F5C /* UITableViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewTests.swift; sourceTree = "<group>"; };
 		3FD393C51F9E583900DA155D /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		3FD393C71F9E61A900DA155D /* UIBarButtonItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTests.swift; sourceTree = "<group>"; };
+		CC095541241EA9C0000125E1 /* MFMailComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFMailComposeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				3F59C5681F1C32AA00945666 /* Core.swift */,
 				3F59C5691F1C32AA00945666 /* KVO.swift */,
+				CC095541241EA9C0000125E1 /* MFMailComposeViewController.swift */,
 				3F59C56A1F1C32AA00945666 /* UICollectionView.swift */,
 				3F59C56B1F1C32AA00945666 /* UIControl.swift */,
 				3F59C56C1F1C32AA00945666 /* UIGestureRecognizer.swift */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC095542241EA9C0000125E1 /* MFMailComposeViewController.swift in Sources */,
 				3F59C5731F1C32BF00945666 /* UICollectionView.swift in Sources */,
 				3F59C5741F1C32BF00945666 /* UIControl.swift in Sources */,
 				3F59C5721F1C32BF00945666 /* KVO.swift in Sources */,
