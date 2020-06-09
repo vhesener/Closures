@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  MFMailComposeViewController.swift
 //  
 //
 //  Created by Alex Ivashko on 15.03.2020.
@@ -26,39 +26,50 @@ class MailComposeDelegate: NSObject, MFMailComposeViewControllerDelegate, Delega
     }
 }
 
+@available(iOS 9.0, *)
 extension MFMailComposeViewController {
-
-    public convenience init(subject: String,
-                            toRecipients: [String]?,
-                            ccRecipients: [String]?,
-                            bccRecipients: [String]?,
-                            body: (body: String, isHTML: Bool),
-                            attachment: (data: Data, mimeType: String, fileName: String)) {
+    public convenience init?(subject: String? = nil,
+                            toRecipients: [String]? = nil,
+                            ccRecipients: [String]? = nil,
+                            bccRecipients: [String]? = nil,
+                            body: (body: String, isHTML: Bool)? = nil,
+                            attachment: (data: Data, mimeType: String, fileName: String)? = nil,
+                            handler: @escaping ((_ result: MFMailComposeResult, _ error: Error?) -> Void)) {
+        guard MFMailComposeViewController.canSendMail() else {
+            return nil
+        }
         self.init()
-        setSubject(subject)
+        if let subject = subject {
+            setSubject(subject)
+        }
         setToRecipients(toRecipients)
         setCcRecipients(ccRecipients)
         setBccRecipients(bccRecipients)
-        setMessageBody(body.body, isHTML: body.isHTML)
-        addAttachmentData(attachment.data, mimeType: attachment.mimeType, fileName: attachment.fileName)
+        if let body = body {
+            setMessageBody(body.body, isHTML: body.isHTML)
+        }
+        if let attachment = attachment {
+            addAttachmentData(attachment.data, mimeType: attachment.mimeType, fileName: attachment.fileName)
+        }
+        didFinish(handler: handler)
     }
     
-    @available(iOS 9.0, *)
     @discardableResult
     public func didFinish(handler: @escaping (_ result: MFMailComposeResult, _ error: Error?) -> Void) -> Self {
         update { $0.didFinishWith = handler }
     }
-
 }
 
 @available(iOS 9.0, *)
 extension MFMailComposeViewController: DelegatorProtocol {
     @discardableResult
     @objc func update(handler: (_ delegate: MailComposeDelegate) -> Void) -> Self {
-        DelegateWrapper.update(self,
-                               delegate: MailComposeDelegate(),
-                               delegates: &MailComposeDelegate.delegates,
-                               bind: MFMailComposeViewController.bind) {
+        DelegateWrapper.update(
+            self,
+            delegate: MailComposeDelegate(),
+            delegates: &MailComposeDelegate.delegates,
+            bind: MFMailComposeViewController.bind
+        ) {
             handler($0.delegate)
         }
         return self
