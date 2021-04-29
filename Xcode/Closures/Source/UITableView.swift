@@ -483,7 +483,7 @@ class TableViewDelegate: ScrollViewDelegate, UITableViewDelegate, UITableViewDat
             return canEditRowAt != nil
         case #selector(TableViewDelegate.tableView(_:canMoveRowAt:)):
             return canMoveRowAt != nil
-        case #selector(TableViewDelegate.tableView(_:sectionForSectionIndexTitle:at:)):
+        case #selector(TableViewDelegate.sectionIndexTitles(for:)):
             return sectionIndexTitles != nil
         case #selector(TableViewDelegate.tableView(_:sectionForSectionIndexTitle:at:)):
             return sectionForSectionIndexTitle != nil
